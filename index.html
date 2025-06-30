@@ -5,13 +5,30 @@
   <title>AI Side Hustle Toolkit</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- 🔧 Google Tag (Replace with your real tag ID) -->
+  <!-- 🔧 Google Tag (Global Site Tag + Conversion Setup) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17260187801"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'AW-17260187801');
+
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17260187801/E6apCMT0gOcaEJmhpqZA',
+          'event_callback': callback
+      });
+      // fallback in case gtag is blocked
+      setTimeout(function () {
+        window.location = url;
+      }, 300);
+      return false;
+    }
   </script>
 
   <style>
@@ -46,7 +63,4 @@
 <body>
   <h1>Launch Your AI Side Hustle</h1>
   <p>The ultimate toolkit to help you start making money with AI — no face required.</p>
-<a class="button" href="https://dudjazz4.gumroad.com/" target="_blank">Browse All AI Tools</a>
- <!-- Trigger rebuild -->
-</body>
-</html>
+  <a c
