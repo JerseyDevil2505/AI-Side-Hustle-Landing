@@ -23,7 +23,7 @@
           'send_to': 'AW-17260187801/E6apCMT0gOcaEJmhpqZA',
           'event_callback': callback
       });
-      // fallback in case gtag is blocked
+      // fallback in case gtag is blocked or delayed
       setTimeout(function () {
         window.location = url;
       }, 300);
@@ -46,7 +46,7 @@
       font-size: 1.2em;
       margin-bottom: 30px;
     }
-    a.button {
+    .button {
       display: inline-block;
       background: #0e2d36;
       color: #fff;
@@ -54,8 +54,9 @@
       text-decoration: none;
       font-size: 1.1em;
       border-radius: 6px;
+      transition: background 0.3s;
     }
-    a.button:hover {
+    .button:hover {
       background: #236376;
     }
   </style>
@@ -63,4 +64,9 @@
 <body>
   <h1>Launch Your AI Side Hustle</h1>
   <p>The ultimate toolkit to help you start making money with AI — no face required.</p>
-  <a c
+  
+  <a class="button" href="https://dudjazz4.gumroad.com/" onclick="return gtag_report_conversion('https://dudjazz4.gumroad.com/');">Browse All AI Tools</a>
+
+  <!-- Trigger rebuild -->
+</body>
+</html>
