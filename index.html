@@ -1,72 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>AI Side Hustle Toolkit</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- 🔧 Google Tag (Global Site Tag + Conversion Setup) -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClickmintAI – Zero-Face AI Product Bundles</title>
+  <link rel="icon" type="image/png" href="/assets/logo.png" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7f9;
+      color: #0E2D36;
+    }
+    header {
+      background: #0E2D36;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      height: 60px;
+    }
+    h1 {
+      margin-top: 20px;
+      font-size: 2.5rem;
+    }
+    .hero {
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+    .hero h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    .cta {
+      background: #ECB42B;
+      color: #0E2D36;
+      display: inline-block;
+      padding: 12px 24px;
+      margin-top: 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .product {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+    }
+    .product img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    .product h3 {
+      margin: 0 0 10px;
+    }
+    .product p {
+      font-size: 0.95rem;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 10px;
+      font-size: 0.9rem;
+      background: #0E2D36;
+      color: #fff;
+    }
+  </style>
+  <!-- Google Tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17260187801"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'AW-17260187801');
-
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
-        }
-      };
-      gtag('event', 'conversion', {
-          'send_to': 'AW-17260187801/E6apCMT0gOcaEJmhpqZA',
-          'event_callback': callback
-      });
-      // fallback in case gtag is blocked or delayed
-      setTimeout(function () {
-        window.location = url;
-      }, 300);
-      return false;
-    }
   </script>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f8f9fa;
-      text-align: center;
-      padding: 50px;
-    }
-    h1 {
-      font-size: 2em;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 1.2em;
-      margin-bottom: 30px;
-    }
-    .button {
-      display: inline-block;
-      background: #0e2d36;
-      color: #fff;
-      padding: 15px 30px;
-      text-decoration: none;
-      font-size: 1.1em;
-      border-radius: 6px;
-      transition: background 0.3s;
-    }
-    .button:hover {
-      background: #236376;
-    }
-  </style>
 </head>
 <body>
-  <h1>Launch Your AI Side Hustle</h1>
-  <p>The ultimate toolkit to help you start making money with AI — no face required.</p>
-  
-  <a class="button" href="https://dudjazz4.gumroad.com/" onclick="return gtag_report_conversion('https://dudjazz4.gumroad.com/');">Browse All AI Tools</a>
+  <header>
+    <img src="/assets/logo.png" alt="ClickmintAI Logo" />
+    <h1>ClickmintAI</h1>
+    <p>AI-Powered Digital Product Bundles That Sell While You Sleep</p>
+  </header>
 
-  <!-- Trigger rebuild -->
+  <section class="hero">
+    <h2>Start your faceless AI hustle in minutes.</h2>
+    <p>No tech skills. No camera. Just proven AI systems and templates to get going today.</p>
+    <a class="cta" href="https://dudjazz4.gumroad.com/">See All Products</a>
+  </section>
+
+  <section class="products">
+    <div class="product">
+      <img src="/assets/ai-hustle-starter-vault.png" alt="AI Hustle Starter Vault Thumbnail" />
+      <h3>AI Hustle Starter Vault</h3>
+      <p>10 zero-face side hustles, AI tools, a revenue tracker, content calendar & product generator – all in one.</p>
+      <a class="cta" href="https://dudjazz4.gumroad.com/l/mqzni">Grab the Vault</a>
+    </div>
+
+    <div class="product">
+      <img src="/assets/faceless-creator-kit.png" alt="Faceless Creator Kit Thumbnail" />
+      <h3>Faceless Creator Kit</h3>
+      <p>Create faceless content for TikTok, YouTube Shorts, and Email. Automate it all using AI tools.</p>
+      <a class="cta" href="https://dudjazz4.gumroad.com/l/creatorbundle">Get the Kit</a>
+    </div>
+
+    <div class="product">
+      <img src="/assets/freelancer-service-bundle.png" alt="AI Freelancer Bundle Thumbnail" />
+      <h3>AI Freelancer & Service Bundle</h3>
+      <p>Use AI to dominate Fiverr, write emails that sell, and run a service business without showing your face.</p>
+      <a class="cta" href="https://dudjazz4.gumroad.com/l/freelancerbundle">Start Freelancing</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ClickmintAI. Built by side hustlers, for side hustlers.</p>
+  </footer>
 </body>
 </html>
