@@ -95,19 +95,19 @@
       font-size: 0.95rem;
     }
 
-    .features, .why-clickmint, .urgency-banner {
+    .features, .why-clickmint, .urgency-banner, .testimonials, .faq {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
       font-size: 1.05rem;
     }
 
-    .features ul {
+    .features ul, .faq ul {
       list-style: none;
       padding: 0;
     }
 
-    .features li::before {
+    .features li::before, .faq li::before {
       content: "\2714\0020";
       color: #ECB42B;
       font-weight: bold;
@@ -120,6 +120,21 @@
       border: 2px dashed #ECB42B;
       font-weight: bold;
       border-radius: 10px;
+    }
+
+    .testimonial {
+      background: #ffffff;
+      border-left: 5px solid #ECB42B;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .testimonial cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      color: #888;
     }
 
     footer {
@@ -166,6 +181,36 @@
   <section class="why-clickmint">
     <h2 class="section-title">Why ClickMintAI?</h2>
     <p>We don't sell hype. We build real tools for creators, freelancers, and solopreneurs who want results. No subscriptions, no fluff — just practical digital kits you can use to start earning today. Our customers love how fast, simple, and affordable our bundles are. Some launch their first hustle in under an hour.</p>
+  </section>
+
+  <section class="testimonials">
+    <h2 class="section-title">What Customers Are Saying</h2>
+    <div class="testimonial">
+      "Super simple setup — I launched my first AI product in a single evening. Worth every penny."
+      <cite>&mdash; Alex R., Florida</cite>
+    </div>
+    <div class="testimonial">
+      "Finally a toolkit that doesn’t waste my time. It just works."
+      <cite>&mdash; Jamie L., UK</cite>
+    </div>
+    <div class="testimonial">
+      "I avoided building a side hustle for months. This helped me break the ice and get moving fast."
+      <cite>&mdash; Dev C., Toronto</cite>
+    </div>
+  </section>
+
+  <section class="faq">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <ul>
+      <li><strong>Do I need to know how to code?</strong><br />
+        Nope. All tools are beginner-friendly and require zero programming skills.</li>
+      <li><strong>What happens after I buy?</strong><br />
+        You’ll get instant access to the full bundle and all included tools via Gumroad.</li>
+      <li><strong>Can I use these tools if I don’t want to show my face?</strong><br />
+        Absolutely. Every product is designed for faceless creators.</li>
+      <li><strong>Is this a subscription?</strong><br />
+        No. It’s a one-time payment — yours to keep forever.</li>
+    </ul>
   </section>
 
   <h2 class="section-title">Current Bundles</h2>
