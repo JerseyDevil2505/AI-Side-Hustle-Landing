@@ -25,29 +25,47 @@
       position: relative;
     }
 
-    .logo {
+    /* Logo container with soft background + glow */
+    .logo-container {
       position: absolute;
       top: 20px;
       left: 20px;
       width: 288px;
       height: 288px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(236, 180, 43, 0.2);
+    }
+
+    .logo-container img {
+      width: 80%;
+      height: auto;
       object-fit: contain;
     }
 
     header {
-      text-align: center;
+      display: flex;
+      align-items: center;
       color: white;
       padding: 120px 20px 60px;
     }
 
-    header h1 {
+    .branding {
+      margin-left: 320px;
+      max-width: 600px;
+    }
+
+    .branding h1 {
       font-family: 'Orbitron', sans-serif;
-      font-size: 3.5em;
-      margin-bottom: 12px;
+      font-size: 4em;
+      margin-bottom: 10px;
       text-shadow: 0 0 12px rgba(236, 180, 43, 0.5);
     }
 
-    header p {
+    .branding p {
       font-size: 1em;
       opacity: 0.85;
       margin-top: 8px;
@@ -125,30 +143,46 @@
       color: #bbb;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.2em;
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        padding: 80px 20px 40px;
+        text-align: center;
       }
-      header p {
-        font-size: 0.9em;
+
+      .logo-container {
+        position: static;
+        width: 180px;
+        height: 180px;
+        margin-bottom: 20px;
       }
-      .logo {
-        width: 48px;
-        top: 12px;
-        left: 12px;
+
+      .branding {
+        margin-left: 0;
+      }
+
+      .branding h1 {
+        font-size: 2.5em;
       }
     }
   </style>
 </head>
 <body>
   <div class="overlay">
-    <img class="logo" src="/assets/logo.png" alt="ClickMint Logo" />
+    <!-- Logo -->
+    <div class="logo-container">
+      <img src="/assets/logo-square.png" alt="ClickMint Logo" />
+    </div>
 
+    <!-- Header -->
     <header>
-      <h1>ClickMint</h1>
-      <p>Smart tools for AI hustlers, health hackers, and conscious creators</p>
+      <div class="branding">
+        <h1>ClickMint</h1>
+        <p>Smart tools for AI hustlers, health hackers, and conscious creators</p>
+      </div>
     </header>
 
+    <!-- AI Hustle Tools -->
     <section class="section">
       <div class="category-title">AI Hustle Tools</div>
       <div class="grid">
@@ -171,6 +205,7 @@
       </div>
     </section>
 
+    <!-- Mindset & Manifestation -->
     <section class="section">
       <div class="category-title">Mindset & Manifestation</div>
       <div class="grid">
@@ -180,7 +215,7 @@
             <h3>Manifestation OS</h3>
             <p>A focused Notion system to align your goals, vision, and subconscious beliefs.</p>
             <a class="btn" href="#">Coming Soon</a>
-          </div> 
+          </div>
         </div>
         <div class="card">
           <img src="https://source.unsplash.com/featured/?mindset,success" alt="Millionaire Mindset Bootcamp" />
@@ -193,6 +228,7 @@
       </div>
     </section>
 
+    <!-- Health & Wellness -->
     <section class="section">
       <div class="category-title">Health & Fringe Wellness</div>
       <div class="grid">
