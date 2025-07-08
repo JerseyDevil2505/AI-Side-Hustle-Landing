@@ -4,255 +4,101 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ClickMint – AI, Health & Mindset Tools</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: url('/assets/hero-bg.jpg') center center / cover no-repeat fixed;
-      color: #0e2d36;
-    }
-
-    .overlay {
-      background-color: rgba(14, 45, 54, 0.88);
-      min-height: 100vh;
-      padding-bottom: 60px;
-      position: relative;
-    }
-
-    .logo-container {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      width: 288px;
-      height: 288px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(255, 255, 255, 0.06);
-      border-radius: 16px;
-      box-shadow: 0 0 20px rgba(236, 180, 43, 0.2);
-    }
-
-    .logo-container img {
-      width: 80%;
-      height: auto;
-      object-fit: contain;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      color: white;
-      padding: 120px 20px 60px;
-    }
-
-    .branding {
-      margin-left: 320px;
-      max-width: 600px;
-    }
-
-    .branding h1 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 5em;
-      margin-bottom: 10px;
-      text-shadow: 0 0 15px rgba(236, 180, 43, 0.6);
-    }
-
-    .branding p {
-      font-size: 1em;
-      opacity: 0.85;
-      margin-top: 8px;
-      font-weight: 300;
-      letter-spacing: 0.5px;
-    }
-
-    .section {
-      padding: 40px 20px;
-      color: white;
-    }
-
-    .category-title {
-      font-size: 1.8em;
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: white;
-      border-radius: 12px;
-      padding: 0 0 20px 0;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-      overflow: hidden;
-      transition: transform 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-    }
-
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .card-content {
-      padding: 20px;
-      color: #0e2d36;
-    }
-
-    .card h3 {
-      margin-top: 0;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      background: #ecb42b;
-      color: black;
-      padding: 10px 16px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.2s ease;
-    }
-
-    .btn:hover {
-      background: #ffd64a;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #bbb;
-    }
-
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        padding: 80px 20px 40px;
-        text-align: center;
-      }
-
-      .logo-container {
-        position: static;
-        width: 180px;
-        height: 180px;
-        margin-bottom: 20px;
-      }
-
-      .branding {
-        margin-left: 0;
-      }
-
-      .branding h1 {
-        font-size: 2.5em;
-      }
-    }
+    body { font-family: Arial, sans-serif; margin: 0; background: #f5f7f9; color: #0e2d36; }
+    header { background: url('assets/hero-bg.jpg') center / cover no-repeat; color: white; padding: 60px 20px; text-align: center; position: relative; }
+    .logo { position: absolute; top: 20px; left: 20px; height: 90px; width: 90px; border-radius: 12px; }
+    h1 { margin-bottom: 10px; font-size: 3em; }
+    .tagline { font-size: 1.1em; margin-top: 0; color: #ccc; }
+    .section { padding: 40px 20px; }
+    .category-title { font-size: 1.8em; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .card { background: white; border-radius: 12px; padding: 0 0 20px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); overflow: hidden; }
+    .card img { width: 100%; height: 180px; object-fit: cover; }
+    .card-content { padding: 20px; }
+    .card h3 { margin-top: 0; }
+    .btn { display: inline-block; margin-top: 10px; background: #ecb42b; color: black; padding: 10px 16px; border-radius: 8px; text-decoration: none; font-weight: bold; }
+    footer { text-align: center; padding: 30px; color: #777; }
   </style>
 </head>
 <body>
-  <div class="overlay">
-    <!-- Logo -->
-    <div class="logo-container">
-      <img src="/assets/logo.png" alt="ClickMint Logo" />
+  <header>
+    <img src="assets/logo.png" alt="ClickMint Logo" class="logo" />
+    <h1>ClickMint</h1>
+    <p class="tagline">Smart tools for AI hustlers, health hackers, and conscious creators</p>
+  </header>
+
+  <section class="section">
+    <div class="category-title">AI Tools <span style="font-size: 0.6em; color: #555">(PDF + Notion formats)</span></div>
+    <div class="grid">
+      <div class="card">
+        <img src="assets/products/Faceless TikTok Thumb.jpg" alt="Faceless TikTok Toolkit" />
+        <div class="card-content">
+          <h3>Faceless TikTok Toolkit</h3>
+          <p>Create viral videos using AI, automation, and faceless content strategies.</p>
+          <a class="btn" href="https://clickmintai.gumroad.com/l/facelesstiktok">View</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets/products/AI Email Generator Thumb.jpg" alt="AI Email Generator" />
+        <div class="card-content">
+          <h3>AI Email Generator</h3>
+          <p>Quickly craft high-converting emails for clients, content, and sales.</p>
+          <a class="btn" href="https://clickmintai.gumroad.com/l/aiemailgen">View</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets/products/50 ChatGPT Prompt Thumb.jpg" alt="50 ChatGPT Prompts" />
+        <div class="card-content">
+          <h3>50 ChatGPT Prompts</h3>
+          <p>Instant inspiration for creators, entrepreneurs, and service providers.</p>
+          <a class="btn" href="https://clickmintai.gumroad.com/l/50prompts">View</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets/products/30 Day Content Calendar Thumb.jpg" alt="30 Day Content Calendar" />
+        <div class="card-content">
+          <h3>30 Day Content Calendar</h3>
+          <p>Plan your AI-powered content workflow across social platforms.</p>
+          <a class="btn" href="https://clickmintai.gumroad.com/l/30daycalendar">View</a>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Header -->
-    <header>
-      <div class="branding">
-        <h1>ClickMint</h1>
-        <p>Smart tools for AI hustlers, health hackers, and conscious creators</p>
-      </div>
-    </header>
-
-    <!-- AI Hustle Tools -->
-    <section class="section">
-      <div class="category-title">AI Hustle Tools</div>
-      <div class="grid">
-        <div class="card">
-          <img src="https://source.unsplash.com/featured/?startup" alt="AI Side Hustle" />
-          <div class="card-content">
-            <h3>AI Side Hustle OS</h3>
-            <p>Track, optimize, and grow your AI-based income streams with ease.</p>
-            <a class="btn" href="https://clickmintai.gumroad.com/l/sidehustleos">View</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://source.unsplash.com/featured/?video,content" alt="Faceless TikTok Toolkit" />
-          <div class="card-content">
-            <h3>Faceless TikTok Toolkit</h3>
-            <p>Create viral videos using AI, automation, and faceless content strategies.</p>
-            <a class="btn" href="https://clickmintai.gumroad.com/l/facelesstiktok">View</a>
-          </div>
+  <section class="section">
+    <div class="category-title">Bundles</div>
+    <div class="grid">
+      <div class="card">
+        <img src="assets/products/AI Freelancer Thumb.jpg" alt="AI Freelancer & Service Bundle" />
+        <div class="card-content">
+          <h3>AI Freelancer & Service Bundle</h3>
+          <p>Launch your freelance gig with AI tools for Fiverr, copywriting, and scheduling.</p>
+          <a class="btn" href="https://clickmintai.gumroad.com/l/ydcpo">View</a>
         </div>
       </div>
-    </section>
-
-    <!-- Mindset & Manifestation -->
-    <section class="section">
-      <div class="category-title">Mindset & Manifestation</div>
-      <div class="grid">
-        <div class="card">
-          <img src="https://source.unsplash.com/featured/?meditation,notebook" alt="Manifestation OS" />
-          <div class="card-content">
-            <h3>Manifestation OS</h3>
-            <p>A focused Notion system to align your goals, vision, and subconscious beliefs.</p>
-            <a class="btn" href="#">Coming Soon</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://source.unsplash.com/featured/?mindset,success" alt="Millionaire Mindset Bootcamp" />
-          <div class="card-content">
-            <h3>Millionaire Mindset Bootcamp</h3>
-            <p>Rewire your thinking and daily habits for abundance and long-term success.</p>
-            <a class="btn" href="#">Coming Soon</a>
-          </div>
+      <div class="card">
+        <img src="assets/products/Faceless Creator Kit Thumb.jpg" alt="Faceless Creator Kit" />
+        <div class="card-content">
+          <h3>Faceless Creator Kit</h3>
+          <p>AI toolset for content creators who want to stay behind the scenes.</p>
+          <a class="btn" href="https://clickmintai.gumroad.com/l/facelessbundle">View</a>
         </div>
       </div>
-    </section>
-
-    <!-- Health & Wellness -->
-    <section class="section">
-      <div class="category-title">Health & Fringe Wellness</div>
-      <div class="grid">
-        <div class="card">
-          <img src="https://source.unsplash.com/featured/?health,science" alt="Deep Arterial Repair" />
-          <div class="card-content">
-            <h3>Deep Arterial Repair Protocol</h3>
-            <p>Breakthrough strategies for vascular healing using modern + alternative science.</p>
-            <a class="btn" href="#">Coming Soon</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://source.unsplash.com/featured/?weather,fashion" alt="Weather Wardrobe App" />
-          <div class="card-content">
-            <h3>Weather Wardrobe App</h3>
-            <p>Stay stylish and temperature-smart using our smart mobile weather dresser.</p>
-            <a class="btn" href="https://clickmintai.gumroad.com/l/weatherwardrobe">View</a>
-          </div>
+      <div class="card">
+        <img src="assets/products/AI Hustle Thumb.jpg" alt="AI Hustle Starter Vault" />
+        <div class="card-content">
+          <h3>AI Hustle Starter Vault</h3>
+          <p>Begin your AI journey with a vault of profitable side hustles and launch tools.</p>
+          <a class="btn" href="https://clickmintai.gumroad.com/l/hustlevault">View</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer>
-      &copy; 2025 ClickMint. All rights reserved.
-    </footer>
-  </div>
+  <footer>
+    &copy; 2025 ClickMint. All rights reserved.
+  </footer>
 </body>
 </html>
