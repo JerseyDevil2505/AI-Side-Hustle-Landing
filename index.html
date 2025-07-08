@@ -13,27 +13,32 @@
       color: #0e2d36;
     }
     header {
+      display: flex;
+      align-items: center;
+      padding: 40px 60px 80px;
       color: white;
-      padding: 80px 20px 120px;
-      text-align: center;
       position: relative;
     }
     .logo {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      height: 120px;
-      width: 120px;
+      height: 200px;
+      width: 200px;
       border-radius: 12px;
+      margin-right: 30px;
     }
-    h1 {
-      margin-bottom: 10px;
-      font-size: 4em;
+    .header-title {
+      display: flex;
+      flex-direction: column;
+    }
+    .header-title h1 {
+      margin: 0;
+      font-size: 4.5em;
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: 2px;
     }
     .tagline {
       font-size: 1.2em;
-      margin-top: 0;
       color: #ccc;
+      margin-top: 10px;
     }
     .section {
       padding: 60px 20px;
@@ -90,12 +95,15 @@
       background: #fff;
     }
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <img src="assets/logo.png" alt="ClickMint Logo" class="logo" />
-    <h1>ClickMint</h1>
-    <p class="tagline">Smart tools for AI hustlers, health hackers, and conscious creators</p>
+    <div class="header-title">
+      <h1>ClickMint</h1>
+      <p class="tagline">Smart tools for AI hustlers, health hackers, and conscious creators</p>
+    </div>
   </header>
 
   <section class="section">
