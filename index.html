@@ -6,19 +6,28 @@
   <title>ClickMint – AI, Health & Mindset Tools</title>
   <link rel="stylesheet" href="style.css" />
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f5f7f9;
+      background: url('/assets/hero-bg.jpg') center center / cover no-repeat fixed;
       color: #0e2d36;
     }
 
+    .overlay {
+      background-color: rgba(14, 45, 54, 0.88); /* dark overlay for readability */
+      min-height: 100vh;
+      padding-bottom: 60px;
+    }
+
     header {
-      background: linear-gradient(rgba(14, 45, 54, 0.8), rgba(14, 45, 54, 0.8)),
-                  url('/assets/hero-bg.jpg') center top / cover no-repeat;
-      color: white;
-      padding: 120px 20px 100px;
       text-align: center;
+      color: white;
+      padding: 120px 20px 60px;
     }
 
     header h1 {
@@ -29,12 +38,12 @@
 
     header p {
       font-size: 1.2em;
-      margin-top: 0;
       opacity: 0.9;
     }
 
     .section {
       padding: 40px 20px;
+      color: white;
     }
 
     .category-title {
@@ -73,6 +82,7 @@
 
     .card-content {
       padding: 20px;
+      color: #0e2d36;
     }
 
     .card h3 {
@@ -98,84 +108,86 @@
     footer {
       text-align: center;
       padding: 30px;
-      color: #777;
+      color: #bbb;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>ClickMint</h1>
-    <p>Smart tools for AI hustlers, health hackers, and conscious creators</p>
-  </header>
+  <div class="overlay">
+    <header>
+      <h1>ClickMint</h1>
+      <p>Smart tools for AI hustlers, health hackers, and conscious creators</p>
+    </header>
 
-  <section class="section">
-    <div class="category-title">AI Hustle Tools</div>
-    <div class="grid">
-      <div class="card">
-        <img src="https://source.unsplash.com/featured/?startup" alt="AI Side Hustle" />
-        <div class="card-content">
-          <h3>AI Side Hustle OS</h3>
-          <p>Track, optimize, and grow your AI-based income streams with ease.</p>
-          <a class="btn" href="https://clickmintai.gumroad.com/l/sidehustleos">View</a>
+    <section class="section">
+      <div class="category-title">AI Hustle Tools</div>
+      <div class="grid">
+        <div class="card">
+          <img src="https://source.unsplash.com/featured/?startup" alt="AI Side Hustle" />
+          <div class="card-content">
+            <h3>AI Side Hustle OS</h3>
+            <p>Track, optimize, and grow your AI-based income streams with ease.</p>
+            <a class="btn" href="https://clickmintai.gumroad.com/l/sidehustleos">View</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://source.unsplash.com/featured/?video,content" alt="Faceless TikTok Toolkit" />
+          <div class="card-content">
+            <h3>Faceless TikTok Toolkit</h3>
+            <p>Create viral videos using AI, automation, and faceless content strategies.</p>
+            <a class="btn" href="https://clickmintai.gumroad.com/l/facelesstiktok">View</a>
+          </div>
         </div>
       </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/featured/?video,content" alt="Faceless TikTok Toolkit" />
-        <div class="card-content">
-          <h3>Faceless TikTok Toolkit</h3>
-          <p>Create viral videos using AI, automation, and faceless content strategies.</p>
-          <a class="btn" href="https://clickmintai.gumroad.com/l/facelesstiktok">View</a>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <div class="category-title">Mindset & Manifestation</div>
-    <div class="grid">
-      <div class="card">
-        <img src="https://source.unsplash.com/featured/?meditation,notebook" alt="Manifestation OS" />
-        <div class="card-content">
-          <h3>Manifestation OS</h3>
-          <p>A focused Notion system to align your goals, vision, and subconscious beliefs.</p>
-          <a class="btn" href="#">Coming Soon</a>
+    <section class="section">
+      <div class="category-title">Mindset & Manifestation</div>
+      <div class="grid">
+        <div class="card">
+          <img src="https://source.unsplash.com/featured/?meditation,notebook" alt="Manifestation OS" />
+          <div class="card-content">
+            <h3>Manifestation OS</h3>
+            <p>A focused Notion system to align your goals, vision, and subconscious beliefs.</p>
+            <a class="btn" href="#">Coming Soon</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://source.unsplash.com/featured/?mindset,success" alt="Millionaire Mindset Bootcamp" />
+          <div class="card-content">
+            <h3>Millionaire Mindset Bootcamp</h3>
+            <p>Rewire your thinking and daily habits for abundance and long-term success.</p>
+            <a class="btn" href="#">Coming Soon</a>
+          </div>
         </div>
       </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/featured/?mindset,success" alt="Millionaire Mindset Bootcamp" />
-        <div class="card-content">
-          <h3>Millionaire Mindset Bootcamp</h3>
-          <p>Rewire your thinking and daily habits for abundance and long-term success.</p>
-          <a class="btn" href="#">Coming Soon</a>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <div class="category-title">Health & Fringe Wellness</div>
-    <div class="grid">
-      <div class="card">
-        <img src="https://source.unsplash.com/featured/?health,science" alt="Deep Arterial Repair" />
-        <div class="card-content">
-          <h3>Deep Arterial Repair Protocol</h3>
-          <p>Breakthrough strategies for vascular healing using modern + alternative science.</p>
-          <a class="btn" href="#">Coming Soon</a>
+    <section class="section">
+      <div class="category-title">Health & Fringe Wellness</div>
+      <div class="grid">
+        <div class="card">
+          <img src="https://source.unsplash.com/featured/?health,science" alt="Deep Arterial Repair" />
+          <div class="card-content">
+            <h3>Deep Arterial Repair Protocol</h3>
+            <p>Breakthrough strategies for vascular healing using modern + alternative science.</p>
+            <a class="btn" href="#">Coming Soon</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://source.unsplash.com/featured/?weather,fashion" alt="Weather Wardrobe App" />
+          <div class="card-content">
+            <h3>Weather Wardrobe App</h3>
+            <p>Stay stylish and temperature-smart using our smart mobile weather dresser.</p>
+            <a class="btn" href="https://clickmintai.gumroad.com/l/weatherwardrobe">View</a>
+          </div>
         </div>
       </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/featured/?weather,fashion" alt="Weather Wardrobe App" />
-        <div class="card-content">
-          <h3>Weather Wardrobe App</h3>
-          <p>Stay stylish and temperature-smart using our smart mobile weather dresser.</p>
-          <a class="btn" href="https://clickmintai.gumroad.com/l/weatherwardrobe">View</a>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
-    &copy; 2025 ClickMint. All rights reserved.
-  </footer>
+    <footer>
+      &copy; 2025 ClickMint. All rights reserved.
+    </footer>
+  </div>
 </body>
 </html>
