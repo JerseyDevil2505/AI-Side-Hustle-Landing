@@ -147,6 +147,85 @@
         transform: translateY(-2px);
         box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
       }
+      .social-proof {
+        background: linear-gradient(
+          135deg,
+          rgba(14, 45, 54, 0.95),
+          rgba(14, 45, 54, 0.8)
+        );
+        padding: 60px 20px;
+        text-align: center;
+        color: white;
+      }
+      .social-proof h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        color: #f8d24e;
+      }
+      .stats-container {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        margin: 40px 0;
+        flex-wrap: wrap;
+      }
+      .stat-item {
+        text-align: center;
+      }
+      .stat-number {
+        font-size: 3em;
+        font-weight: bold;
+        color: #f8d24e;
+        display: block;
+      }
+      .stat-label {
+        font-size: 1.1em;
+        color: #ccc;
+        margin-top: 5px;
+      }
+      .testimonials {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .testimonial {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 25px;
+        border-radius: 15px;
+        border-left: 4px solid #f8d24e;
+      }
+      .testimonial-text {
+        font-style: italic;
+        font-size: 1.1em;
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+      .testimonial-author {
+        font-weight: bold;
+        color: #f8d24e;
+      }
+      .testimonial-title {
+        font-size: 0.9em;
+        color: #ccc;
+      }
+      .trust-badges {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 40px;
+        flex-wrap: wrap;
+      }
+      .trust-badge {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-size: 0.9em;
+        color: #ccc;
+      }
       footer {
         text-align: center;
         padding: 30px;
@@ -193,6 +272,69 @@
         </p>
       </div>
     </header>
+
+    <section class="social-proof">
+      <h2>Join 5,000+ AI Entrepreneurs</h2>
+      <p style="font-size: 1.2em; color: #ccc; margin-bottom: 0">
+        Trusted by creators, freelancers, and digital entrepreneurs worldwide
+      </p>
+
+      <div class="stats-container">
+        <div class="stat-item">
+          <span class="stat-number">5,000+</span>
+          <div class="stat-label">Happy Customers</div>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">15+</span>
+          <div class="stat-label">AI Tools & Bundles</div>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">4.9★</span>
+          <div class="stat-label">Average Rating</div>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">$2M+</span>
+          <div class="stat-label">Revenue Generated</div>
+        </div>
+      </div>
+
+      <div class="testimonials">
+        <div class="testimonial">
+          <div class="testimonial-text">
+            "The AI Digital Product Generator helped me launch 3 successful
+            products in just 2 weeks. My revenue jumped from $500 to
+            $5,000/month!"
+          </div>
+          <div class="testimonial-author">Sarah Chen</div>
+          <div class="testimonial-title">Digital Entrepreneur</div>
+        </div>
+
+        <div class="testimonial">
+          <div class="testimonial-text">
+            "ClickMint's ChatGPT prompts saved me 20+ hours per week. I can now
+            focus on growing my business instead of writing copy."
+          </div>
+          <div class="testimonial-author">Marcus Rodriguez</div>
+          <div class="testimonial-title">Marketing Consultant</div>
+        </div>
+
+        <div class="testimonial">
+          <div class="testimonial-text">
+            "The Faceless YouTube toolkit got me to 10K subscribers in 3 months.
+            These strategies actually work!"
+          </div>
+          <div class="testimonial-author">Alex Thompson</div>
+          <div class="testimonial-title">Content Creator</div>
+        </div>
+      </div>
+
+      <div class="trust-badges">
+        <div class="trust-badge">✓ Instant Download</div>
+        <div class="trust-badge">✓ 30-Day Money Back</div>
+        <div class="trust-badge">✓ Lifetime Updates</div>
+        <div class="trust-badge">✓ Email Support</div>
+      </div>
+    </section>
 
     <section class="section">
       <div class="category-title">Free Download</div>
