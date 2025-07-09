@@ -1233,6 +1233,61 @@
           faqItem.classList.toggle("active");
         });
       });
+
+      // Social Proof Notifications
+      const customers = [
+        "Sarah from NYC",
+        "Mike from LA",
+        "Emma from London",
+        "David from Toronto",
+        "Lisa from Miami",
+        "Jake from Seattle",
+        "Ana from Berlin",
+        "Tom from Sydney",
+      ];
+
+      const products = [
+        "AI Digital Product Generator",
+        "ChatGPT Prompts",
+        "Faceless YouTube Toolkit",
+        "AI Email Generator",
+        "Content Calendar",
+        "AI Hustle Starter Vault",
+      ];
+
+      function showSocialProof() {
+        const notification = document.getElementById(
+          "social-proof-notification",
+        );
+        const customerName = document.getElementById("customer-name");
+        const productName = document.getElementById("product-name");
+
+        customerName.textContent =
+          customers[Math.floor(Math.random() * customers.length)];
+        productName.textContent =
+          products[Math.floor(Math.random() * products.length)];
+
+        notification.classList.add("show");
+
+        setTimeout(() => {
+          notification.classList.remove("show");
+        }, 5000);
+      }
+
+      // Show notification every 15 seconds
+      setInterval(showSocialProof, 15000);
+
+      // Show first notification after 3 seconds
+      setTimeout(showSocialProof, 3000);
+
+      // Close notification on click
+      document
+        .querySelector(".notification-close")
+        .addEventListener("click", () => {
+          document
+            .getElementById("social-proof-notification")
+            .classList.remove("show");
+        });
     </script>
   </body>
 </html>
