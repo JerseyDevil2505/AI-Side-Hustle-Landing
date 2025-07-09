@@ -1,247 +1,417 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ClickMint – AI, Health & Mindset Tools</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: url('assets/hero-bg.jpg') center / cover no-repeat;
-      color: #0e2d36;
-    }
-    header {
-      display: flex;
-      align-items: center;
-      padding: 40px 60px 80px;
-      color: white;
-      position: relative;
-    }
-    .logo {
-      height: 200px;
-      width: 200px;
-      border-radius: 12px;
-      margin-right: 30px;
-      box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
-    }
-    .header-title {
-      display: flex;
-      flex-direction: column;
-    }
-    .header-title h1 {
-      margin: 0;
-      font-size: 4.5em;
-      font-family: 'Orbitron', sans-serif;
-      letter-spacing: 2px;
-    }
-    .tagline {
-      font-size: 1.2em;
-      color: #ccc;
-      margin-top: 10px;
-    }
-    .section {
-      padding: 80px 20px 60px;
-    }
-    .category-title {
-      font-size: 2.8em;
-      margin-bottom: 40px;
-      text-align: center;
-      color: white;
-    }
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 32px;
-    }
-    .card {
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 12px;
-      padding: 16px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      width: 220px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: contain;
-      margin-bottom: 10px;
-    }
-    .card-content {
-      text-align: center;
-    }
-    .card h3 {
-      margin: 14px 0 8px 0;
-      font-size: 1.1em;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      background: linear-gradient(to bottom, #f8d24e, #ecb42b);
-      color: #0e2d36;
-      padding: 10px 18px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-    }
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #777;
-      background: #fff;
-    }
-    @media (max-width: 1200px) {
-      .grid {
-        justify-content: center;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      ClickMint – AI, Health & Mindset Tools | Digital Products for AI Hustlers
+    </title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Smart AI tools and digital products for AI hustlers, health hackers, and conscious creators. Download free AI hustles guide + premium tools for content creation, email copy, and automation."
+    />
+    <meta
+      name="keywords"
+      content="AI tools, digital products, AI hustles, ChatGPT prompts, content creation, email copy, faceless YouTube, TikTok automation, AI business"
+    />
+    <meta name="author" content="ClickMint" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="ClickMint – AI, Health & Mindset Tools"
+    />
+    <meta
+      property="og:description"
+      content="Smart AI tools and digital products for AI hustlers, health hackers, and conscious creators. Get your free AI hustles guide now!"
+    />
+    <meta
+      property="og:image"
+      content="https://clickmintai.com/assets/logo.png"
+    />
+    <meta property="og:url" content="https://clickmintai.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ClickMint" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="ClickMint – AI, Health & Mindset Tools"
+    />
+    <meta
+      name="twitter:description"
+      content="Smart AI tools and digital products for AI hustlers, health hackers, and conscious creators."
+    />
+    <meta
+      name="twitter:image"
+      content="https://clickmintai.com/assets/logo.png"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/logo.png" />
+    <link rel="apple-touch-icon" href="assets/logo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: url("assets/hero-bg.jpg") center / cover no-repeat;
+        color: #0e2d36;
       }
-    }
-  </style>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header>
-    <img src="assets/logo.png" alt="ClickMint Logo" class="logo" />
-    <div class="header-title">
-      <h1>ClickMint</h1>
-      <p class="tagline">Smart tools for AI hustlers, health hackers, and conscious creators</p>
-    </div>
-  </header>
+      header {
+        display: flex;
+        align-items: center;
+        padding: 40px 60px 80px;
+        color: white;
+        position: relative;
+      }
+      .logo {
+        height: 200px;
+        width: 200px;
+        border-radius: 12px;
+        margin-right: 30px;
+        box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
+      }
+      .header-title {
+        display: flex;
+        flex-direction: column;
+      }
+      .header-title h1 {
+        margin: 0;
+        font-size: 4.5em;
+        font-family: "Orbitron", sans-serif;
+        letter-spacing: 2px;
+      }
+      .tagline {
+        font-size: 1.2em;
+        color: #ccc;
+        margin-top: 10px;
+      }
+      .section {
+        padding: 80px 20px 60px;
+      }
+      .category-title {
+        font-size: 2.8em;
+        margin-bottom: 40px;
+        text-align: center;
+        color: white;
+      }
+      .grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 32px;
+      }
+      .card {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 12px;
+        padding: 16px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        width: 220px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .card img {
+        width: 100%;
+        height: 180px;
+        object-fit: contain;
+        margin-bottom: 10px;
+      }
+      .card-content {
+        text-align: center;
+      }
+      .card h3 {
+        margin: 14px 0 8px 0;
+        font-size: 1.1em;
+      }
+      .btn {
+        display: inline-block;
+        margin-top: 10px;
+        background: linear-gradient(to bottom, #f8d24e, #ecb42b);
+        color: #0e2d36;
+        padding: 10px 18px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+      }
+      footer {
+        text-align: center;
+        padding: 30px;
+        color: #777;
+        background: #fff;
+      }
+      @media (max-width: 1200px) {
+        .grid {
+          justify-content: center;
+        }
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap"
+      rel="stylesheet"
+    />
 
-  <section class="section">
-    <div class="category-title">Free Download</div>
-    <div class="grid">
-      <div class="card">
-        <img src="assets/products/10 Ai Hustles Thumb.jpg" alt="10 AI Hustles" />
-        <div class="card-content">
-          <h3>10 AI Hustles (Free)</h3>
-          <p>Explore 10 real AI income ideas you can start today. Includes PDF + Notion formats.</p>
-          <a class="btn" href="/downloads/Clickmint 10 AI Hustles.zip" download>Get</a>
-        </div>
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ClickMint",
+        "description": "Smart AI tools and digital products for AI hustlers, health hackers, and conscious creators",
+        "url": "https://clickmintai.com",
+        "logo": "https://clickmintai.com/assets/logo.png",
+        "sameAs": ["https://clickmintai.gumroad.com"],
+        "offers": {
+          "@type": "AggregateOffer",
+          "itemCondition": "https://schema.org/NewCondition",
+          "availability": "https://schema.org/InStock",
+          "category": "Digital Products"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <img src="assets/logo.png" alt="ClickMint Logo" class="logo" />
+      <div class="header-title">
+        <h1>ClickMint</h1>
+        <p class="tagline">
+          Smart tools for AI hustlers, health hackers, and conscious creators
+        </p>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <section class="section">
-    <div class="category-title">AI Tools <span style="font-size: 0.6em; color: #ddd">(PDF + Notion formats)</span></div>
-    <div class="grid">
-      <div class="card">
-        <img src="assets/products/AI Digital Product Thumb.jpg" alt="AI Digital Product Generator" />
-        <div class="card-content">
-          <h3>AI Digital Product Generator</h3>
-          <p>Create and launch AI-driven products fast.</p>
-          <a class="btn" href="https://clickmintai.gumroad.com/l/digitalproduct">View</a>
+    <section class="section">
+      <div class="category-title">Free Download</div>
+      <div class="grid">
+        <div class="card">
+          <img
+            src="assets/products/10 Ai Hustles Thumb.jpg"
+            alt="10 AI Hustles"
+          />
+          <div class="card-content">
+            <h3>10 AI Hustles (Free)</h3>
+            <p>
+              Explore 10 real AI income ideas you can start today. Includes PDF
+              + Notion formats.
+            </p>
+            <a
+              class="btn"
+              href="/downloads/Clickmint 10 AI Hustles.zip"
+              download
+              >Get</a
+            >
+          </div>
         </div>
       </div>
-      <div class="card">
-        <img src="assets/products/AI Email Generator Thumb.jpg" alt="AI Email Generator" />
-        <div class="card-content">
-          <h3>AI Email Generator</h3>
-          <p>Generate high-converting email copy instantly.</p>
-          <a class="btn" href="https://clickmintai.gumroad.com/l/emailcopy">View</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="assets/products/50 ChatGPT Prompt Thumb.jpg" alt="50 ChatGPT Prompts" />
-        <div class="card-content">
-          <h3>50 ChatGPT Prompts</h3>
-          <p>Boost your productivity with ready-to-use prompts.</p>
-          <a class="btn" href="https://clickmintai.gumroad.com/l/50prompts">View</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="assets/products/30 Day Content Calendar Thumb.jpg" alt="30 Day Content Calendar" />
-        <div class="card-content">
-          <h3>30 Day Content Calendar</h3>
-          <p>Plan and post engaging AI content every day.</p>
-          <a class="btn" href="https://clickmintai.gumroad.com/l/contentcalendar">View</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="assets/products/AI Fiverr Thumb.jpg" alt="AI Fiverr Gig Builder" />
-        <div class="card-content">
-          <h3>AI Fiverr Gig Builder</h3>
-          <p>Launch profitable AI-powered Fiverr gigs fast.</p>
-          <a class="btn" href="https://clickmintai.gumroad.com/l/fiverr">View</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="assets/products/AI Side Revenue Tracker Thumb.png" alt="AI Side Revenue Tracker" />
-        <div class="card-content">
-          <h3>AI Side Revenue Tracker</h3>
-          <p>Track your side hustle income like a pro.</p>
-          <a class="btn" href="https://clickmintai.gumroad.com/l/revenuetracker">View</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="assets/products/Faceless YouTube Thumb.jpg" alt="Faceless YouTube Script Generator" />
-        <div class="card-content">
-          <h3>Faceless YouTube Script Generator</h3>
-          <p>Generate YouTube scripts without showing your face.</p>
-          <a class="btn" href="https://clickmintai.gumroad.com/l/facelessyoutube">View</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="assets/products/Faceless TikTok Thumb.jpg" alt="Faceless TikTok Toolkit" />
-        <div class="card-content">
-          <h3>Faceless TikTok Toolkit</h3>
-          <p>Create viral TikToks using AI and automation.</p>
-          <a class="btn" href="https://clickmintai.gumroad.com/l/facelesstiktok">View</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="assets/products/Faceless AI Business Thumb.jpg" alt="Faceless AI Business Starter" />
-        <div class="card-content">
-          <h3>Faceless AI Business Starter</h3>
-          <p>Build an automated AI brand with no face required.</p>
-          <a class="btn" href="https://clickmintai.gumroad.com/l/facelessbusinessstarter">View</a>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <div class="category-title">Bundles</div>
-    <div class="grid">
-      <div class="card">
-        <img src="assets/products/AI Hustle Thumb.jpg" alt="AI Hustle Starter Vault" />
-        <div class="card-content">
-          <h3>AI Hustle Starter Vault</h3>
-          <p>Bundle of essential AI hustle tools to kickstart your journey.</p>
-          <a class="btn" href="https://clickmintai.gumroad.com/l/hustlestartervault">View</a>
+    <section class="section">
+      <div class="category-title">
+        AI Tools
+        <span style="font-size: 0.6em; color: #ddd"
+          >(PDF + Notion formats)</span
+        >
+      </div>
+      <div class="grid">
+        <div class="card">
+          <img
+            src="assets/products/AI Digital Product Thumb.jpg"
+            alt="AI Digital Product Generator"
+          />
+          <div class="card-content">
+            <h3>AI Digital Product Generator</h3>
+            <p>Create and launch AI-driven products fast.</p>
+            <a
+              class="btn"
+              href="https://clickmintai.gumroad.com/l/digitalproduct"
+              >View</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="assets/products/AI Email Generator Thumb.jpg"
+            alt="AI Email Generator"
+          />
+          <div class="card-content">
+            <h3>AI Email Generator</h3>
+            <p>Generate high-converting email copy instantly.</p>
+            <a class="btn" href="https://clickmintai.gumroad.com/l/emailcopy"
+              >View</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="assets/products/50 ChatGPT Prompt Thumb.jpg"
+            alt="50 ChatGPT Prompts"
+          />
+          <div class="card-content">
+            <h3>50 ChatGPT Prompts</h3>
+            <p>Boost your productivity with ready-to-use prompts.</p>
+            <a class="btn" href="https://clickmintai.gumroad.com/l/50prompts"
+              >View</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="assets/products/30 Day Content Calendar Thumb.jpg"
+            alt="30 Day Content Calendar"
+          />
+          <div class="card-content">
+            <h3>30 Day Content Calendar</h3>
+            <p>Plan and post engaging AI content every day.</p>
+            <a
+              class="btn"
+              href="https://clickmintai.gumroad.com/l/contentcalendar"
+              >View</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="assets/products/AI Fiverr Thumb.jpg"
+            alt="AI Fiverr Gig Builder"
+          />
+          <div class="card-content">
+            <h3>AI Fiverr Gig Builder</h3>
+            <p>Launch profitable AI-powered Fiverr gigs fast.</p>
+            <a class="btn" href="https://clickmintai.gumroad.com/l/fiverr"
+              >View</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="assets/products/AI Side Revenue Tracker Thumb.png"
+            alt="AI Side Revenue Tracker"
+          />
+          <div class="card-content">
+            <h3>AI Side Revenue Tracker</h3>
+            <p>Track your side hustle income like a pro.</p>
+            <a
+              class="btn"
+              href="https://clickmintai.gumroad.com/l/revenuetracker"
+              >View</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="assets/products/Faceless YouTube Thumb.jpg"
+            alt="Faceless YouTube Script Generator"
+          />
+          <div class="card-content">
+            <h3>Faceless YouTube Script Generator</h3>
+            <p>Generate YouTube scripts without showing your face.</p>
+            <a
+              class="btn"
+              href="https://clickmintai.gumroad.com/l/facelessyoutube"
+              >View</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="assets/products/Faceless TikTok Thumb.jpg"
+            alt="Faceless TikTok Toolkit"
+          />
+          <div class="card-content">
+            <h3>Faceless TikTok Toolkit</h3>
+            <p>Create viral TikToks using AI and automation.</p>
+            <a
+              class="btn"
+              href="https://clickmintai.gumroad.com/l/facelesstiktok"
+              >View</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="assets/products/Faceless AI Business Thumb.jpg"
+            alt="Faceless AI Business Starter"
+          />
+          <div class="card-content">
+            <h3>Faceless AI Business Starter</h3>
+            <p>Build an automated AI brand with no face required.</p>
+            <a
+              class="btn"
+              href="https://clickmintai.gumroad.com/l/facelessbusinessstarter"
+              >View</a
+            >
+          </div>
         </div>
       </div>
-      <div class="card">
-        <img src="assets/products/AI Freelancer Thumb.jpg" alt="AI Freelancer & Service Bundle" />
-        <div class="card-content">
-          <h3>AI Freelancer & Service Bundle</h3>
-          <p>Complete toolkit for AI freelancers and service providers.</p>
-          <a class="btn" href="https://clickmintai.gumroad.com/l/freelancerservicebundle">View</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="assets/products/Faceless Creator Kit Thumb.jpg" alt="Faceless Creator Kit" />
-        <div class="card-content">
-          <h3>Faceless Creator Kit</h3>
-          <p>Bundle for faceless video, content, and automation success.</p>
-          <a class="btn" href="https://clickmintai.gumroad.com/l/facelesscreatorbundle">View</a>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
-    &copy; 2025 ClickMint. All rights reserved.
-  </footer>
-</body>
+    <section class="section">
+      <div class="category-title">Bundles</div>
+      <div class="grid">
+        <div class="card">
+          <img
+            src="assets/products/AI Hustle Thumb.jpg"
+            alt="AI Hustle Starter Vault"
+          />
+          <div class="card-content">
+            <h3>AI Hustle Starter Vault</h3>
+            <p>
+              Bundle of essential AI hustle tools to kickstart your journey.
+            </p>
+            <a
+              class="btn"
+              href="https://clickmintai.gumroad.com/l/hustlestartervault"
+              >View</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="assets/products/AI Freelancer Thumb.jpg"
+            alt="AI Freelancer & Service Bundle"
+          />
+          <div class="card-content">
+            <h3>AI Freelancer & Service Bundle</h3>
+            <p>Complete toolkit for AI freelancers and service providers.</p>
+            <a
+              class="btn"
+              href="https://clickmintai.gumroad.com/l/freelancerservicebundle"
+              >View</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="assets/products/Faceless Creator Kit Thumb.jpg"
+            alt="Faceless Creator Kit"
+          />
+          <div class="card-content">
+            <h3>Faceless Creator Kit</h3>
+            <p>Bundle for faceless video, content, and automation success.</p>
+            <a
+              class="btn"
+              href="https://clickmintai.gumroad.com/l/facelesscreatorbundle"
+              >View</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>&copy; 2025 ClickMint. All rights reserved.</footer>
+  </body>
 </html>
