@@ -365,9 +365,30 @@
         max-width: 1200px;
         margin: 0 auto;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         padding: 0 20px;
+      }
+      .nav-brand {
+        font-family: "Orbitron", sans-serif;
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #f8d24e;
+      }
+      .mobile-menu-btn {
+        display: none;
+        flex-direction: column;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+      }
+      .mobile-menu-btn span {
+        width: 25px;
+        height: 3px;
+        background: white;
+        margin: 3px 0;
+        transition: 0.3s;
       }
       .nav-menu {
         display: flex;
