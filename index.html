@@ -94,6 +94,30 @@
         color: #ccc;
         margin-top: 10px;
       }
+      .urgency-banner {
+        background: rgba(248, 210, 78, 0.9);
+        color: #0e2d36;
+        padding: 8px 16px;
+        border-radius: 25px;
+        margin-top: 15px;
+        display: inline-block;
+        font-weight: bold;
+        animation: pulse 2s infinite;
+      }
+      .fire-emoji {
+        margin-right: 8px;
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
       .section {
         padding: 80px 20px 60px;
       }
