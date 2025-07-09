@@ -118,6 +118,56 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+      .product-badge {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background: linear-gradient(45deg, #ff6b6b, #ff5252);
+        color: white;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.8em;
+        font-weight: bold;
+        z-index: 10;
+      }
+      .product-badge.free {
+        background: linear-gradient(45deg, #4caf50, #45a049);
+      }
+      .product-badge.popular {
+        background: linear-gradient(45deg, #f8d24e, #ecb42b);
+        color: #0e2d36;
+      }
+      .pricing {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 8px 0;
+      }
+      .price {
+        font-size: 1.4em;
+        font-weight: bold;
+        color: #0e2d36;
+      }
+      .price.free {
+        color: #4caf50;
+      }
+      .instant-badge {
+        background: #f8d24e;
+        color: #0e2d36;
+        padding: 2px 8px;
+        border-radius: 12px;
+        font-size: 0.7em;
+        font-weight: bold;
+        margin-bottom: 8px;
       }
       .card img {
         width: 100%;
@@ -649,7 +699,7 @@
               margin-bottom: 25px;
             "
           >
-            Our curated collection of digital products—from ChatGPT prompts to
+            Our curated collection of digital products���from ChatGPT prompts to
             complete business frameworks—eliminates the guesswork and
             accelerates your path to success. We continuously add new tools and
             resources, but always with the same promise: practical, affordable
