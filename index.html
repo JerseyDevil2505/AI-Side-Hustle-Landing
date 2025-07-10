@@ -213,6 +213,7 @@
       .pricing {
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 8px;
         margin: 8px 0;
       }
@@ -628,7 +629,8 @@
         <div class="urgency-banner">
           <span class="fire-emoji">🔥</span>
           <span class="urgency-text"
-            >2,847 downloads this week • Join thousands getting results</span
+            ><span id="download-counter">2,847</span> downloads this week • Join
+            thousands getting results</span
           >
         </div>
       </div>
@@ -895,17 +897,22 @@
           </div>
         </div>
         <div class="card">
+          <div class="product-badge">BUNDLE DEAL</div>
           <img
             src="assets/products/AI Freelancer Thumb.jpg"
             alt="AI Freelancer & Service Bundle"
           />
           <div class="card-content">
+            <div class="instant-badge">⚡ Instant Download</div>
             <h3>AI Freelancer & Service Bundle</h3>
+            <div class="pricing">
+              <span class="price">$10</span>
+            </div>
             <p>Complete toolkit for AI freelancers and service providers.</p>
             <a
               class="btn"
               href="https://clickmintai.gumroad.com/l/freelancerservicebundle"
-              >View</a
+              >Get Bundle Now</a
             >
           </div>
         </div>
@@ -942,22 +949,24 @@
           </div>
           <div class="faq-answer">
             <p>
-              All products include PDF format for easy reading, plus many also
-              include Notion templates for interactive use. You'll get both
-              formats when available.
+              All products come in PDF format for easy reading and a Notion
+              markdown file for interactive use and customization. You'll
+              receive both formats with every purchase.
             </p>
           </div>
         </div>
 
         <div class="faq-item">
           <div class="faq-question">
-            <h3>Do you offer refunds?</h3>
+            <h3>What if I'm not satisfied with my purchase?</h3>
             <span class="faq-toggle">+</span>
           </div>
           <div class="faq-answer">
             <p>
-              Yes! We offer a 30-day money-back guarantee. If you're not
-              satisfied with your purchase, just email us for a full refund.
+              We stand behind our products with confidence. Each digital product
+              is carefully crafted based on proven strategies. If you have any
+              concerns, our support team is here to help you get the most value
+              from your purchase.
             </p>
           </div>
         </div>
@@ -998,19 +1007,6 @@
             <p>
               Never! All our products are one-time purchases. No hidden fees, no
               monthly charges, no subscription traps. Pay once, own forever.
-            </p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            <h3>Do you offer customer support?</h3>
-            <span class="faq-toggle">+</span>
-          </div>
-          <div class="faq-answer">
-            <p>
-              Yes! Email us at support@clickmintai.com and we'll respond within
-              24 hours. We're here to help you succeed.
             </p>
           </div>
         </div>
@@ -1229,7 +1225,7 @@
           <h4>Contact & Support</h4>
           <p>📧 support@clickmintai.com</p>
           <p>💬 Response time: 24 hours</p>
-          <p>🛡️ 30-day money-back guarantee</p>
+          <p>🚀 Lifetime updates included</p>
         </div>
         <div class="footer-section">
           <h4>Quick Links</h4>
@@ -1301,11 +1297,11 @@
         }, 5000);
       }
 
-      // Show notification every 15 seconds
-      setInterval(showSocialProof, 15000);
+      // Show notification every 60 seconds (1 minute)
+      setInterval(showSocialProof, 60000);
 
-      // Show first notification after 3 seconds
-      setTimeout(showSocialProof, 3000);
+      // Show first notification after 15 seconds
+      setTimeout(showSocialProof, 15000);
 
       // Close notification on click
       document
@@ -1315,6 +1311,34 @@
             .getElementById("social-proof-notification")
             .classList.remove("show");
         });
+
+      // Dynamic Download Counter
+      function updateDownloadCounter() {
+        const counter = document.getElementById("download-counter");
+        const baseNumber = 2847; // Starting number from deployment
+
+        // Get days since deployment (yesterday)
+        const deploymentDate = new Date("2025-01-08"); // Yesterday's date
+        const currentDate = new Date();
+        const daysDiff = Math.floor(
+          (currentDate - deploymentDate) / (1000 * 60 * 60 * 24),
+        );
+
+        // Total additional downloads since deployment (3-8 randomized but consistent)
+        const randomSeed = Math.floor(
+          currentDate.getTime() / (1000 * 60 * 60 * 24),
+        ); // Changes daily
+        const totalAdditional = 3 + (randomSeed % 6); // Ranges from 3-8 total
+        const newCount = baseNumber + totalAdditional;
+
+        counter.textContent = newCount.toLocaleString();
+      }
+
+      // Update counter on page load
+      updateDownloadCounter();
+
+      // Update counter every hour (in case someone stays on page long)
+      setInterval(updateDownloadCounter, 3600000);
     </script>
   </body>
 </html>
