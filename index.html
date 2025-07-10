@@ -1316,6 +1316,31 @@
             .getElementById("social-proof-notification")
             .classList.remove("show");
         });
+
+      // Dynamic Download Counter
+      function updateDownloadCounter() {
+        const counter = document.getElementById("download-counter");
+        const baseNumber = 2847;
+
+        // Get days since a fixed date (Jan 1, 2025) to ensure consistency
+        const startDate = new Date("2025-01-01");
+        const currentDate = new Date();
+        const daysDiff = Math.floor(
+          (currentDate - startDate) / (1000 * 60 * 60 * 24),
+        );
+
+        // Add 3-8 downloads per day (random but consistent for the day)
+        const dailyIncrement = 3 + (daysDiff % 6); // Ranges from 3-8
+        const newCount = baseNumber + daysDiff * dailyIncrement;
+
+        counter.textContent = newCount.toLocaleString();
+      }
+
+      // Update counter on page load
+      updateDownloadCounter();
+
+      // Update counter every hour (in case someone stays on page long)
+      setInterval(updateDownloadCounter, 3600000);
     </script>
   </body>
 </html>
