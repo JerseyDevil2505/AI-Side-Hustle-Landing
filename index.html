@@ -1329,9 +1329,12 @@
           (currentDate - deploymentDate) / (1000 * 60 * 60 * 24),
         );
 
-        // Add 3-8 downloads per day (random but consistent for the day)
-        const dailyIncrement = 3 + (daysDiff % 6); // Ranges from 3-8
-        const newCount = baseNumber + daysDiff * dailyIncrement;
+        // Total additional downloads since deployment (3-8 randomized but consistent)
+        const randomSeed = Math.floor(
+          currentDate.getTime() / (1000 * 60 * 60 * 24),
+        ); // Changes daily
+        const totalAdditional = 3 + (randomSeed % 6); // Ranges from 3-8 total
+        const newCount = baseNumber + totalAdditional;
 
         counter.textContent = newCount.toLocaleString();
       }
