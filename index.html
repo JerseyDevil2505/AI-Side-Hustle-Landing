@@ -1320,13 +1320,13 @@
       // Dynamic Download Counter
       function updateDownloadCounter() {
         const counter = document.getElementById("download-counter");
-        const baseNumber = 2847;
+        const baseNumber = 2847; // Starting number from deployment
 
-        // Get days since a fixed date (Jan 1, 2025) to ensure consistency
-        const startDate = new Date("2025-01-01");
+        // Get days since deployment (yesterday)
+        const deploymentDate = new Date("2025-01-08"); // Yesterday's date
         const currentDate = new Date();
         const daysDiff = Math.floor(
-          (currentDate - startDate) / (1000 * 60 * 60 * 24),
+          (currentDate - deploymentDate) / (1000 * 60 * 60 * 24),
         );
 
         // Add 3-8 downloads per day (random but consistent for the day)
