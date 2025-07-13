@@ -1364,6 +1364,17 @@
             value: value,
             currency: "USD",
           });
+
+          // Google Ads conversion tracking
+          if (eventName === "free_download") {
+            gtag("event", "conversion", { send_to: "AW-17260187801" });
+          } else if (eventName === "product_click") {
+            gtag("event", "conversion", {
+              send_to: "AW-17260187801",
+              value: value,
+              currency: "USD",
+            });
+          }
         }
 
         // Google Tag Manager data layer push
