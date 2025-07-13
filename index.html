@@ -1353,6 +1353,59 @@
             .classList.remove("show");
         });
 
+      // Conversion Tracking Events
+      function trackConversion(eventName, value = 0, productName = "") {
+        // Google Analytics 4 event tracking
+        if (typeof gtag !== "undefined") {
+          gtag("event", eventName, {
+            event_category: "conversion",
+            event_label: productName,
+            value: value,
+            currency: "USD",
+          });
+        }
+
+        // Google Tag Manager data layer push
+        if (typeof dataLayer !== "undefined") {
+          dataLayer.push({
+            event: eventName,
+            product_name: productName,
+            value: value,
+            currency: "USD",
+          });
+        }
+      }
+
+      // Track free download
+      const freeDownloadBtn = document.querySelector("a[download]");
+      if (freeDownloadBtn) {
+        freeDownloadBtn.addEventListener("click", function () {
+          trackConversion("free_download", 0, "10 AI Hustles Free");
+        });
+      }
+
+      // Track product clicks (potential purchases)
+      document.querySelectorAll(".btn:not(.free)").forEach((button) => {
+        button.addEventListener("click", function () {
+          const card = this.closest(".card");
+          const productName = card.querySelector("h3").textContent;
+          const priceElement = card.querySelector(".price");
+          const price = priceElement
+            ? parseFloat(priceElement.textContent.replace("$", ""))
+            : 5;
+
+          trackConversion("product_click", price, productName);
+        });
+      });
+
+      // Track newsletter signup
+      const newsletterForm = document.querySelector(".newsletter-form");
+      if (newsletterForm) {
+        newsletterForm.addEventListener("submit", function (e) {
+          trackConversion("newsletter_signup", 0, "Email Newsletter");
+        });
+      }
+
       // Dynamic Download Counter
       function updateDownloadCounter() {
         const counter = document.getElementById("download-counter");
