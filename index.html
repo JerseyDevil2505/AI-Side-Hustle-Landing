@@ -54,6 +54,37 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/logo.png" />
     <link rel="apple-touch-icon" href="assets/logo.png" />
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-W2CD79BTF9");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google Analytics 4 -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ZRLK4MRGQW"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-ZRLK4MRGQW");
+      gtag("config", "AW-17260187801");
+    </script>
+    <!-- End Google Analytics 4 -->
     <link rel="stylesheet" href="style.css" />
     <style>
       html {
@@ -607,6 +638,17 @@
     </script>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-W2CD79BTF9"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <!-- Social Proof Notification -->
     <div id="social-proof-notification" class="social-notification">
       <div class="notification-content">
@@ -1311,6 +1353,70 @@
             .getElementById("social-proof-notification")
             .classList.remove("show");
         });
+
+      // Conversion Tracking Events
+      function trackConversion(eventName, value = 0, productName = "") {
+        // Google Analytics 4 event tracking
+        if (typeof gtag !== "undefined") {
+          gtag("event", eventName, {
+            event_category: "conversion",
+            event_label: productName,
+            value: value,
+            currency: "USD",
+          });
+
+          // Google Ads conversion tracking
+          if (eventName === "free_download") {
+            gtag("event", "conversion", { send_to: "AW-17260187801" });
+          } else if (eventName === "product_click") {
+            gtag("event", "conversion", {
+              send_to: "AW-17260187801",
+              value: value,
+              currency: "USD",
+            });
+          }
+        }
+
+        // Google Tag Manager data layer push
+        if (typeof dataLayer !== "undefined") {
+          dataLayer.push({
+            event: eventName,
+            product_name: productName,
+            value: value,
+            currency: "USD",
+          });
+        }
+      }
+
+      // Track free download
+      const freeDownloadBtn = document.querySelector("a[download]");
+      if (freeDownloadBtn) {
+        freeDownloadBtn.addEventListener("click", function () {
+          trackConversion("free_download", 0, "10 AI Hustles Free");
+        });
+      }
+
+      // Track product clicks (potential purchases)
+      document.querySelectorAll(".btn:not(.free)").forEach((button) => {
+        button.addEventListener("click", function () {
+          const card = this.closest(".card");
+          const productName = card.querySelector("h3").textContent;
+          const priceElement = card.querySelector(".price");
+          const price = priceElement
+            ? parseFloat(priceElement.textContent.replace("$", ""))
+            : 5;
+
+          trackConversion("product_click", price, productName);
+        });
+      });
+
+      // Track newsletter signup
+      const newsletterForm = document.querySelector(".newsletter-form");
+      if (newsletterForm) {
+        newsletterForm.addEventListener("submit", function (e) {
+          trackConversion("newsletter_signup", 0, "Email Newsletter");
+        });
+      }
 
       // Dynamic Download Counter
       function updateDownloadCounter() {
