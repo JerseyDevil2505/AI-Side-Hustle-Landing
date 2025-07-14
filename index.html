@@ -241,6 +241,15 @@
         background: linear-gradient(45deg, #f8d24e, #ecb42b);
         color: #0e2d36;
       }
+      .product-badge.ultimate-badge {
+        background: linear-gradient(45deg, #f6ad55, #ed8936);
+        color: white;
+        font-size: 0.75em;
+        padding: 6px 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
       .pricing {
         display: flex;
         align-items: center;
@@ -303,6 +312,24 @@
       .btn:hover {
         transform: translateY(-2px);
         box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+      }
+      .btn.ultimate-btn {
+        background: linear-gradient(to bottom, #f6ad55, #ed8936);
+        color: white;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.9em;
+        padding: 14px 24px;
+      }
+      .btn.ultimate-btn:hover {
+        box-shadow: 0 6px 20px rgba(246, 173, 85, 0.4);
+      }
+      .original-price {
+        font-size: 1em;
+        color: #999;
+        text-decoration: line-through;
+        margin-left: 8px;
       }
       .social-proof {
         padding: 60px 20px;
@@ -757,9 +784,7 @@
               <span class="price">$5</span>
             </div>
             <p>Create and launch AI-driven products fast.</p>
-            <a
-              class="btn"
-              href="https://clickmintai.gumroad.com/l/digitalproduct"
+            <a class="btn" href="/checkout-ai-digital-product.html"
               >Get Instant Access</a
             >
           </div>
@@ -776,7 +801,7 @@
               <span class="price">$5</span>
             </div>
             <p>Generate high-converting email copy instantly.</p>
-            <a class="btn" href="https://clickmintai.gumroad.com/l/emailcopy"
+            <a class="btn" href="/checkout-ai-email-generator.html"
               >Get Instant Access</a
             >
           </div>
@@ -793,7 +818,7 @@
               <span class="price">$5</span>
             </div>
             <p>Boost your productivity with ready-to-use prompts.</p>
-            <a class="btn" href="https://clickmintai.gumroad.com/l/50prompts"
+            <a class="btn" href="/checkout-chatgpt-prompts.html"
               >Get Instant Access</a
             >
           </div>
@@ -810,9 +835,7 @@
               <span class="price">$5</span>
             </div>
             <p>Plan and post engaging AI content every day.</p>
-            <a
-              class="btn"
-              href="https://clickmintai.gumroad.com/l/contentcalendar"
+            <a class="btn" href="/checkout-content-calendar.html"
               >Get Instant Access</a
             >
           </div>
@@ -829,7 +852,7 @@
               <span class="price">$5</span>
             </div>
             <p>Launch profitable AI-powered Fiverr gigs fast.</p>
-            <a class="btn" href="https://clickmintai.gumroad.com/l/fiverr"
+            <a class="btn" href="/checkout-ai-fiverr-gig.html"
               >Get Instant Access</a
             >
           </div>
@@ -846,9 +869,7 @@
               <span class="price">$5</span>
             </div>
             <p>Track your side hustle income like a pro.</p>
-            <a
-              class="btn"
-              href="https://clickmintai.gumroad.com/l/revenuetracker"
+            <a class="btn" href="/checkout-ai-revenue-tracker.html"
               >Get Instant Access</a
             >
           </div>
@@ -865,9 +886,7 @@
               <span class="price">$5</span>
             </div>
             <p>Generate YouTube scripts without showing your face.</p>
-            <a
-              class="btn"
-              href="https://clickmintai.gumroad.com/l/facelessyoutube"
+            <a class="btn" href="/checkout-faceless-youtube.html"
               >Get Instant Access</a
             >
           </div>
@@ -884,9 +903,7 @@
               <span class="price">$5</span>
             </div>
             <p>Create viral TikToks using AI and automation.</p>
-            <a
-              class="btn"
-              href="https://clickmintai.gumroad.com/l/facelesstiktok"
+            <a class="btn" href="/checkout-faceless-tiktok.html"
               >Get Instant Access</a
             >
           </div>
@@ -903,9 +920,7 @@
               <span class="price">$5</span>
             </div>
             <p>Build an automated AI brand with no face required.</p>
-            <a
-              class="btn"
-              href="https://clickmintai.gumroad.com/l/facelessbusinessstarter"
+            <a class="btn" href="/checkout-faceless-ai-business.html"
               >Get Instant Access</a
             >
           </div>
@@ -917,6 +932,30 @@
       <div class="category-title">Bundles</div>
       <div class="grid">
         <div class="card">
+          <div class="product-badge ultimate-badge">🏆 ULTIMATE</div>
+          <img
+            src="assets/ai-hustle-starter-vault.png"
+            alt="The Vault - All Access Pass"
+          />
+          <div class="card-content">
+            <div class="instant-badge">⚡ Instant Download</div>
+            <h3>The Vault - All Access Pass</h3>
+            <div class="pricing">
+              <span class="price">$35</span>
+              <span class="original-price">$45</span>
+            </div>
+            <p>
+              Get ALL 9 products in one ultimate bundle. Complete AI business
+              toolkit with everything you need to succeed.
+            </p>
+            <a
+              class="btn ultimate-btn"
+              href="checkout-the-vault-all-access.html"
+              >Get Everything Now</a
+            >
+          </div>
+        </div>
+        <div class="card">
           <div class="product-badge">BUNDLE DEAL</div>
           <img
             src="assets/products/AI Hustle Thumb.jpg"
@@ -926,14 +965,12 @@
             <div class="instant-badge">⚡ Instant Download</div>
             <h3>AI Hustle Starter Vault</h3>
             <div class="pricing">
-              <span class="price">$15</span>
+              <span class="price">$10</span>
             </div>
             <p>
               Bundle of essential AI hustle tools to kickstart your journey.
             </p>
-            <a
-              class="btn"
-              href="https://clickmintai.gumroad.com/l/hustlestartervault"
+            <a class="btn" href="checkout-ai-hustle-starter-vault.html"
               >Get Bundle Now</a
             >
           </div>
@@ -951,9 +988,7 @@
               <span class="price">$10</span>
             </div>
             <p>Complete toolkit for AI freelancers and service providers.</p>
-            <a
-              class="btn"
-              href="https://clickmintai.gumroad.com/l/freelancerservicebundle"
+            <a class="btn" href="checkout-ai-freelancer-service-bundle.html"
               >Get Bundle Now</a
             >
           </div>
@@ -971,9 +1006,7 @@
               <span class="price">$10</span>
             </div>
             <p>Bundle for faceless video, content, and automation success.</p>
-            <a
-              class="btn"
-              href="https://clickmintai.gumroad.com/l/facelesscreatorbundle"
+            <a class="btn" href="checkout-faceless-creator-kit.html"
               >Get Bundle Now</a
             >
           </div>
