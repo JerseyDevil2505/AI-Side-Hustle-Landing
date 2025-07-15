@@ -359,6 +359,14 @@
         value: 5,
         currency: "USD",
       });
+
+      // Google Ads Conversion Tracking
+      gtag("event", "conversion", {
+        send_to: "AW-17260187801/-ZBTCIO66vAaEJmhpqZA",
+        value: 5.0,
+        currency: "USD",
+        transaction_id: "digital_product_" + Date.now(),
+      });
     </script>
   </body>
 </html>
