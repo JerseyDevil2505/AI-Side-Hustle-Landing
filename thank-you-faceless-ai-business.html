@@ -415,6 +415,14 @@
         ],
       });
 
+      // Google Ads Conversion Tracking
+      gtag("event", "conversion", {
+        send_to: "AW-17260187801/-ZBTCIO66vAaEJmhpqZA",
+        value: 5.0,
+        currency: "USD",
+        transaction_id: "faceless_business_" + Date.now(),
+      });
+
       // Function to track downloads
       function trackDownload(type) {
         gtag("event", "file_download", {
