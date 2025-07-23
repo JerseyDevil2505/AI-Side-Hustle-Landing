@@ -2053,42 +2053,19 @@
         }
       };
 
-      // Preview Functions - Declared after data
-      function openPreview(productId) {
-        const modal = document.getElementById('preview-modal');
-        const title = document.getElementById('preview-title');
-        const body = document.getElementById('preview-body');
+        // Close modal when clicking outside
+        document.getElementById('preview-modal').addEventListener('click', function(e) {
+          if (e.target === this) {
+            window.closePreview();
+          }
+        });
 
-        const data = previewData[productId];
-        if (data) {
-          title.textContent = data.title;
-          body.innerHTML = data.content;
-          modal.style.display = 'block';
-          document.body.style.overflow = 'hidden';
-
-          // Track preview view
-          trackConversion('preview_view', 0, data.title);
-        }
-      }
-
-      function closePreview() {
-        const modal = document.getElementById('preview-modal');
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-      }
-
-      // Close modal when clicking outside
-      document.getElementById('preview-modal').addEventListener('click', function(e) {
-        if (e.target === this) {
-          closePreview();
-        }
-      });
-
-      // Close modal with Escape key
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-          closePreview();
-        }
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            window.closePreview();
+          }
+        });
       });
     </script>
   </body>
