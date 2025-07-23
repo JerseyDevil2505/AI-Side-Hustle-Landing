@@ -1537,36 +1537,9 @@
       // Update counter every hour (in case someone stays on page long)
       setInterval(updateDownloadCounter, 3600000);
 
-      // Preview System - Wrapped in document ready
-      document.addEventListener('DOMContentLoaded', function() {
-        // Make functions global so onclick handlers can access them
-        window.openPreview = function(productId) {
-          const modal = document.getElementById('preview-modal');
-          const title = document.getElementById('preview-title');
-          const body = document.getElementById('preview-body');
-
-          const data = previewData[productId];
-          if (data) {
-            title.textContent = data.title;
-            body.innerHTML = data.content;
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-
-            // Track preview view
-            if (typeof trackConversion === 'function') {
-              trackConversion('preview_view', 0, data.title);
-            }
-          }
-        };
-
-        window.closePreview = function() {
-          const modal = document.getElementById('preview-modal');
-          modal.style.display = 'none';
-          document.body.style.overflow = 'auto';
-        };
-
-        // Preview Data
-        const previewData = {
+      // Preview System - Define functions immediately for onclick access
+      // Preview Data
+      const previewData = {
         'ai-digital-product': {
           title: 'AI Digital Product Generator',
           content: `
