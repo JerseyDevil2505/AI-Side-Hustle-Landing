@@ -2026,12 +2026,45 @@
         }
       };
 
-        // Close modal when clicking outside
-        document.getElementById('preview-modal').addEventListener('click', function(e) {
-          if (e.target === this) {
-            window.closePreview();
+      // Global preview functions - accessible immediately for onclick handlers
+      window.openPreview = function(productId) {
+        const modal = document.getElementById('preview-modal');
+        const title = document.getElementById('preview-title');
+        const body = document.getElementById('preview-body');
+
+        const data = previewData[productId];
+        if (data) {
+          title.textContent = data.title;
+          body.innerHTML = data.content;
+          modal.style.display = 'block';
+          document.body.style.overflow = 'hidden';
+
+          // Track preview view
+          if (typeof trackConversion === 'function') {
+            trackConversion('preview_view', 0, data.title);
           }
-        });
+        }
+      };
+
+      window.closePreview = function() {
+        const modal = document.getElementById('preview-modal');
+        if (modal) {
+          modal.style.display = 'none';
+          document.body.style.overflow = 'auto';
+        }
+      };
+
+      // Event listeners - wait for DOM ready
+      document.addEventListener('DOMContentLoaded', function() {
+        // Close modal when clicking outside
+        const modal = document.getElementById('preview-modal');
+        if (modal) {
+          modal.addEventListener('click', function(e) {
+            if (e.target === this) {
+              window.closePreview();
+            }
+          });
+        }
 
         // Close modal with Escape key
         document.addEventListener('keydown', function(e) {
