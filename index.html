@@ -1421,6 +1421,19 @@
       </div>
     </footer>
 
+    <!-- Preview Modal -->
+    <div id="preview-modal" class="preview-modal">
+      <div class="preview-content">
+        <div class="preview-header">
+          <h2 class="preview-title" id="preview-title">Product Preview</h2>
+          <button class="preview-close" onclick="closePreview()">&times;</button>
+        </div>
+        <div class="preview-body" id="preview-body">
+          <!-- Content will be dynamically inserted here -->
+        </div>
+      </div>
+    </div>
+
     <script>
       // FAQ Toggle functionality
       document.querySelectorAll(".faq-question").forEach((question) => {
