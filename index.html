@@ -1031,7 +1031,7 @@
       <div class="category-title">Bundles</div>
       <div class="grid">
         <div class="card">
-          <div class="product-badge ultimate-badge">🏆 ULTIMATE</div>
+          <div class="product-badge ultimate-badge">���� ULTIMATE</div>
           <img
             src="assets/ai-hustle-starter-vault.png"
             alt="The Vault - All Access Pass"
@@ -2027,7 +2027,7 @@
       };
 
       // Global preview functions - accessible immediately for onclick handlers
-      window.openPreview = function(productId) {
+      function openPreview(productId) {
         const modal = document.getElementById('preview-modal');
         const title = document.getElementById('preview-title');
         const body = document.getElementById('preview-body');
@@ -2044,15 +2044,15 @@
             trackConversion('preview_view', 0, data.title);
           }
         }
-      };
+      }
 
-      window.closePreview = function() {
+      function closePreview() {
         const modal = document.getElementById('preview-modal');
         if (modal) {
           modal.style.display = 'none';
           document.body.style.overflow = 'auto';
         }
-      };
+      }
 
       // Event listeners - wait for DOM ready
       document.addEventListener('DOMContentLoaded', function() {
