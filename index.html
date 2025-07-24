@@ -2025,8 +2025,8 @@
         }
       };
 
-      // Preview functions - make them global and accessible immediately
-      window.openPreview = function(productId) {
+      // Preview functions - available directly in global scope
+      function openPreview(productId) {
         try {
           console.log('Opening preview for:', productId);
           const modal = document.getElementById('preview-modal');
@@ -2055,15 +2055,15 @@
         } catch (error) {
           console.error('Error opening preview:', error);
         }
-      };
+      }
 
-      window.closePreview = function() {
+      function closePreview() {
         const modal = document.getElementById('preview-modal');
         if (modal) {
           modal.style.display = 'none';
           document.body.style.overflow = 'auto';
         }
-      };
+      }
 
       // Event listeners - wait for DOM ready
       document.addEventListener('DOMContentLoaded', function() {
