@@ -1630,7 +1630,7 @@
               <strong>📋 What You Get:</strong> 50 battle-tested prompts in PDF + Notion template for easy access
             </div>
 
-            <h3>��� Business Strategy Prompts (Sample)</h3>
+            <h3>💼 Business Strategy Prompts (Sample)</h3>
             <h4>Market Analysis & Competitor Research:</h4>
             <ul>
               <li><strong>Prompt #1:</strong> "Analyze the market for [industry] and identify 5 underserved customer segments with their pain points and willingness to pay."</li>
@@ -2009,7 +2009,7 @@
               <strong>��� Case Study:</strong> Rachel built a faceless AI automation agency to $12,000/month in 4 months. She uses a team brand "AutoFlow AI" and has never shown her face in any marketing material.
             </div>
 
-            <h3>🛠��� Essential Tools Stack</h3>
+            <h3>🛠️ Essential Tools Stack</h3>
             <ul>
               <li><strong>AI Tools:</strong> ChatGPT, Claude, Midjourney</li>
               <li><strong>Automation:</strong> Zapier, Make.com</li>
@@ -2025,7 +2025,11 @@
         }
       };
 
-      // Global preview functions - accessible immediately for onclick handlers
+      // Preview functions - declared after data is available
+      window.openPreview = openPreview;
+      window.closePreview = closePreview;
+
+      function openPreview(productId) {
       function openPreview(productId) {
         try {
           console.log('Opening preview for:', productId);
