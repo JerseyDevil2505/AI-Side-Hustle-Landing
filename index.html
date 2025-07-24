@@ -2025,9 +2025,8 @@
         }
       };
 
-      // Preview functions - declared after data is available
-      function openPreview(productId) {
-      function openPreview(productId) {
+      // Preview functions - make them global and accessible immediately
+      window.openPreview = function(productId) {
         try {
           console.log('Opening preview for:', productId);
           const modal = document.getElementById('preview-modal');
@@ -2056,7 +2055,10 @@
         } catch (error) {
           console.error('Error opening preview:', error);
         }
-      }
+      };
+
+      // Also make it available directly for onclick handlers
+      window.openPreview = window.openPreview;
 
       function closePreview() {
         const modal = document.getElementById('preview-modal');
