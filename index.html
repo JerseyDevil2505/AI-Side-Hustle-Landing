@@ -2057,16 +2057,13 @@
         }
       };
 
-      // Also make it available directly for onclick handlers
-      window.openPreview = window.openPreview;
-
-      function closePreview() {
+      window.closePreview = function() {
         const modal = document.getElementById('preview-modal');
         if (modal) {
           modal.style.display = 'none';
           document.body.style.overflow = 'auto';
         }
-      }
+      };
 
       // Event listeners - wait for DOM ready
       document.addEventListener('DOMContentLoaded', function() {
