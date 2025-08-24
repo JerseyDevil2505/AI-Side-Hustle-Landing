@@ -278,29 +278,45 @@
       form.addEventListener('submit', async (event) => {
         event.preventDefault();
 
+        console.log('🔄 Payment form submitted');
+        console.log('🔑 Stripe key:', stripe._keyType, stripe._keyPrefix);
+
         submitButton.disabled = true;
         submitButton.textContent = 'Processing...';
 
+        const checkoutConfig = {
+          lineItems: [{
+            price: 'price_1QVwb1JKFWBdFBNJVcKgr5Ph', // AI Digital Product price ID for $6
+            quantity: 1,
+          }],
+          mode: 'payment',
+          successUrl: window.location.origin + '/thank-you-ai-office-powerpack.html',
+          cancelUrl: window.location.href,
+        };
+
+        console.log('📋 Checkout config:', checkoutConfig);
+
         try {
-          const { error } = await stripe.redirectToCheckout({
-            lineItems: [{
-              price: 'price_1QVwb1JKFWBdFBNJVcKgr5Ph', // AI Digital Product price ID for $6
-              quantity: 1,
-            }],
-            mode: 'payment',
-            successUrl: window.location.origin + '/thank-you-ai-office-powerpack.html',
-            cancelUrl: window.location.href,
-          });
+          console.log('🚀 Calling stripe.redirectToCheckout...');
+          const { error } = await stripe.redirectToCheckout(checkoutConfig);
 
           if (error) {
-            console.error('Error:', error);
-            alert('There was an error processing your payment. Please try again.');
+            console.error('❌ Stripe Error Details:', {
+              type: error.type,
+              code: error.code,
+              message: error.message,
+              param: error.param
+            });
+            alert(`Payment failed: ${error.message}`);
             submitButton.disabled = false;
             submitButton.textContent = 'Instant Access - $6';
+          } else {
+            console.log('✅ Stripe redirect initiated successfully');
           }
         } catch (err) {
-          console.error('Error:', err);
-          alert('There was an error processing your payment. Please try again.');
+          console.error('❌ Unexpected Error:', err);
+          console.error('❌ Error stack:', err.stack);
+          alert(`Unexpected error: ${err.message}`);
           submitButton.disabled = false;
           submitButton.textContent = 'Instant Access - $6';
         }
