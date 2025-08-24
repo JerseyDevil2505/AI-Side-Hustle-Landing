@@ -240,7 +240,7 @@
 
       <div class="download-section">
         <h2 class="download-title">📥 Access Your Revenue Tracker</h2>
-        <div class="download-buttons">
+                <div class="download-buttons">
           <a
             href="assets/products/AI Side Hustle Revenue Tracker - Professional Guide.pdf"
             class="download-btn"
@@ -258,7 +258,7 @@
             📊 Access Notion Workspace
           </a>
         </div>
-        <div class="download-info">
+                <div class="download-info">
           <p><strong>⚡ Complete revenue tracking system included</strong></p>
           <p>• PDF guide for easy reading on any device</p>
           <p>• Interactive Notion workspace with tracking templates</p>
@@ -344,31 +344,31 @@
         gtag("event", "file_download", {
           event_category: "product_download",
           event_label: "AI Side Revenue Tracker - " + format,
-          value: 5,
+          value: 6,
         });
 
         // Google Ads conversion for completed download
         gtag("event", "conversion", {
           send_to: "AW-17260187801",
-          value: 5,
+          value: 6,
           currency: "USD",
         });
       }
 
-      // Track page view as successful purchase completion
+            // Track page view as successful purchase completion
       gtag("event", "purchase_complete", {
         event_category: "ecommerce",
         event_label: "AI Side Revenue Tracker",
-        value: 5,
+        value: 6,
         currency: "USD",
       });
 
       // Google Ads Conversion Tracking
-      gtag("event", "conversion", {
-        send_to: "AW-17260187801/-ZBTCIO66vAaEJmhpqZA",
-        value: 5.0,
-        currency: "USD",
-        transaction_id: "revenue_tracker_" + Date.now(),
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17260187801/-ZBTCIO66vAaEJmhpqZA',
+          'value': 6.0,
+          'currency': 'USD',
+          'transaction_id': 'revenue_tracker_' + Date.now()
       });
     </script>
   </body>
