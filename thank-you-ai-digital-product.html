@@ -341,13 +341,13 @@
         gtag("event", "file_download", {
           event_category: "product_download",
           event_label: "AI Digital Product Generator - " + format,
-          value: 5,
+          value: 6,
         });
 
         // Google Ads conversion for completed download
         gtag("event", "conversion", {
           send_to: "AW-17260187801",
-          value: 5,
+          value: 6,
           currency: "USD",
         });
       }
@@ -356,14 +356,14 @@
       gtag("event", "purchase_complete", {
         event_category: "ecommerce",
         event_label: "AI Digital Product Generator",
-        value: 5,
+        value: 6,
         currency: "USD",
       });
 
       // Google Ads Conversion Tracking
       gtag("event", "conversion", {
         send_to: "AW-17260187801/-ZBTCIO66vAaEJmhpqZA",
-        value: 5.0,
+        value: 6.0,
         currency: "USD",
         transaction_id: "digital_product_" + Date.now(),
       });
