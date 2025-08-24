@@ -163,12 +163,6 @@
         border-color: #f8d24e;
       }
 
-      #card-element {
-        padding: 12px;
-        border: 2px solid #ddd;
-        border-radius: 8px;
-        background: white;
-      }
 
       .buy-button {
         width: 100%;
@@ -209,35 +203,6 @@
         gap: 5px;
       }
 
-      .loading {
-        display: none;
-        text-align: center;
-        margin-top: 20px;
-      }
-
-      .spinner {
-        border: 3px solid #f3f3f3;
-        border-top: 3px solid #f8d24e;
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        animation: spin 1s linear infinite;
-        margin: 0 auto 10px;
-      }
-
-      @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
-
-      .error-message {
-        color: #e74c3c;
-        margin-top: 10px;
-        padding: 10px;
-        background: #ffeaea;
-        border-radius: 5px;
-        display: none;
-      }
 
       @media (max-width: 768px) {
         .checkout-container {
@@ -279,30 +244,12 @@
         </ul>
       </div>
       
-      <form id="checkout-form" class="checkout-form">
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" required placeholder="your@email.com">
-        </div>
-        
-        <div class="form-group">
-          <label for="card-element">Card Information</label>
-          <div id="card-element">
-            <!-- Stripe Elements will create form elements here -->
-          </div>
-        </div>
-        
-        <div class="error-message" id="card-errors"></div>
-        
+      <form id="payment-form" class="checkout-form">
         <button type="submit" id="submit-button" class="buy-button">
           Instant Access - $6
         </button>
         
-        <div class="loading" id="loading">
-          <div class="spinner"></div>
-          <p>Processing your payment...</p>
-        </div>
-      </form>
+        </form>
       
       <div class="security-badges">
         <div class="security-badge">
@@ -321,71 +268,57 @@
     </div>
     
     <script>
-      // Initialize Stripe
-      const stripe = Stripe('pk_live_51RkWN0JojdZIOXoUfXg2MbwsyDx6qjvrBOUM0FnQyU46VgqV11E9jJEbvSrEKR8mNCEYGcrJQ3PGmSTvXT7VgB5h00jqXRMKCM');
-      const elements = stripe.elements();
-      
-      // Create card element
-      const cardElement = elements.create('card', {
-        style: {
-          base: {
-            fontSize: '16px',
-            color: '#424770',
-            '::placeholder': {
-              color: '#aab7c4',
-            },
-          },
-        },
-      });
-      
-      cardElement.mount('#card-element');
-      
+      // Initialize Stripe with working API key
+      const stripe = Stripe('pk_live_51QVwZpJKFWBdFBNJQqCBgggPqy9e1ZqHyNZvCDZYYq2sX16dN2AESN3ddv7ZbxDXYYVbLUPjyRZcRdK6Yc9Wd2tH00aMwOPfD9');
+
       // Handle form submission
-      const form = document.getElementById('checkout-form');
+      const form = document.getElementById('payment-form');
       const submitButton = document.getElementById('submit-button');
-      const loading = document.getElementById('loading');
-      const errorElement = document.getElementById('card-errors');
-      
+
       form.addEventListener('submit', async (event) => {
         event.preventDefault();
 
+        console.log('🔄 Payment form submitted');
+        console.log('🔑 Stripe key:', stripe._keyType, stripe._keyPrefix);
+
         submitButton.disabled = true;
-        loading.style.display = 'block';
-        errorElement.style.display = 'none';
+        submitButton.textContent = 'Processing...';
+
+        const checkoutConfig = {
+          lineItems: [{
+            price: 'price_1QVwb1JKFWBdFBNJVcKgr5Ph', // AI Digital Product price ID for $6
+            quantity: 1,
+          }],
+          mode: 'payment',
+          successUrl: window.location.origin + '/thank-you-ai-office-powerpack.html',
+          cancelUrl: window.location.href,
+        };
+
+        console.log('📋 Checkout config:', checkoutConfig);
 
         try {
-          // Use existing Stripe Price ID for $6 product
-          const {error} = await stripe.redirectToCheckout({
-            lineItems: [{
-              price: 'price_1QVwb1JKFWBdFBNJVcKgr5Ph', // Using existing $6 price ID
-              quantity: 1,
-            }],
-            mode: 'payment',
-            successUrl: window.location.origin + '/thank-you-ai-office-powerpack.html?email=' + encodeURIComponent(document.getElementById('email').value),
-            cancelUrl: window.location.href,
-          });
+          console.log('🚀 Calling stripe.redirectToCheckout...');
+          const { error } = await stripe.redirectToCheckout(checkoutConfig);
 
           if (error) {
-            errorElement.textContent = error.message;
-            errorElement.style.display = 'block';
+            console.error('❌ Stripe Error Details:', {
+              type: error.type,
+              code: error.code,
+              message: error.message,
+              param: error.param
+            });
+            alert(`Payment failed: ${error.message}`);
             submitButton.disabled = false;
-            loading.style.display = 'none';
+            submitButton.textContent = 'Instant Access - $6';
+          } else {
+            console.log('✅ Stripe redirect initiated successfully');
           }
-        } catch (error) {
-          errorElement.textContent = 'Payment processing failed. Please try again.';
-          errorElement.style.display = 'block';
+        } catch (err) {
+          console.error('❌ Unexpected Error:', err);
+          console.error('❌ Error stack:', err.stack);
+          alert(`Unexpected error: ${err.message}`);
           submitButton.disabled = false;
-          loading.style.display = 'none';
-        }
-      });
-      
-      // Handle real-time validation errors from the card Element
-      cardElement.on('change', ({error}) => {
-        if (error) {
-          errorElement.textContent = error.message;
-          errorElement.style.display = 'block';
-        } else {
-          errorElement.style.display = 'none';
+          submitButton.textContent = 'Instant Access - $6';
         }
       });
     </script>
