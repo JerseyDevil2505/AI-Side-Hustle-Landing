@@ -57,7 +57,7 @@
       <div class="download-section">
         <h2 class="download-title">📱 Accede a tu Kit de TikTok</h2>
         <div class="download-buttons">
-          <a href="assets/products/Faceless TikTok Automation Pack - Professional Guide.pdf" class="download-btn" target="_blank" onclick="trackDownload('PDF')">�� Descargar Guía PDF</a>
+          <a href="assets/products/Faceless TikTok Automation Pack - Professional Guide.pdf" class="download-btn" target="_blank" onclick="trackDownload('PDF')">📄 Descargar Guía PDF</a>
           <a href="https://clickmintai.notion.site/Faceless-TikTok-Automation-Pack-Notion-21cd9e2eb3a980039acf6d44c8537dc02" class="download-btn" target="_blank" onclick="trackDownload('Notion')">📱 Acceder a Espacio Notion</a>
         </div>
         <div class="download-info">
@@ -110,12 +110,12 @@
       if (email) { document.getElementById("customer-email").textContent = email; }
 
       function trackDownload(format) {
-        gtag("event", "file_download", { event_category: "product_download", event_label: "Kit de TikTok Sin Rostro - " + format, value: 5 });
-        gtag("event", "conversion", { send_to: "AW-17260187801", value: 5, currency: "USD" });
+        gtag("event", "file_download", { event_category: "product_download", event_label: "Kit de TikTok Sin Rostro - " + format, value: 6 });
+        gtag("event", "conversion", { send_to: "AW-17260187801", value: 6, currency: "USD" });
       }
 
-      gtag("event", "purchase_complete", { event_category: "ecommerce", event_label: "Kit de TikTok Sin Rostro", value: 5, currency: "USD" });
-      gtag("event", "conversion", { send_to: "AW-17260187801/-ZBTCIO66vAaEJmhpqZA", value: 5.0, currency: "USD", transaction_id: "faceless_tiktok_" + Date.now() });
+      gtag("event", "purchase_complete", { event_category: "ecommerce", event_label: "Kit de TikTok Sin Rostro", value: 6, currency: "USD" });
+      gtag("event", "conversion", { send_to: "AW-17260187801/-ZBTCIO66vAaEJmhpqZA", value: 6.0, currency: "USD", transaction_id: "faceless_tiktok_" + Date.now() });
     </script>
   </body>
 </html>
