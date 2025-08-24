@@ -358,7 +358,7 @@
           </div>
           <div class="detail-row">
             <span class="detail-label">Amount:</span>
-            <span class="detail-value">$10.00</span>
+            <span class="detail-value">$25.00</span>
           </div>
           <div class="detail-row">
             <span class="detail-label">Email:</span>
@@ -521,7 +521,7 @@
         page_location: window.location.href,
       });
 
-      // Track successful purchase
+            // Track successful purchase
       gtag("event", "purchase", {
         transaction_id: "freelancer_" + Date.now(),
         value: 10,
@@ -538,11 +538,11 @@
       });
 
       // Google Ads Conversion Tracking
-      gtag("event", "conversion", {
-        send_to: "AW-17260187801/-ZBTCIO66vAaEJmhpqZA",
-        value: 10.0,
-        currency: "USD",
-        transaction_id: "freelancer_" + Date.now(),
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17260187801/-ZBTCIO66vAaEJmhpqZA',
+          'value': 10.0,
+          'currency': 'USD',
+          'transaction_id': 'freelancer_' + Date.now()
       });
 
       // Function to track downloads
