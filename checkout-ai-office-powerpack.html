@@ -354,27 +354,15 @@
         errorElement.style.display = 'none';
 
         try {
-          // Create Stripe Checkout Session
+          // Use existing Stripe Price ID for $6 product
           const {error} = await stripe.redirectToCheckout({
             lineItems: [{
-              price_data: {
-                currency: 'usd',
-                product_data: {
-                  name: 'AI Office PowerPack',
-                  description: '500+ AI prompts for Word, Excel, PowerPoint & Outlook',
-                },
-                unit_amount: 600, // $6.00 in cents
-              },
+              price: 'price_1QVwb1JKFWBdFBNJVcKgr5Ph', // Using existing $6 price ID
               quantity: 1,
             }],
             mode: 'payment',
             successUrl: window.location.origin + '/thank-you-ai-office-powerpack.html?email=' + encodeURIComponent(document.getElementById('email').value),
             cancelUrl: window.location.href,
-            customerEmail: document.getElementById('email').value,
-            metadata: {
-              product: 'ai-office-powerpack',
-              source: 'website'
-            }
           });
 
           if (error) {
