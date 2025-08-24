@@ -149,6 +149,28 @@
           transform: scale(1);
         }
       }
+      .language-switcher {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 8px 15px;
+        backdrop-filter: blur(10px);
+      }
+      .language-switcher a {
+        color: white;
+        text-decoration: none;
+        margin: 0 5px;
+        padding: 5px 10px;
+        border-radius: 15px;
+        transition: all 0.3s ease;
+      }
+      .language-switcher a:hover,
+      .language-switcher a.active {
+        background: rgba(248, 210, 78, 0.8);
+        color: #0e2d36;
+      }
 
       .section {
         padding: 80px 20px 60px;
@@ -638,6 +660,10 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <header>
+      <div class="language-switcher">
+        <a href="index.html" class="active">🇺🇸 EN</a>
+        <a href="index-es.html">🇪🇸 ES</a>
+      </div>
       <img src="assets/logo.png" alt="ClickMint Logo" class="logo" />
       <div class="header-title">
         <h1>ClickMint</h1>
@@ -671,9 +697,6 @@
           </li>
           <li class="nav-item">
             <a href="#about" class="nav-link">About</a>
-          </li>
-          <li class="nav-item">
-            <a href="#testimonials" class="nav-link">Testimonials</a>
           </li>
         </ul>
       </div>
