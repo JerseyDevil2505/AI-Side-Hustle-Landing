@@ -240,7 +240,7 @@
 
       <div class="download-section">
         <h2 class="download-title">📥 Access Your ChatGPT Prompts</h2>
-        <div class="download-buttons">
+                <div class="download-buttons">
           <a
             href="assets/products/50 ChatGPT Prompts for Side Hustlers - Professional Guide.pdf"
             class="download-btn"
@@ -255,10 +255,10 @@
             target="_blank"
             onclick="trackDownload('Notion')"
           >
-            🤖 Access Notion Workspace
+            ��� Access Notion Workspace
           </a>
         </div>
-        <div class="download-info">
+                <div class="download-info">
           <p><strong>⚡ 50 premium ChatGPT prompts included</strong></p>
           <p>• PDF guide for easy reading on any device</p>
           <p>• Interactive Notion workspace with all prompts</p>
@@ -286,7 +286,7 @@
               alt="AI Digital Product Generator"
             />
             <h4>AI Digital Product Generator</h4>
-            <div class="price">$5</div>
+            <div class="price">$6</div>
             <a href="/checkout-ai-digital-product.html" class="upsell-btn"
               >Get Now</a
             >
@@ -298,7 +298,7 @@
               alt="AI Email Generator"
             />
             <h4>AI Email Generator</h4>
-            <div class="price">$5</div>
+            <div class="price">$6</div>
             <a href="/checkout-ai-email-generator.html" class="upsell-btn"
               >Get Now</a
             >
@@ -310,9 +310,9 @@
               alt="AI Hustle Starter Vault"
             />
             <h4>AI Hustle Starter Vault</h4>
-            <div class="price">$15</div>
-            <a href="/checkout-ai-hustle-vault.html" class="upsell-btn"
-              >Save $5</a
+            <div class="price">$25</div>
+            <a href="/checkout-ai-hustle-starter-vault.html" class="upsell-btn"
+              >Save $10</a
             >
           </div>
         </div>
@@ -344,31 +344,31 @@
         gtag("event", "file_download", {
           event_category: "product_download",
           event_label: "50 ChatGPT Prompts - " + format,
-          value: 5,
+          value: 6,
         });
 
         // Google Ads conversion for completed download
         gtag("event", "conversion", {
           send_to: "AW-17260187801",
-          value: 5,
+          value: 6,
           currency: "USD",
         });
       }
 
-      // Track page view as successful purchase completion
+            // Track page view as successful purchase completion
       gtag("event", "purchase_complete", {
         event_category: "ecommerce",
         event_label: "50 ChatGPT Prompts",
-        value: 5,
+        value: 6,
         currency: "USD",
       });
 
       // Google Ads Conversion Tracking
-      gtag("event", "conversion", {
-        send_to: "AW-17260187801/-ZBTCIO66vAaEJmhpqZA",
-        value: 5.0,
-        currency: "USD",
-        transaction_id: "chatgpt_prompts_" + Date.now(),
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17260187801/-ZBTCIO66vAaEJmhpqZA',
+          'value': 6.0,
+          'currency': 'USD',
+          'transaction_id': 'chatgpt_prompts_' + Date.now()
       });
     </script>
   </body>
