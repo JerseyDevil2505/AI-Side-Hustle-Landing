@@ -458,27 +458,27 @@
                 // Track successful payment
                 gtag('event', 'purchase', {
                     transaction_id: token.id,
-                    value: 10,
+                    value: 25,
                     currency: 'USD',
                     items: [{
                         item_id: 'ai-freelancer-service-bundle',
                         item_name: 'Paquete de Servicios para Freelancers de IA',
                         category: 'Bundle',
                         quantity: 1,
-                        price: 10
+                        price: 25
                     }]
                 });
 
                 // Google Ads conversion tracking
                 gtag('event', 'conversion', {
                     'send_to': 'AW-17260187801/YOUR_CONVERSION_LABEL',
-                    'value': 10,
+                    'value': 25,
                     'currency': 'USD'
                 });
 
                 // Store email for thank you page
                 localStorage.setItem('customerEmail', document.getElementById('email').value);
-                localStorage.setItem('purchaseAmount', '10');
+                localStorage.setItem('purchaseAmount', '25');
                 localStorage.setItem('productName', 'Paquete de Servicios para Freelancers de IA');
                 
                 // Redirect to thank you page
