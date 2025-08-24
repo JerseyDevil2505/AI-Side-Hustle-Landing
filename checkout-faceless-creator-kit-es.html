@@ -425,13 +425,13 @@
             // Track purchase attempt
             gtag('event', 'begin_checkout', {
                 currency: 'USD',
-                value: 10,
+                value: 25,
                 items: [{
                     item_id: 'faceless-creator-kit',
                     item_name: 'Kit de Creador Sin Rostro',
                     category: 'Bundle',
                     quantity: 1,
-                    price: 10
+                    price: 25
                 }]
             });
 
@@ -458,14 +458,14 @@
                 // Track successful payment
                 gtag('event', 'purchase', {
                     transaction_id: token.id,
-                    value: 10,
+                    value: 25,
                     currency: 'USD',
                     items: [{
                         item_id: 'faceless-creator-kit',
                         item_name: 'Kit de Creador Sin Rostro',
                         category: 'Bundle',
                         quantity: 1,
-                        price: 10
+                        price: 25
                     }]
                 });
 
@@ -478,7 +478,7 @@
 
                 // Store email for thank you page
                 localStorage.setItem('customerEmail', document.getElementById('email').value);
-                localStorage.setItem('purchaseAmount', '10');
+                localStorage.setItem('purchaseAmount', '25');
                 localStorage.setItem('productName', 'Kit de Creador Sin Rostro');
                 
                 // Redirect to thank you page
