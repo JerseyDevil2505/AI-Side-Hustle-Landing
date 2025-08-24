@@ -392,13 +392,39 @@
             currency: "USD",
           });
 
-          // Here you would send the payment method to your server
-          // For now, simulate success and redirect to thank you page
-          setTimeout(() => {
-            window.location.href =
-              "/thank-you-ai-digital-product.html?email=" +
-              encodeURIComponent(document.getElementById("email").value);
-          }, 2000);
+          // Use Stripe Checkout for secure payment processing
+          try {
+            const {error} = await stripe.redirectToCheckout({
+              lineItems: [{
+                price_data: {
+                  currency: 'usd',
+                  product_data: {
+                    name: 'AI Digital Product Generator Toolkit',
+                    description: 'Complete toolkit for creating digital products with AI',
+                  },
+                  unit_amount: 600, // $6.00 in cents
+                },
+                quantity: 1,
+              }],
+              mode: 'payment',
+              successUrl: window.location.origin + '/thank-you-ai-digital-product.html?email=' + encodeURIComponent(document.getElementById('email').value),
+              cancelUrl: window.location.href,
+              customerEmail: document.getElementById('email').value,
+              metadata: {
+                product: 'ai-digital-product-generator',
+                source: 'website'
+              }
+            });
+
+            if (error) {
+              throw error;
+            }
+          } catch (error) {
+            errorElement.textContent = 'Payment processing failed. Please try again.';
+            errorElement.style.display = 'block';
+            submitButton.disabled = false;
+            loading.style.display = 'none';
+          }
         }
       });
 
