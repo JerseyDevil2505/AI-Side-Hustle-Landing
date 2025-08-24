@@ -399,12 +399,22 @@
         });
       }
 
-      // Track page view as successful purchase completion
-      gtag("event", "purchase_complete", {
-        event_category: "ecommerce",
-        event_label: "AI Office PowerPack",
+      // Track successful purchase (only fires after actual payment)
+      const transactionId = 'ai_office_powerpack_' + Date.now();
+
+      gtag("event", "purchase", {
+        transaction_id: transactionId,
         value: 6,
         currency: "USD",
+        items: [
+          {
+            item_id: "ai-office-powerpack",
+            item_name: "AI Office PowerPack",
+            category: "Digital Product",
+            quantity: 1,
+            price: 6,
+          },
+        ],
       });
 
       // Google Ads Conversion Tracking
@@ -412,7 +422,15 @@
           'send_to': 'AW-17260187801/-ZBTCIO66vAaEJmhpqZA',
           'value': 6.0,
           'currency': 'USD',
-          'transaction_id': 'ai_office_powerpack_' + Date.now()
+          'transaction_id': transactionId
+      });
+
+      // Additional conversion event for Google Ads
+      gtag("event", "conversion", {
+        send_to: "AW-17260187801",
+        value: 6,
+        currency: "USD",
+        transaction_id: transactionId
       });
     </script>
   </body>
