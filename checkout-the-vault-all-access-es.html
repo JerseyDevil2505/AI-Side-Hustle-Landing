@@ -587,27 +587,27 @@
                 // Track successful payment
                 gtag('event', 'purchase', {
                     transaction_id: token.id,
-                    value: 35,
+                    value: 49,
                     currency: 'USD',
                     items: [{
                         item_id: 'the-vault-all-access',
                         item_name: 'La Bóveda - Pase de Acceso Total',
                         category: 'Ultimate Bundle',
                         quantity: 1,
-                        price: 35
+                        price: 49
                     }]
                 });
 
                 // Google Ads conversion tracking
                 gtag('event', 'conversion', {
                     'send_to': 'AW-17260187801/YOUR_CONVERSION_LABEL',
-                    'value': 35,
+                    'value': 49,
                     'currency': 'USD'
                 });
 
                 // Store email for thank you page
                 localStorage.setItem('customerEmail', document.getElementById('email').value);
-                localStorage.setItem('purchaseAmount', '35');
+                localStorage.setItem('purchaseAmount', '49');
                 localStorage.setItem('productName', 'La Bóveda - Pase de Acceso Total');
                 
                 // Redirect to thank you page
