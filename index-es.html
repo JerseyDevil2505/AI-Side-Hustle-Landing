@@ -622,6 +622,14 @@
           justify-content: center;
         }
       }
+      /* Ad-mode helpers */
+      .ad-mode-hidden { display: none !important; }
+      .sale-banner { background: rgba(255, 107, 107, 0.9); color: white; text-align: center; padding: 15px; margin-bottom: 30px; border-radius: 10px; animation: pulse 2s infinite; }
+      .sale-title { margin: 0; font-size: 1.3em; }
+      .sale-subtitle { margin: 5px 0 0 0; font-size: 0.9em; }
+      .ad-trust-bar { background: rgba(0, 0, 0, 0.5); color: white; padding: 10px 20px; text-align: center; border-radius: 8px; margin: 20px auto; max-width: 900px; }
+      .ad-trust-text { font-weight: bold; }
+      .card.ad-highlight { box-shadow: 0 12px 30px rgba(0,0,0,0.25); transform: none; }
     </style>
     <link
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap"
@@ -703,17 +711,9 @@
     </nav>
 
     <section class="section" id="productos">
-      <div style="
-        background: rgba(255, 107, 107, 0.9);
-        color: white;
-        text-align: center;
-        padding: 15px;
-        margin-bottom: 30px;
-        border-radius: 10px;
-        animation: pulse 2s infinite;
-      ">
-        <h3 style="margin: 0; font-size: 1.3em;">🍂 Oferta Flash de Otoño, 50% de descuento Termina el 30 de septiembre</h3>
-        <p style="margin: 5px 0 0 0; font-size: 0.9em;">Tiempo limitado: Todos los productos solo $6 (antes $12)</p>
+      <div class="sale-banner">
+        <h3 class="sale-title">🍂 Oferta Flash de Otoño, 50% de descuento Termina el 30 de septiembre</h3>
+        <p class="sale-subtitle">Tiempo limitado: Todos los productos solo $6 (antes $12)</p>
       </div>
       <div class="category-title">
         Herramientas de IA
@@ -1164,7 +1164,7 @@
             line-height: 1.7;
             margin-bottom: 25px;
           ">
-            Pasé meses experimentando, probando y descubriendo qué estrategias de IA realmente generan ingresos reales. Luego empaqué todo en guías simples y accionables que cualquiera puede seguir. <strong>Sin jerga intimidante, sin configuraciones complejas—solo herramientas prácticas que funcionan.</strong>
+            Pasé meses experimentando, probando y descubriendo qué estrategias de IA realmente generan ingresos reales. Luego empaqué todo en guías simples y accionables que cualquiera puede seguir. <strong>Sin jerga intimidante, sin configuraciones complejas��solo herramientas prácticas que funcionan.</strong>
           </p>
           
           <div style="
@@ -1485,6 +1485,22 @@
           trackConversion("newsletter_signup", 0, "Email Newsletter");
         });
       }
+    </script>
+    <script>
+      // Ad-focused landing page logic (Spanish)
+      function getParam(name) { const params = new URLSearchParams(window.location.search); return params.get(name); }
+      (function applyAdMode(){
+        const ad = getParam('ad');
+        if(!ad || !(ad === '1' || ad.toLowerCase() === 'true')) return;
+        // Hide distractions
+        ['nav','footer','.language-switcher','.newsletter-section'].forEach(sel=>{ const el=document.querySelector(sel); if(el) el.classList.add('ad-mode-hidden'); });
+        // Disable internal anchors
+        document.querySelectorAll('a[href^="#"]').forEach(a=>{ a.addEventListener('click', e=>e.preventDefault()); a.removeAttribute('href'); });
+        // Insert quick trust bar under header
+        const headerEl=document.querySelector('header'); if(headerEl && !document.querySelector('.ad-trust-bar')){ const trustBar=document.createElement('div'); trustBar.className='ad-trust-bar'; trustBar.innerHTML='<div class="ad-trust-text">Amado por 5,000+ Emprendedores de IA! ✓ Descarga Instantánea ✓ Actualizaciones de por vida ✓ Soporte por Email</div>'; headerEl.parentNode.insertBefore(trustBar, headerEl.nextSibling); }
+        // Message match by product slug
+        const productSlug = getParam('product'); if(productSlug){ const normalized = productSlug.replace(/-/g,' ').toLowerCase(); const cards = Array.from(document.querySelectorAll('.grid .card')); let matched=null; cards.forEach(card=>{ const title=(card.querySelector('h3')?.textContent||'').toLowerCase(); if(title.includes(normalized) || normalized.includes(title)) matched=card; }); if(matched){ const titleText=matched.querySelector('h3')?.textContent||''; const desc=matched.querySelector('.card-content p')?.textContent||''; const h1=document.querySelector('.header-title h1'); const tagline=document.querySelector('.header-title .tagline'); if(h1 && titleText) h1.textContent=titleText; if(tagline && desc) tagline.textContent=desc; cards.forEach(card=>{ if(card!==matched) card.classList.add('ad-mode-hidden'); else card.classList.add('ad-highlight'); }); } }
+      })();
     </script>
   </body>
 </html>
