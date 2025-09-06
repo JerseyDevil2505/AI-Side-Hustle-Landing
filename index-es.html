@@ -622,6 +622,17 @@
           justify-content: center;
         }
       }
+      /* Ad-mode helpers */
+      .ad-mode-hidden { display: none !important; }
+      .sale-banner { background: rgba(255, 107, 107, 0.9); color: white; text-align: center; padding: 15px; margin-bottom: 30px; border-radius: 10px; animation: pulse 2s infinite; }
+      .sale-title { margin: 0; font-size: 1.3em; }
+      .sale-subtitle { margin: 5px 0 0 0; font-size: 0.9em; }
+      .ad-trust-bar { background: rgba(0, 0, 0, 0.5); color: white; padding: 10px 20px; text-align: center; border-radius: 8px; margin: 20px auto; max-width: 900px; }
+      .ad-trust-text { font-weight: bold; }
+      .card.ad-highlight { box-shadow: 0 12px 30px rgba(0,0,0,0.25); transform: none; }
+      /* On-sale badge */
+      .product-badge.on-sale { background: linear-gradient(45deg,#f8d24e,#ecb42b); color: #0e2d36; font-weight: 700; text-transform: uppercase; font-size: 0.75em; padding: 6px 10px; }
+      .section--tight { padding: 20px 20px 40px; }
     </style>
     <link
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap"
@@ -670,60 +681,13 @@
         <p class="tagline">
           Herramientas inteligentes para emprendedores de IA, biohackers y creadores conscientes
         </p>
-        <div class="urgency-banner">
-          <span class="fire-emoji">🔥</span>
-          <span class="urgency-text">Transforma tus ideas en productos de IA rentables</span>
-        </div>
       </div>
     </header>
 
-    <nav>
-      <div class="nav-container">
-        <div class="nav-brand">ClickMint</div>
-        <button class="mobile-menu-btn" id="mobile-menu-btn">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <ul class="nav-menu" id="nav-menu">
-          <li class="nav-item">
-            <a href="#productos" class="nav-link cta">Comprar Herramientas IA</a>
-          </li>
-          <li class="nav-item">
-            <a href="#paquetes" class="nav-link">Paquetes</a>
-          </li>
-          <li class="nav-item">
-            <a href="#fundador" class="nav-link">Fundador</a>
-          </li>
-          <li class="nav-item">
-            <a href="#acerca" class="nav-link">Acerca</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
 
-    <section class="section" id="productos">
-      <div style="
-        background: rgba(255, 107, 107, 0.9);
-        color: white;
-        text-align: center;
-        padding: 15px;
-        margin-bottom: 30px;
-        border-radius: 10px;
-        animation: pulse 2s infinite;
-      ">
-        <h3 style="margin: 0; font-size: 1.3em;">🍂 Oferta Flash de Otoño, 50% de descuento Termina el 30 de septiembre</h3>
-        <p style="margin: 5px 0 0 0; font-size: 0.9em;">Tiempo limitado: Todos los productos solo $6 (antes $12)</p>
-      </div>
-      <div class="category-title">
-        Herramientas de IA
-        <span style="font-size: 0.6em; color: #ddd"
-          >(Plantillas y marcos listos para usar)</span
-        >
-      </div>
+    <section class="section section--tight" id="productos">
       <div class="grid">
         <div class="card">
-          <div class="product-badge popular">MÁS POPULAR</div>
           <img
             src="assets/products/AI Digital Product Thumb.jpg"
             alt="Generador de Productos Digitales IA"
@@ -1018,21 +982,10 @@
           </div>
         </div>
 
-        <div class="faq-item">
-          <div class="faq-question">
-            <h3>¿Están incluidas las actualizaciones con mi compra?</h3>
-            <span class="faq-toggle">+</span>
-          </div>
-          <div class="faq-answer">
-            <p>
-              ¡Absolutamente! Obtienes actualizaciones de por vida para cualquier producto que compres. Mientras mejoramos y expandimos el contenido, recibirás las actualizaciones gratis.
-            </p>
-          </div>
-        </div>
 
         <div class="faq-item">
           <div class="faq-question">
-            <h3>¿Qué tan rápido recibiré mi descarga?</h3>
+            <h3>¿Qué tan rápido recibir�� mi descarga?</h3>
             <span class="faq-toggle">+</span>
           </div>
           <div class="faq-answer">
@@ -1105,7 +1058,7 @@
                 margin-bottom: 10px;
                 font-family: 'Orbitron', sans-serif;
               ">
-                De Experimentador a Emprendedor IA
+                Conoce a tu guía de IA
               </h3>
               <p style="
                 color: #f8d24e;
@@ -1113,76 +1066,23 @@
                 margin: 0;
                 font-weight: bold;
               ">
-                "La IA no se trata de reemplazarte—se trata de amplificar tu potencial"
+                Construí ClickMint para que las herramientas de ingresos con IA sean simples, rápidas y accesibles para cualquiera.
               </p>
             </div>
           </div>
-          
-          <p style="
-            color: #0e2d36;
-            font-size: 1.2em;
-            line-height: 1.7;
-            margin-bottom: 25px;
-          ">
-            <strong>Hola, soy el fundador detrás de ClickMint.</strong> Como tú, siempre he estado fascinado por la tecnología y encontrar formas más inteligentes de generar ingresos—especialmente del tipo que funciona mientras duermes.
-          </p>
-          
-          <p style="
-            color: #555;
-            font-size: 1.1em;
-            line-height: 1.7;
-            margin-bottom: 20px;
-          ">
-            Cuando la IA comenzó a hacer titulares, seré honesto—estaba emocionado e intimidado. ¿Esta tecnología me dejaría atrás? Entonces me di cuenta de algo crucial: <strong>La IA no es tu competencia, es tu compañero más poderoso.</strong>
-          </p>
-          
-          <div style="
-            background: rgba(248, 210, 78, 0.1);
-            border-left: 4px solid #f8d24e;
-            padding: 20px;
-            margin: 25px 0;
-            text-align: left;
-            border-radius: 8px;
-          ">
-            <h4 style="
-              color: #0e2d36;
-              margin-top: 0;
-              margin-bottom: 15px;
-              font-size: 1.2em;
-            ">Por qué construí ClickMint:</h4>
-            <ul style="color: #555; margin: 0; padding-left: 20px; line-height: 1.6;">
-              <li><strong>La edad es solo un número:</strong> Ya tengas 18 o 75 años, la IA nivela el campo de juego</li>
-              <li><strong>No se necesita experiencia técnica:</strong> Si puedes enviar un email, puedes usar IA</li>
-              <li><strong>Enfoque en ingresos pasivos:</strong> Construye sistemas que generen ingresos 24/7</li>
-              <li><strong>No te quedes atrás:</strong> La revolución IA está ocurriendo ahora—sé parte de ella</li>
+
+          <div style="color: #0e2d36; font-size: 1.15em; line-height: 1.7; margin-bottom: 20px; text-align: left; max-width:700px; margin-left:auto; margin-right:auto;">
+            <ul style="color: #0e2d36; margin: 0; padding-left: 20px; line-height: 1.8;">
+              <li style="margin-bottom:10px;"><strong>Funciona para cualquier edad</strong> — no se necesita experiencia técnica</li>
+              <li style="margin-bottom:10px;"><strong>Sin configuraciones confusas</strong> — solo herramientas plug-and-play</li>
+              <li style="margin-bottom:10px;"><strong>Crea fuentes de ingresos</strong> que funcionen mientras duermes</li>
+              <li style="margin-bottom:10px;"><strong>Mantente por delante de la curva IA</strong> — no te quedes atrás</li>
             </ul>
           </div>
-          
-          <p style="
-            color: #555;
-            font-size: 1.1em;
-            line-height: 1.7;
-            margin-bottom: 25px;
-          ">
-            Pasé meses experimentando, probando y descubriendo qué estrategias de IA realmente generan ingresos reales. Luego empaqué todo en guías simples y accionables que cualquiera puede seguir. <strong>Sin jerga intimidante, sin configuraciones complejas—solo herramientas prácticas que funcionan.</strong>
+
+          <p style="color: #555; font-size: 1.1em; line-height: 1.7; margin-bottom: 25px;">
+            ClickMint se trata de herramientas prácticas que ofrecen resultados reales — sin relleno, jerga ni agobio.
           </p>
-          
-          <div style="
-            border: 2px solid #f8d24e;
-            border-radius: 12px;
-            padding: 20px;
-            background: rgba(248, 210, 78, 0.05);
-          ">
-            <p style="
-              color: #0e2d36;
-              font-size: 1.1em;
-              font-weight: bold;
-              margin: 0;
-              font-style: italic;
-            ">
-              "El mejor momento para empezar con IA fue ayer. El segundo mejor momento es ahora mismo. No dejes que el miedo o la edad te impidan construir los flujos de ingresos que mereces."
-            </p>
-          </div>
         </div>
       </div>
     </section>
@@ -1225,7 +1125,7 @@
             "
           >
             <strong
-              >Empoderar a la próxima generación de emprendedores de IA para construir negocios rentables y escalables sin las barreras tradicionales.</strong
+              >En ClickMint hacemos las herramientas de IA simples, asequibles y prácticas — sin suscripciones, sin ventas adicionales, solo valor real. Nuestra meta: empoderar a creadores y emprendedores para convertir la IA en ingresos.</strong
             >
           </p>
           <p
@@ -1450,6 +1350,9 @@
               value: value,
               currency: "USD",
             });
+          } else if (eventName === "landing_view") {
+            // Landing Page View conversion
+            gtag('event', 'conversion', { send_to: 'AW-17260187801/JyRGCJTq0ZUbEJmhpqZA' });
           }
         }
 
@@ -1463,6 +1366,14 @@
           });
         }
       }
+
+      // Fire landing page view conversion on initial page load
+      try {
+        if (!window.__landing_view_fired) {
+          window.__landing_view_fired = true;
+          trackConversion('landing_view', 0, 'Landing Page');
+        }
+      } catch (e) { }
 
       // Track product clicks (potential purchases)
       document.querySelectorAll(".btn:not(.free)").forEach((button) => {
@@ -1485,6 +1396,41 @@
           trackConversion("newsletter_signup", 0, "Email Newsletter");
         });
       }
+    </script>
+    <script>
+      // Ad-focused landing page logic (Spanish)
+      function getParam(name) { const params = new URLSearchParams(window.location.search); return params.get(name); }
+      (function applyAdMode(){
+        const ad = getParam('ad');
+        if(!ad || !(ad === '1' || ad.toLowerCase() === 'true')) return;
+        // Hide distractions
+        ['nav','footer','.language-switcher','.newsletter-section'].forEach(sel=>{ const el=document.querySelector(sel); if(el) el.classList.add('ad-mode-hidden'); });
+        // Disable internal anchors
+        document.querySelectorAll('a[href^="#"]').forEach(a=>{ a.addEventListener('click', e=>e.preventDefault()); a.removeAttribute('href'); });
+        // Insert quick trust bar under header
+        const headerEl=document.querySelector('header'); if(headerEl && !document.querySelector('.ad-trust-bar')){ const trustBar=document.createElement('div'); trustBar.className='ad-trust-bar'; trustBar.innerHTML='<div class="ad-trust-text">Amado por 5,000+ Emprendedores de IA! ✓ Descarga Instantánea ✓ Actualizaciones de por vida ✓ Soporte por Email</div>'; headerEl.parentNode.insertBefore(trustBar, headerEl.nextSibling); }
+        // Message match by product slug
+        const productSlug = getParam('product'); if(productSlug){ const normalized = productSlug.replace(/-/g,' ').toLowerCase(); const cards = Array.from(document.querySelectorAll('.grid .card')); let matched=null; cards.forEach(card=>{ const title=(card.querySelector('h3')?.textContent||'').toLowerCase(); if(title.includes(normalized) || normalized.includes(title)) matched=card; }); if(matched){ const titleText=matched.querySelector('h3')?.textContent||''; const desc=matched.querySelector('.card-content p')?.textContent||''; const h1=document.querySelector('.header-title h1'); const tagline=document.querySelector('.header-title .tagline'); if(h1 && titleText) h1.textContent=titleText; if(tagline && desc) tagline.textContent=desc; cards.forEach(card=>{ if(card!==matched) card.classList.add('ad-mode-hidden'); else card.classList.add('ad-highlight'); }); } }
+      })();
+    </script>
+    <script>
+      (function applySaleBadges(){
+        const sections = ['#products','#productos'];
+        sections.forEach(function(sel){
+          const section = document.querySelector(sel);
+          if(!section) return;
+          section.querySelectorAll('.card').forEach(function(card){
+            const pop = card.querySelector('.product-badge.popular');
+            if(pop) pop.remove();
+            if(!card.querySelector('.product-badge.on-sale') && !card.querySelector('.product-badge.ultimate-badge')){
+              const badge = document.createElement('div');
+              badge.className = 'product-badge on-sale';
+              badge.textContent = 'ON SALE';
+              card.insertBefore(badge, card.firstChild);
+            }
+          });
+        });
+      })();
     </script>
   </body>
 </html>

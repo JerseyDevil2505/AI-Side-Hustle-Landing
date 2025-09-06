@@ -575,5 +575,26 @@
         localStorage.removeItem("productName");
       }, 5000);
     </script>
+    <script>
+      (function(){
+        // If page already contains explicit purchase conversion action, skip
+        if (document.documentElement.innerHTML.indexOf('AW-17260187801/-ZBTCIO66vAaEJmhpqZA') !== -1) return;
+        if (window.__purchase_conversion_fired) return; window.__purchase_conversion_fired = true;
+        try{
+          if (typeof gtag !== 'undefined'){
+            var value = (function(){
+              var el = document.querySelector('.pricing .price') || document.querySelector('.price') || null;
+              if(el) return parseFloat((el.textContent||'').replace(/[^0-9\.]/g,'')) || 1.0; return 1.0;
+            })();
+            gtag('event','conversion',{
+              'send_to':'AW-17260187801/-ZBTCIO66vAaEJmhpqZA',
+              'value': value,
+              'currency':'USD',
+              'transaction_id': 'purchase_'+Date.now()
+            });
+          }
+        }catch(e){}
+      })();
+    </script>
   </body>
 </html>
