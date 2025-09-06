@@ -985,7 +985,7 @@
 
         <div class="faq-item">
           <div class="faq-question">
-            <h3>¿Qué tan rápido recibiré mi descarga?</h3>
+            <h3>¿Qué tan rápido recibir�� mi descarga?</h3>
             <span class="faq-toggle">+</span>
           </div>
           <div class="faq-answer">
@@ -1350,6 +1350,9 @@
               value: value,
               currency: "USD",
             });
+          } else if (eventName === "landing_view") {
+            // Landing Page View conversion
+            gtag('event', 'conversion', { send_to: 'AW-17260187801/JyRGCJTq0ZUbEJmhpqZA' });
           }
         }
 
@@ -1363,6 +1366,14 @@
           });
         }
       }
+
+      // Fire landing page view conversion on initial page load
+      try {
+        if (!window.__landing_view_fired) {
+          window.__landing_view_fired = true;
+          trackConversion('landing_view', 0, 'Landing Page');
+        }
+      } catch (e) { }
 
       // Track product clicks (potential purchases)
       document.querySelectorAll(".btn:not(.free)").forEach((button) => {
