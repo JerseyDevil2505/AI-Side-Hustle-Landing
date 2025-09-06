@@ -630,6 +630,8 @@
       .ad-trust-bar { background: rgba(0, 0, 0, 0.5); color: white; padding: 10px 20px; text-align: center; border-radius: 8px; margin: 20px auto; max-width: 900px; }
       .ad-trust-text { font-weight: bold; }
       .card.ad-highlight { box-shadow: 0 12px 30px rgba(0,0,0,0.25); transform: none; }
+      /* On-sale badge */
+      .product-badge.on-sale { background: linear-gradient(45deg,#f8d24e,#ecb42b); color: #0e2d36; font-weight: 700; text-transform: uppercase; font-size: 0.75em; padding: 6px 10px; }
     </style>
     <link
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap"
@@ -707,10 +709,6 @@
     </nav>
 
     <section class="section" id="productos">
-      <div class="sale-banner">
-        <h3 class="sale-title">🍂 Oferta Flash de Otoño, 50% de descuento Termina el 30 de septiembre</h3>
-        <p class="sale-subtitle">Tiempo limitado: Todos los productos solo $6 (antes $12)</p>
-      </div>
       <div class="category-title">
         Herramientas de IA
         <span style="font-size: 0.6em; color: #ddd"
@@ -719,7 +717,6 @@
       </div>
       <div class="grid">
         <div class="card">
-          <div class="product-badge popular">MÁS POPULAR</div>
           <img
             src="assets/products/AI Digital Product Thumb.jpg"
             alt="Generador de Productos Digitales IA"
@@ -1432,6 +1429,25 @@
         const headerEl=document.querySelector('header'); if(headerEl && !document.querySelector('.ad-trust-bar')){ const trustBar=document.createElement('div'); trustBar.className='ad-trust-bar'; trustBar.innerHTML='<div class="ad-trust-text">Amado por 5,000+ Emprendedores de IA! ✓ Descarga Instantánea ✓ Actualizaciones de por vida ✓ Soporte por Email</div>'; headerEl.parentNode.insertBefore(trustBar, headerEl.nextSibling); }
         // Message match by product slug
         const productSlug = getParam('product'); if(productSlug){ const normalized = productSlug.replace(/-/g,' ').toLowerCase(); const cards = Array.from(document.querySelectorAll('.grid .card')); let matched=null; cards.forEach(card=>{ const title=(card.querySelector('h3')?.textContent||'').toLowerCase(); if(title.includes(normalized) || normalized.includes(title)) matched=card; }); if(matched){ const titleText=matched.querySelector('h3')?.textContent||''; const desc=matched.querySelector('.card-content p')?.textContent||''; const h1=document.querySelector('.header-title h1'); const tagline=document.querySelector('.header-title .tagline'); if(h1 && titleText) h1.textContent=titleText; if(tagline && desc) tagline.textContent=desc; cards.forEach(card=>{ if(card!==matched) card.classList.add('ad-mode-hidden'); else card.classList.add('ad-highlight'); }); } }
+      })();
+    </script>
+    <script>
+      (function applySaleBadges(){
+        const sections = ['#products','#productos'];
+        sections.forEach(function(sel){
+          const section = document.querySelector(sel);
+          if(!section) return;
+          section.querySelectorAll('.card').forEach(function(card){
+            const pop = card.querySelector('.product-badge.popular');
+            if(pop) pop.remove();
+            if(!card.querySelector('.product-badge.on-sale') && !card.querySelector('.product-badge.ultimate-badge')){
+              const badge = document.createElement('div');
+              badge.className = 'product-badge on-sale';
+              badge.textContent = 'ON SALE';
+              card.insertBefore(badge, card.firstChild);
+            }
+          });
+        });
       })();
     </script>
   </body>
