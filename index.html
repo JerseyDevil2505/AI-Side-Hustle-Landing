@@ -1366,6 +1366,7 @@
             currency: "USD",
           });
 
+          // Existing conversions
           if (eventName === "free_download") {
             gtag("event", "conversion", { send_to: "AW-17260187801" });
           } else if (eventName === "product_click") {
@@ -1374,6 +1375,9 @@
               value: value,
               currency: "USD",
             });
+          } else if (eventName === "landing_view") {
+            // New Landing Page View conversion
+            gtag('event', 'conversion', { send_to: 'AW-17260187801/JyRGCJTq0ZUbEJmhpqZA' });
           }
         }
 
@@ -1385,6 +1389,17 @@
             currency: "USD",
           });
         }
+      }
+
+      // Fire landing page view conversion on initial page load
+      try {
+        // Only fire once
+        if (!window.__landing_view_fired) {
+          window.__landing_view_fired = true;
+          trackConversion('landing_view', 0, 'Landing Page');
+        }
+      } catch (e) {
+        /* no-op */
       }
 
       // Track free download
