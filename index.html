@@ -622,6 +622,14 @@
           justify-content: center;
         }
       }
+      /* Ad-mode helpers */
+      .ad-mode-hidden { display: none !important; }
+      .sale-banner { background: rgba(255, 107, 107, 0.9); color: white; text-align: center; padding: 15px; margin-bottom: 30px; border-radius: 10px; animation: pulse 2s infinite; }
+      .sale-title { margin: 0; font-size: 1.3em; }
+      .sale-subtitle { margin: 5px 0 0 0; font-size: 0.9em; }
+      .ad-trust-bar { background: rgba(0, 0, 0, 0.5); color: white; padding: 10px 20px; text-align: center; border-radius: 8px; margin: 20px auto; max-width: 900px; }
+      .ad-trust-text { font-weight: bold; }
+      .card.ad-highlight { box-shadow: 0 12px 30px rgba(0,0,0,0.25); transform: none; }
     </style>
     <link
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap"
@@ -704,17 +712,9 @@
 
 
     <section class="section" id="products">
-      <div style="
-        background: rgba(255, 107, 107, 0.9);
-        color: white;
-        text-align: center;
-        padding: 15px;
-        margin-bottom: 30px;
-        border-radius: 10px;
-        animation: pulse 2s infinite;
-      ">
-        <h3 style="margin: 0; font-size: 1.3em;">🍂 Fall Flash Sale, 50% off Ends September 30th</h3>
-        <p style="margin: 5px 0 0 0; font-size: 0.9em;">Limited time: All products just $6 (was $12)</p>
+      <div class="sale-banner">
+        <h3 class="sale-title">🍂 Fall Flash Sale, 50% off Ends September 30th</h3>
+        <p class="sale-subtitle">Limited time: All products just $6 (was $12)</p>
       </div>
       <div class="category-title">
         AI Tools
@@ -1463,7 +1463,6 @@
 
       // Conversion Tracking Events
       function trackConversion(eventName, value = 0, productName = "") {
-        // Google Analytics 4 event tracking
         if (typeof gtag !== "undefined") {
           gtag("event", eventName, {
             event_category: "conversion",
@@ -1472,7 +1471,6 @@
             currency: "USD",
           });
 
-          // Google Ads conversion tracking
           if (eventName === "free_download") {
             gtag("event", "conversion", { send_to: "AW-17260187801" });
           } else if (eventName === "product_click") {
@@ -1484,7 +1482,6 @@
           }
         }
 
-        // Google Tag Manager data layer push
         if (typeof dataLayer !== "undefined") {
           dataLayer.push({
             event: eventName,
@@ -1511,7 +1508,7 @@
           const priceElement = card.querySelector(".price");
           const price = priceElement
             ? parseFloat(priceElement.textContent.replace("$", ""))
-            : 5;
+            : 6;
 
           trackConversion("product_click", price, productName);
         });
@@ -1528,30 +1525,79 @@
       // Dynamic Download Counter
       function updateDownloadCounter() {
         const counter = document.getElementById("download-counter");
-        const baseNumber = 2847; // Starting number from deployment
-
-        // Get days since deployment (yesterday)
-        const deploymentDate = new Date("2025-01-08"); // Yesterday's date
+        if (!counter) return;
+        const baseNumber = 2847;
+        const deploymentDate = new Date("2025-01-08");
         const currentDate = new Date();
-        const daysDiff = Math.floor(
-          (currentDate - deploymentDate) / (1000 * 60 * 60 * 24),
-        );
-
-        // Total additional downloads since deployment (3-8 randomized but consistent)
-        const randomSeed = Math.floor(
-          currentDate.getTime() / (1000 * 60 * 60 * 24),
-        ); // Changes daily
-        const totalAdditional = 3 + (randomSeed % 6); // Ranges from 3-8 total
+        const daysDiff = Math.floor((currentDate - deploymentDate) / (1000 * 60 * 60 * 24));
+        const randomSeed = Math.floor(currentDate.getTime() / (1000 * 60 * 60 * 24));
+        const totalAdditional = 3 + (randomSeed % 6);
         const newCount = baseNumber + totalAdditional;
-
         counter.textContent = newCount.toLocaleString();
       }
-
-      // Update counter on page load
       updateDownloadCounter();
-
-      // Update counter every hour (in case someone stays on page long)
       setInterval(updateDownloadCounter, 3600000);
+
+      // Ad-focused landing page logic
+      function getParam(name) {
+        const params = new URLSearchParams(window.location.search);
+        return params.get(name);
+      }
+
+      (function applyAdMode() {
+        const ad = getParam("ad");
+        if (!ad || !(ad === "1" || ad.toLowerCase() === "true")) return;
+
+        // Hide distractions
+        const selectors = ["nav", "footer", ".language-switcher", ".newsletter-section"];
+        selectors.forEach((sel) => {
+          const el = document.querySelector(sel);
+          if (el) el.classList.add("ad-mode-hidden");
+        });
+
+        // Disable internal anchors
+        document.querySelectorAll('a[href^="#"]').forEach((a) => {
+          a.addEventListener("click", (e) => e.preventDefault());
+          a.removeAttribute("href");
+        });
+
+        // Insert quick trust bar under header
+        const headerEl = document.querySelector("header");
+        if (headerEl && !document.querySelector(".ad-trust-bar")) {
+          const trustBar = document.createElement("div");
+          trustBar.className = "ad-trust-bar";
+          trustBar.innerHTML =
+            '<div class="ad-trust-text">Loved by 5,000+ AI Hustlers! ✓ Instant Download ✓ Lifetime Updates ✓ Email Support</div>';
+          headerEl.parentNode.insertBefore(trustBar, headerEl.nextSibling);
+        }
+
+        // Message match by product slug
+        const productSlug = getParam("product");
+        if (productSlug) {
+          const normalized = productSlug.replace(/-/g, " ").toLowerCase();
+          const cards = Array.from(document.querySelectorAll(".grid .card"));
+          let matched = null;
+          cards.forEach((card) => {
+            const title = (card.querySelector("h3")?.textContent || "").toLowerCase();
+            if (title.includes(normalized) || normalized.includes(title)) matched = card;
+          });
+
+          if (matched) {
+            const titleText = matched.querySelector("h3")?.textContent || "";
+            const desc = matched.querySelector(".card-content p")?.textContent || "";
+            const h1 = document.querySelector(".header-title h1");
+            const tagline = document.querySelector(".header-title .tagline");
+            if (h1 && titleText) h1.textContent = titleText;
+            if (tagline && desc) tagline.textContent = desc;
+
+            // Show only the matched product
+            cards.forEach((card) => {
+              if (card !== matched) card.classList.add("ad-mode-hidden");
+              else card.classList.add("ad-highlight");
+            });
+          }
+        }
+      })();
     </script>
   </body>
 </html>
