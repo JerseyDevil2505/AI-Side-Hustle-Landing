@@ -4,17 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      ClickMint – AI, Health & Mindset Tools | Digital Products for AI Entrepreneurs
+      ClickMint – Ready-to-Use AI Tools for Digital Entrepreneurs
     </title>
 
     <!-- SEO Meta Tags -->
     <meta
       name="description"
-      content="Smart AI tools and digital products for AI entrepreneurs, health hackers, and conscious creators. Download free AI businesses guide + premium tools for content creation, email copy, and automation."
+      content="Download proven AI tools and templates that help you create content, launch products, and automate your business. No subscriptions. Just results."
     />
     <meta
       name="keywords"
-      content="AI tools, digital products, AI businesses, ChatGPT prompts, content creation, email copy, faceless YouTube, TikTok automation, AI business"
+      content="AI tools, digital products, ChatGPT prompts, content creation, AI business tools, faceless content, automation"
     />
     <meta name="author" content="ClickMint" />
     <meta name="robots" content="index, follow" />
@@ -22,11 +22,11 @@
     <!-- Open Graph Meta Tags -->
     <meta
       property="og:title"
-      content="ClickMint – AI, Health & Mindset Tools"
+      content="ClickMint – Ready-to-Use AI Tools for Digital Entrepreneurs"
     />
     <meta
       property="og:description"
-      content="Smart AI tools and digital products for AI entrepreneurs, health hackers, and conscious creators. Get your free AI businesses guide now!"
+      content="Download proven AI tools and templates that help you create content, launch products, and automate your business."
     />
     <meta
       property="og:image"
@@ -40,11 +40,11 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="ClickMint – AI, Health & Mindset Tools"
+      content="ClickMint – Ready-to-Use AI Tools for Digital Entrepreneurs"
     />
     <meta
       name="twitter:description"
-      content="Smart AI tools and digital products for AI entrepreneurs, health hackers, and conscious creators."
+      content="Download proven AI tools and templates that help you create content, launch products, and automate your business."
     />
     <meta
       name="twitter:image"
@@ -85,559 +85,518 @@
       gtag("config", "AW-17260187801");
     </script>
     <!-- End Google Analytics 4 -->
-    <link rel="stylesheet" href="style.css" />
+    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
       html {
         scroll-behavior: smooth;
       }
+      
       body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        background: url("assets/hero-bg.jpg") center / cover no-repeat;
-        color: #0e2d36;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.6;
+        color: #1a1a1a;
+        background: #ffffff;
       }
+      
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      
+      /* Header */
       header {
-        display: flex;
-        align-items: center;
-        padding: 40px 60px 80px;
+        background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
         color: white;
+        padding: 80px 24px 100px;
+        text-align: center;
         position: relative;
       }
+      
       .logo {
-        height: 200px;
-        width: 200px;
-        border-radius: 12px;
-        margin-right: 30px;
-        box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
+        width: 80px;
+        height: 80px;
+        border-radius: 16px;
+        margin: 0 auto 24px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
       }
-      .header-title {
-        display: flex;
-        flex-direction: column;
-      }
-      .header-title h1 {
-        margin: 0;
-        font-size: 4.5em;
-        font-family: "Orbitron", sans-serif;
-        letter-spacing: 2px;
-      }
-      .tagline {
-        font-size: 1.2em;
-        color: #ccc;
-        margin-top: 10px;
-      }
-      .urgency-banner {
-        background: rgba(248, 210, 78, 0.9);
-        color: #0e2d36;
-        padding: 8px 16px;
-        border-radius: 25px;
-        margin-top: 15px;
-        display: inline-block;
-        font-weight: bold;
-        animation: pulse 2s infinite;
-      }
-      .fire-emoji {
-        margin-right: 8px;
-      }
-      @keyframes pulse {
-        0% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.05);
-        }
-        100% {
-          transform: scale(1);
-        }
-      }
-      .language-switcher {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 20px;
-        padding: 8px 15px;
-        backdrop-filter: blur(10px);
-      }
-      .language-switcher a {
-        color: white;
-        text-decoration: none;
-        margin: 0 5px;
-        padding: 5px 10px;
-        border-radius: 15px;
-        transition: all 0.3s ease;
-      }
-      .language-switcher a:hover,
-      .language-switcher a.active {
-        background: rgba(248, 210, 78, 0.8);
-        color: #0e2d36;
-      }
-
-      .section {
-        padding: 80px 20px 60px;
-      }
-      .category-title {
-        font-size: 2.8em;
-        margin-bottom: 40px;
-        text-align: center;
-        color: white;
-      }
-      .grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 32px;
-      }
-      .card {
-        background: rgba(255, 255, 255, 0.95);
-        border-radius: 12px;
-        padding: 16px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        width: 220px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        transition:
-          transform 0.3s ease,
-          box-shadow 0.3s ease;
-      }
-      .card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-      }
-      .product-badge {
-        position: absolute;
-        top: -8px;
-        right: -8px;
-        background: linear-gradient(45deg, #ff6b6b, #ff5252);
-        color: white;
-        padding: 4px 12px;
-        border-radius: 20px;
-        font-size: 0.8em;
-        font-weight: bold;
-        z-index: 10;
-      }
-      .product-badge.free {
-        background: linear-gradient(45deg, #4caf50, #45a049);
-      }
-      .product-badge.popular {
-        background: linear-gradient(45deg, #f8d24e, #ecb42b);
-        color: #0e2d36;
-      }
-      .product-badge.ultimate-badge {
-        background: linear-gradient(45deg, #f6ad55, #ed8936);
-        color: white;
-        font-size: 0.75em;
-        padding: 6px 14px;
+      
+      .hero-title {
+        font-size: 3.5em;
         font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1px;
+        margin-bottom: 16px;
+        line-height: 1.2;
       }
-      .pricing {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        margin: 8px 0;
-      }
-      .price {
-        font-size: 1.4em;
-        font-weight: bold;
-        color: #0e2d36;
-      }
-      .price.free {
-        color: #4caf50;
-      }
-      .instant-badge {
-        background: #f8d24e;
-        color: #0e2d36;
-        padding: 2px 8px;
-        border-radius: 12px;
-        font-size: 0.7em;
-        font-weight: bold;
-        margin-bottom: 8px;
-      }
-      .card img {
-        width: 100%;
-        height: 180px;
-        object-fit: contain;
-        margin-bottom: 10px;
-      }
-      .card-content {
-        text-align: center;
-      }
-      .card h3 {
-        margin: 14px 0 8px 0;
-        font-size: 1.1em;
-      }
-      .btn {
-        display: inline-block;
-        margin-top: 10px;
-        background: linear-gradient(to bottom, #f8d24e, #ecb42b);
-        color: #0e2d36;
-        padding: 12px 24px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: bold;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        transition:
-          transform 0.2s ease,
-          box-shadow 0.2s ease;
-        font-size: 1em;
-        width: 100%;
-        text-align: center;
-        box-sizing: border-box;
-      }
-      .btn.free {
-        background: linear-gradient(to bottom, #4caf50, #45a049);
-        color: white;
-      }
-      .btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-      }
-      .btn.ultimate-btn {
-        background: linear-gradient(to bottom, #f6ad55, #ed8936);
-        color: white;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-size: 0.9em;
-        padding: 14px 24px;
-      }
-      .btn.ultimate-btn:hover {
-        box-shadow: 0 6px 20px rgba(246, 173, 85, 0.4);
-      }
-      .original-price {
-        font-size: 1em;
-        color: #999;
-        text-decoration: line-through;
-        margin-left: 8px;
-      }
-      .social-proof {
-        padding: 60px 20px;
-        text-align: center;
-        color: white;
-        position: relative;
-      }
-      .social-proof h2 {
-        font-size: 2.5em;
-        margin-bottom: 20px;
-        color: #f8d24e;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-      }
-      .stats-container {
-        display: flex;
-        justify-content: center;
-        gap: 50px;
-        margin: 40px 0;
-        flex-wrap: wrap;
-      }
-      .stat-item {
-        text-align: center;
-      }
-      .stat-number {
-        font-size: 3em;
-        font-weight: bold;
-        color: #f8d24e;
-        display: block;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-      }
-      .stat-label {
-        font-size: 1.1em;
-        color: white;
-        margin-top: 5px;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-      }
-      .testimonials {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-        margin-top: 50px;
-        max-width: 1000px;
+      
+      .hero-subtitle {
+        font-size: 1.5em;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 32px;
+        font-weight: 400;
+        max-width: 700px;
         margin-left: auto;
         margin-right: auto;
       }
-      .testimonial {
-        background: rgba(0, 0, 0, 0.4);
-        backdrop-filter: blur(10px);
-        padding: 25px;
-        border-radius: 15px;
-        border-left: 4px solid #f8d24e;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-      }
-      .testimonial-text {
-        font-style: italic;
-        font-size: 1.1em;
-        line-height: 1.6;
-        margin-bottom: 15px;
-      }
-      .testimonial-author {
-        font-weight: bold;
-        color: #f8d24e;
-      }
-      .testimonial-title {
-        font-size: 0.9em;
-        color: #ccc;
-      }
-      .trust-badges {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        margin-top: 40px;
-        flex-wrap: wrap;
-      }
-      .trust-badge {
-        background: rgba(255, 255, 255, 0.1);
-        padding: 10px 20px;
-        border-radius: 25px;
-        font-size: 0.9em;
-        color: #ccc;
-      }
-      nav {
-        background: rgba(14, 45, 54, 0.95);
-        padding: 15px 0;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        backdrop-filter: blur(10px);
-        border-bottom: 1px solid rgba(248, 210, 78, 0.3);
-      }
-      .nav-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 20px;
-      }
-      .nav-brand {
-        font-family: "Orbitron", sans-serif;
-        font-size: 1.5em;
-        font-weight: bold;
-        color: #f8d24e;
-      }
-      .mobile-menu-btn {
-        display: none;
-        flex-direction: column;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 5px;
-      }
-      .mobile-menu-btn span {
-        width: 25px;
-        height: 3px;
-        background: white;
-        margin: 3px 0;
-        transition: 0.3s;
-      }
-      .nav-menu {
-        display: flex;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        gap: 40px;
-      }
-      .nav-item {
-        margin: 0;
-      }
-      .nav-link {
+      
+      .hero-cta {
+        display: inline-block;
+        background: #10b981;
         color: white;
+        padding: 16px 40px;
+        border-radius: 8px;
         text-decoration: none;
-        font-weight: 500;
+        font-weight: 600;
         font-size: 1.1em;
-        padding: 10px 20px;
-        border-radius: 25px;
         transition: all 0.3s ease;
-        display: block;
+        box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);
       }
-      .nav-link:hover,
-      .nav-link.cta {
-        background: linear-gradient(to bottom, #f8d24e, #ecb42b);
-        color: #0e2d36;
+      
+      .hero-cta:hover {
+        background: #059669;
         transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(248, 210, 78, 0.3);
+        box-shadow: 0 6px 24px rgba(16, 185, 129, 0.4);
       }
-      .nav-link.cta {
-        font-weight: bold;
+      
+      .language-switcher {
+        position: absolute;
+        top: 24px;
+        right: 24px;
       }
-      .newsletter-section {
-        background: linear-gradient(135deg, #0e2d36, #1a4551);
-        padding: 80px 20px;
-        text-align: center;
+      
+      .language-switcher a {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        margin: 0 8px;
+        padding: 8px 16px;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        font-size: 0.9em;
+      }
+      
+      .language-switcher a:hover,
+      .language-switcher a.active {
+        background: rgba(255, 255, 255, 0.15);
         color: white;
       }
-      .newsletter-container {
+      
+      /* Value Props */
+      .value-props {
+        background: #f9fafb;
+        padding: 64px 24px;
+        border-bottom: 1px solid #e5e7eb;
+      }
+      
+      .value-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 32px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      
+      .value-item {
+        text-align: center;
+        padding: 32px 24px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      
+      .value-icon {
+        font-size: 3em;
+        margin-bottom: 16px;
+      }
+      
+      .value-title {
+        font-size: 1.3em;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #1a1a1a;
+      }
+      
+      .value-text {
+        color: #6b7280;
+        font-size: 1em;
+      }
+      
+      /* Section */
+      .section {
+        padding: 80px 24px;
+      }
+      
+      .section-header {
+        text-align: center;
+        margin-bottom: 56px;
+      }
+      
+      .section-title {
+        font-size: 2.5em;
+        font-weight: 700;
+        margin-bottom: 16px;
+        color: #1a1a1a;
+      }
+      
+      .section-subtitle {
+        font-size: 1.2em;
+        color: #6b7280;
         max-width: 600px;
         margin: 0 auto;
       }
-      .newsletter-section h2 {
+      
+      /* Bundle Highlight */
+      .bundle-highlight {
+        background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+        border-radius: 16px;
+        padding: 48px;
+        color: white;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 80px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+      }
+      
+      .bundle-badge {
+        display: inline-block;
+        background: #10b981;
+        color: white;
+        padding: 8px 20px;
+        border-radius: 24px;
+        font-size: 0.9em;
+        font-weight: 600;
+        margin-bottom: 24px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      
+      .bundle-highlight h2 {
         font-size: 2.5em;
-        margin-bottom: 20px;
-        color: #f8d24e;
+        margin-bottom: 16px;
+        font-weight: 700;
       }
-      .newsletter-section p {
+      
+      .bundle-price {
+        font-size: 4em;
+        font-weight: 700;
+        margin: 24px 0;
+        color: #10b981;
+      }
+      
+      .bundle-description {
         font-size: 1.2em;
-        margin-bottom: 30px;
-        color: #ccc;
+        margin-bottom: 32px;
+        opacity: 0.95;
+        line-height: 1.7;
       }
-      .newsletter-form {
-        display: flex;
-        gap: 15px;
-        margin-bottom: 30px;
-        flex-wrap: wrap;
-        justify-content: center;
+      
+      .bundle-includes {
+        text-align: left;
+        max-width: 500px;
+        margin: 32px auto;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 24px;
+        border-radius: 12px;
       }
-      .newsletter-form input {
-        flex: 1;
-        min-width: 250px;
-        padding: 15px 20px;
-        border: none;
-        border-radius: 8px;
+      
+      .bundle-includes h4 {
+        font-size: 1.1em;
+        margin-bottom: 16px;
+        font-weight: 600;
+      }
+      
+      .bundle-includes ul {
+        list-style: none;
+      }
+      
+      .bundle-includes li {
+        padding: 8px 0;
+        padding-left: 28px;
+        position: relative;
         font-size: 1em;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       }
-      .newsletter-btn {
-        padding: 15px 30px;
-        background: linear-gradient(to bottom, #f8d24e, #ecb42b);
-        color: #0e2d36;
-        border: none;
-        border-radius: 8px;
+      
+      .bundle-includes li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #10b981;
         font-weight: bold;
-        font-size: 1em;
-        cursor: pointer;
-        transition:
-          transform 0.2s ease,
-          box-shadow 0.2s ease;
-        box-shadow: 0 4px 15px rgba(248, 210, 78, 0.3);
+        font-size: 1.2em;
       }
-      .newsletter-btn:hover {
+      
+      .btn-primary {
+        display: inline-block;
+        background: #10b981;
+        color: white;
+        padding: 18px 48px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.2em;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);
+      }
+      
+      .btn-primary:hover {
+        background: #059669;
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(248, 210, 78, 0.4);
+        box-shadow: 0 6px 24px rgba(16, 185, 129, 0.4);
       }
-      .newsletter-benefits {
+      
+      /* Product Grid */
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 32px;
+        margin-bottom: 64px;
+      }
+      
+      .product-card {
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: all 0.3s ease;
         display: flex;
-        justify-content: center;
-        gap: 30px;
-        flex-wrap: wrap;
+        flex-direction: column;
       }
-      .benefit {
+      
+      .product-card:hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        transform: translateY(-4px);
+      }
+      
+      .product-image {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        background: #f9fafb;
+      }
+      
+      .product-content {
+        padding: 24px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .product-title {
+        font-size: 1.3em;
+        font-weight: 600;
+        margin-bottom: 12px;
+        color: #1a1a1a;
+      }
+      
+      .product-description {
+        color: #6b7280;
+        margin-bottom: 20px;
+        flex: 1;
+        font-size: 0.95em;
+      }
+      
+      .product-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: auto;
+      }
+      
+      .product-price {
+        font-size: 2em;
+        font-weight: 700;
+        color: #1a1a1a;
+      }
+      
+      .btn-product {
+        background: #2c5364;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        font-size: 0.95em;
+      }
+      
+      .btn-product:hover {
+        background: #203a43;
+        transform: translateY(-1px);
+      }
+      
+      /* Bundle Card */
+      .bundle-card {
+        background: white;
+        border: 2px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 32px;
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+      
+      .bundle-card:hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        border-color: #10b981;
+      }
+      
+      .bundle-card h3 {
+        font-size: 1.5em;
+        font-weight: 600;
+        margin-bottom: 12px;
+        color: #1a1a1a;
+      }
+      
+      .bundle-card .price {
+        font-size: 3em;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin: 16px 0;
+      }
+      
+      .bundle-card p {
+        color: #6b7280;
+        margin-bottom: 24px;
         font-size: 1em;
-        color: #f8d24e;
       }
+      
+      /* FAQ */
       .faq-container {
         max-width: 800px;
         margin: 0 auto;
-        padding: 0 20px;
       }
+      
       .faq-item {
-        background: rgba(255, 255, 255, 0.95);
-        margin-bottom: 15px;
-        border-radius: 10px;
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        margin-bottom: 16px;
         overflow: hidden;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       }
+      
       .faq-question {
-        padding: 20px;
-        background: rgba(248, 210, 78, 0.1);
+        padding: 20px 24px;
         cursor: pointer;
         display: flex;
         justify-content: space-between;
         align-items: center;
         transition: background 0.3s ease;
+        font-weight: 600;
+        color: #1a1a1a;
       }
+      
       .faq-question:hover {
-        background: rgba(248, 210, 78, 0.2);
+        background: #f9fafb;
       }
-      .faq-question h3 {
-        margin: 0;
-        color: #0e2d36;
-        font-size: 1.1em;
-      }
+      
       .faq-toggle {
         font-size: 1.5em;
-        color: #f8d24e;
-        font-weight: bold;
+        color: #6b7280;
         transition: transform 0.3s ease;
+        font-weight: 300;
       }
+      
       .faq-item.active .faq-toggle {
         transform: rotate(45deg);
       }
+      
       .faq-answer {
-        padding: 0 20px;
         max-height: 0;
         overflow: hidden;
         transition: all 0.3s ease;
+        padding: 0 24px;
       }
+      
       .faq-item.active .faq-answer {
-        padding: 20px;
-        max-height: 200px;
+        max-height: 300px;
+        padding: 0 24px 20px;
       }
+      
       .faq-answer p {
-        margin: 0;
-        color: #555;
-        line-height: 1.6;
+        color: #6b7280;
+        line-height: 1.7;
       }
+      
+      /* Footer */
       footer {
-        background: #0e2d36;
+        background: #1a1a1a;
         color: white;
-        padding: 50px 20px 20px;
+        padding: 64px 24px 32px;
       }
+      
       .footer-content {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 40px;
+        gap: 48px;
         max-width: 1200px;
-        margin: 0 auto;
-        margin-bottom: 30px;
+        margin: 0 auto 48px;
       }
+      
       .footer-section h4 {
-        color: #f8d24e;
-        margin-bottom: 15px;
-        font-size: 1.2em;
+        font-size: 1.1em;
+        margin-bottom: 16px;
+        font-weight: 600;
       }
-      .footer-section p {
-        margin: 8px 0;
-        color: #ccc;
-      }
+      
+      .footer-section p,
       .footer-section a {
-        display: block;
-        color: #ccc;
+        color: rgba(255, 255, 255, 0.7);
         text-decoration: none;
+        display: block;
         margin: 8px 0;
         transition: color 0.3s ease;
       }
+      
       .footer-section a:hover {
-        color: #f8d24e;
+        color: #10b981;
       }
+      
       .footer-bottom {
         text-align: center;
-        padding-top: 20px;
-        border-top: 1px solid #2a4a57;
-        color: #999;
+        padding-top: 32px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.5);
       }
-      @media (max-width: 1200px) {
-        .grid {
-          justify-content: center;
+      
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 2.5em;
+        }
+        
+        .hero-subtitle {
+          font-size: 1.2em;
+        }
+        
+        .section-title {
+          font-size: 2em;
+        }
+        
+        .bundle-highlight {
+          padding: 32px 24px;
+        }
+        
+        .bundle-highlight h2 {
+          font-size: 2em;
+        }
+        
+        .bundle-price {
+          font-size: 3em;
+        }
+        
+        .product-grid {
+          grid-template-columns: 1fr;
         }
       }
-      /* Ad-mode helpers */
-      .ad-mode-hidden { display: none !important; }
-      .sale-banner { background: rgba(255, 107, 107, 0.9); color: white; text-align: center; padding: 15px; margin-bottom: 30px; border-radius: 10px; animation: pulse 2s infinite; }
-      .sale-title { margin: 0; font-size: 1.3em; }
-      .sale-subtitle { margin: 5px 0 0 0; font-size: 0.9em; }
-      .ad-trust-bar { background: rgba(0, 0, 0, 0.5); color: white; padding: 10px 20px; text-align: center; border-radius: 8px; margin: 20px auto; max-width: 900px; }
-      .ad-trust-text { font-weight: bold; }
-      .card.ad-highlight { box-shadow: 0 12px 30px rgba(0,0,0,0.25); transform: none; }
-      /* On-sale badge */
-      .product-badge.on-sale { background: linear-gradient(45deg,#f8d24e,#ecb42b); color: #0e2d36; font-weight: 700; text-transform: uppercase; font-size: 0.75em; padding: 6px 10px; }
-      .section--tight { padding: 20px 20px 40px; }
     </style>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap"
-      rel="stylesheet"
-    />
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -645,7 +604,7 @@
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "ClickMint",
-        "description": "Smart AI tools and digital products for AI entrepreneurs, health hackers, and conscious creators",
+        "description": "Ready-to-use AI tools and templates for digital entrepreneurs",
         "url": "https://clickmintai.com",
         "logo": "https://clickmintai.com/assets/logo.png",
         "sameAs": ["https://clickmintai.gumroad.com"],
@@ -675,688 +634,397 @@
         <a href="index.html" class="active">🇺🇸 EN</a>
         <a href="index-es.html">🇪🇸 ES</a>
       </div>
+      
       <img src="assets/logo.png" alt="ClickMint Logo" class="logo" />
-      <div class="header-title">
-        <h1>ClickMint</h1>
-        <p class="tagline">
-          Smart AI tools for creators and entrepreneurs
-        </p>
-      </div>
+      
+      <h1 class="hero-title">Ready-to-Use AI Tools<br>Built for Results</h1>
+      
+      <p class="hero-subtitle">
+        Download proven templates and prompts that help you create content, launch products, and automate your business.
+      </p>
+      
+      <a href="#all-access" class="hero-cta">Get All 10 Tools for $30</a>
     </header>
 
-
-    <section class="section section--tight" id="products">
-      <div class="grid">
-        <div class="card">
-          <img
-            src="assets/products/AI Digital Product Thumb.jpg"
-            alt="AI Digital Product Generator"
-          />
-          <div class="card-content">
-            <div class="instant-badge">⚡ Instant Download</div>
-            <h3>AI Digital Product Generator</h3>
-            <div class="pricing">
-              <span class="price">$6</span>
-              <span class="original-price">$12</span>
-            </div>
-            <p>Copy-paste templates to launch products in 24 hours.</p>
-            <a class="btn" href="https://buy.stripe.com/bJefZif6t3Qb9kh5mz4wM01" target="_blank"
-              >Get Instant Access</a
-            >
+    <section class="value-props">
+      <div class="container">
+        <div class="value-grid">
+          <div class="value-item">
+            <div class="value-icon">⚡</div>
+            <h3 class="value-title">Instant Download</h3>
+            <p class="value-text">Get immediate access. Start using your tools within minutes.</p>
           </div>
-        </div>
-        <div class="card">
-          <img
-            src="assets/products/AI Email Generator Thumb.jpg"
-            alt="AI Email Generator"
-          />
-          <div class="card-content">
-            <div class="instant-badge">⚡ Instant Download</div>
-            <h3>AI Email Generator</h3>
-            <div class="pricing">
-              <span class="price">$6</span>
-              <span class="original-price">$12</span>
-            </div>
-            <p>25+ proven email templates - just fill in the blanks.</p>
-            <a class="btn" href="https://buy.stripe.com/eVqbJ2bUh4UfeEB8yL4wM04" target="_blank"
-              >Get Instant Access</a
-            >
+          <div class="value-item">
+            <div class="value-icon">📋</div>
+            <h3 class="value-title">Copy-Paste Ready</h3>
+            <p class="value-text">No setup required. Just copy, paste, and customize for your needs.</p>
           </div>
-        </div>
-        <div class="card">
-          <img
-            src="assets/products/50 ChatGPT Prompt Thumb.jpg"
-            alt="50 ChatGPT Prompts"
-          />
-          <div class="card-content">
-            <div class="instant-badge">⚡ Instant Download</div>
-            <h3>50 ChatGPT Prompts</h3>
-            <div class="pricing">
-              <span class="price">$6</span>
-              <span class="original-price">$12</span>
-            </div>
-            <p>50 copy-paste prompts that save 20+ hours weekly.</p>
-            <a class="btn" href="https://buy.stripe.com/6oU6oI0bzfyTdAxdT54wM0a" target="_blank"
-              >Get Instant Access</a
-            >
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="assets/products/30 Day Content Calendar Thumb.jpg"
-            alt="30 Day Content Calendar"
-          />
-          <div class="card-content">
-            <div class="instant-badge">⚡ Instant Download</div>
-            <h3>30 Day Content Calendar</h3>
-            <div class="pricing">
-              <span class="price">$6</span>
-              <span class="original-price">$12</span>
-            </div>
-            <p>Plan and post engaging AI content every day.</p>
-            <a class="btn" href="https://buy.stripe.com/7sY7sMcYl2M71RPbKX4wM0c" target="_blank"
-              >Get Instant Access</a
-            >
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="assets/products/AI Fiverr Thumb.jpg"
-            alt="AI Fiverr Gig Builder"
-          />
-          <div class="card-content">
-            <div class="instant-badge">⚡ Instant Download</div>
-            <h3>AI Fiverr Gig Builder</h3>
-            <div class="pricing">
-              <span class="price">$6</span>
-              <span class="original-price">$12</span>
-            </div>
-            <p>Launch profitable AI-powered Fiverr gigs fast.</p>
-            <a class="btn" href="https://buy.stripe.com/cNi9AU5vTdqL2VTbKX4wM06" target="_blank"
-              >Get Instant Access</a
-            >
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="assets/products/AI Side Revenue Tracker Thumb.png"
-            alt="AI Side Revenue Tracker"
-          />
-          <div class="card-content">
-            <div class="instant-badge">⚡ Instant Download</div>
-            <h3>AI Side Revenue Tracker</h3>
-            <div class="pricing">
-              <span class="price">$6</span>
-              <span class="original-price">$12</span>
-            </div>
-            <p>Track your side business income like a pro.</p>
-            <a class="btn" href="https://buy.stripe.com/8x25kE2jH4Uf541aGT4wM08" target="_blank"
-              >Get Instant Access</a
-            >
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="assets/products/Faceless YouTube Thumb.jpg"
-            alt="Faceless YouTube Script Generator"
-          />
-          <div class="card-content">
-            <div class="instant-badge">⚡ Instant Download</div>
-            <h3>Faceless YouTube Script Generator</h3>
-            <div class="pricing">
-              <span class="price">$6</span>
-              <span class="original-price">$12</span>
-            </div>
-            <p>Generate YouTube scripts without showing your face.</p>
-            <a class="btn" href="https://buy.stripe.com/6oU14o5vT4Ufaol02f4wM0g" target="_blank"
-              >Get Instant Access</a
-            >
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="assets/products/Faceless TikTok Thumb.jpg"
-            alt="Faceless TikTok Toolkit"
-          />
-          <div class="card-content">
-            <div class="instant-badge">⚡ Instant Download</div>
-            <h3>Faceless TikTok Toolkit</h3>
-            <div class="pricing">
-              <span class="price">$6</span>
-              <span class="original-price">$12</span>
-            </div>
-            <p>Create viral TikToks using AI and automation.</p>
-            <a class="btn" href="https://buy.stripe.com/bJe00k9M986reEBg1d4wM0e" target="_blank"
-              >Get Instant Access</a
-            >
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="assets/products/Faceless AI Business Thumb.jpg"
-            alt="Faceless AI Business Starter"
-          />
-          <div class="card-content">
-            <div class="instant-badge">⚡ Instant Download</div>
-            <h3>Faceless AI Business Starter</h3>
-            <div class="pricing">
-              <span class="price">$6</span>
-              <span class="original-price">$12</span>
-            </div>
-            <p>Build an automated AI brand with no face required.</p>
-            <a class="btn" href="https://buy.stripe.com/4gM4gA7E10DZ54116j4wM0i" target="_blank"
-              >Get Instant Access</a
-            >
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="assets/products/AI Office Thumb.png"
-            alt="AI Office PowerPack"
-          />
-          <div class="card-content">
-            <div class="instant-badge">⚡ Instant Download</div>
-            <h3>AI Office PowerPack</h3>
-            <div class="pricing">
-              <span class="price">$6</span>
-              <span class="original-price">$12</span>
-            </div>
-            <p>500+ AI prompts for Word, Excel, PowerPoint & Outlook.</p>
-            <a class="btn" href="https://buy.stripe.com/dRm9AUe2p86rdAx8yL4wM00" target="_blank"
-              >Get Instant Access</a
-            >
+          <div class="value-item">
+            <div class="value-icon">💰</div>
+            <h3 class="value-title">One-Time Payment</h3>
+            <p class="value-text">Pay once, own forever. No subscriptions or hidden fees.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="bundles">
-      <div class="category-title">Bundles</div>
-      <div class="grid">
-        <div class="card">
-          <div class="product-badge ultimate-badge">🏆 ULTIMATE</div>
-          <img
-            src="assets/ai-hustle-starter-vault.png"
-            alt="The Vault - All Access Pass"
-          />
-          <div class="card-content">
-            <div class="instant-badge">⚡ Instant Download</div>
-            <h3>The Vault - All Access Pass</h3>
-            <div class="pricing">
-              <span class="price">$49</span>
-              <span class="original-price">$108</span>
-            </div>
-            <p>
-              Complete AI business mastery: ALL 10 premium products worth $120 individually. Everything you need to build a profitable AI empire.
-            </p>
-            <a
-              class="btn ultimate-btn"
-              href="https://buy.stripe.com/6oUeVe0bzaezcwt16j4wM0q" target="_blank"
-              >Get Everything Now</a
-            >
+    <section class="section" id="all-access">
+      <div class="container">
+        <div class="bundle-highlight">
+          <div class="bundle-badge">Best Value</div>
+          <h2>All-Access Pass</h2>
+          <div class="bundle-price">$30</div>
+          <p class="bundle-description">
+            Get all 10 premium AI tools instantly. Everything you need to create content, launch products, and grow your business with AI.
+          </p>
+          
+          <div class="bundle-includes">
+            <h4>What's Included:</h4>
+            <ul>
+              <li>All 10 Premium Tools (Worth $30 individually)</li>
+              <li>500+ ChatGPT Prompts</li>
+              <li>Product Launch Templates</li>
+              <li>Email Copy Generator</li>
+              <li>Faceless Content Tools</li>
+              <li>Revenue Tracking System</li>
+              <li>Lifetime Updates</li>
+            </ul>
           </div>
+          
+          <a href="https://buy.stripe.com/6oUeVe0bzaezcwt16j4wM0q" class="btn-primary" target="_blank">Get Complete Access Now</a>
         </div>
-        <div class="card">
-          <div class="product-badge">BUNDLE DEAL</div>
-          <img
-            src="assets/products/AI Hustle Thumb.jpg"
-            alt="AI Business Starter Vault"
-          />
-          <div class="card-content">
-            <div class="instant-badge">⚡ Instant Download</div>
+      </div>
+    </section>
+
+    <section class="section" id="bundles" style="background: #f9fafb;">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Starter Bundles</h2>
+          <p class="section-subtitle">
+            Not ready for everything? Start with a focused bundle.
+          </p>
+        </div>
+        
+        <div class="product-grid">
+          <div class="bundle-card">
             <h3>AI Business Starter Vault</h3>
-            <div class="pricing">
-              <span class="price">$25</span>
-            </div>
-            <p>
-              Bundle of essential AI business tools to kickstart your journey.
-            </p>
-            <a class="btn" href="https://buy.stripe.com/dRmfZie2p1I37c93er4wM0m" target="_blank"
-              >Get Bundle Now</a
-            >
+            <div class="price">$6</div>
+            <p>Essential tools to kickstart your AI business journey.</p>
+            <a href="https://buy.stripe.com/dRmfZie2p1I37c93er4wM0m" class="btn-product" target="_blank">Get This Bundle</a>
           </div>
-        </div>
-        <div class="card">
-          <div class="product-badge">BUNDLE DEAL</div>
-          <img
-            src="assets/products/AI Freelancer Thumb.jpg"
-            alt="AI Freelancer & Service Bundle"
-          />
-          <div class="card-content">
-            <div class="instant-badge">⚡ Instant Download</div>
-            <h3>AI Freelancer & Service Bundle</h3>
-            <div class="pricing">
-              <span class="price">$25</span>
-            </div>
+          
+          <div class="bundle-card">
+            <h3>AI Freelancer Bundle</h3>
+            <div class="price">$6</div>
             <p>Complete toolkit for AI freelancers and service providers.</p>
-            <a class="btn" href="https://buy.stripe.com/14AaEY1fDgCX3ZX8yL4wM0k" target="_blank"
-              >Get Bundle Now</a
-            >
+            <a href="https://buy.stripe.com/14AaEY1fDgCX3ZX8yL4wM0k" class="btn-product" target="_blank">Get This Bundle</a>
           </div>
-        </div>
-        <div class="card">
-          <div class="product-badge">BUNDLE DEAL</div>
-          <img
-            src="assets/products/Faceless Creator Kit Thumb.jpg"
-            alt="Faceless Creator Kit"
-          />
-          <div class="card-content">
-            <div class="instant-badge">⚡ Instant Download</div>
+          
+          <div class="bundle-card">
             <h3>Faceless Creator Kit</h3>
-            <div class="pricing">
-              <span class="price">$25</span>
-            </div>
-            <p>Bundle for faceless video, content, and automation success.</p>
-            <a class="btn" href="https://buy.stripe.com/9B65kE5vT4Uf7c9eX94wM0o" target="_blank"
-              >Get Bundle Now</a
-            >
+            <div class="price">$6</div>
+            <p>Everything you need for faceless video and content creation.</p>
+            <a href="https://buy.stripe.com/9B65kE5vT4Uf7c9eX94wM0o" class="btn-product" target="_blank">Get This Bundle</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="faq">
-      <div class="category-title">Frequently Asked Questions</div>
-      <div class="faq-container">
-        <div class="faq-item">
-          <div class="faq-question">
-            <h3>What formats do your products come in?</h3>
-            <span class="faq-toggle">+</span>
-          </div>
-          <div class="faq-answer">
-            <p>
-              All products come in PDF format for easy reading and a Notion
-              markdown file for interactive use and customization. You'll
-              receive both formats with every purchase.
-            </p>
-          </div>
+    <section class="section" id="products">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Individual Tools</h2>
+          <p class="section-subtitle">
+            Pick exactly what you need. Each tool is $3.
+          </p>
         </div>
+        
+        <div class="product-grid">
+          <div class="product-card">
+            <img
+              src="assets/products/AI Digital Product Thumb.jpg"
+              alt="AI Digital Product Generator"
+              class="product-image"
+            />
+            <div class="product-content">
+              <h3 class="product-title">AI Digital Product Generator</h3>
+              <p class="product-description">Copy-paste templates to launch digital products in 24 hours. Includes 20+ ready-to-use frameworks.</p>
+              <div class="product-footer">
+                <span class="product-price">$3</span>
+                <a href="https://buy.stripe.com/bJefZif6t3Qb9kh5mz4wM01" class="btn-product" target="_blank">Download</a>
+              </div>
+            </div>
+          </div>
 
-        <div class="faq-item">
-          <div class="faq-question">
-            <h3>What if I'm not satisfied with my purchase?</h3>
-            <span class="faq-toggle">+</span>
+          <div class="product-card">
+            <img
+              src="assets/products/AI Email Generator Thumb.jpg"
+              alt="AI Email Generator"
+              class="product-image"
+            />
+            <div class="product-content">
+              <h3 class="product-title">AI Email Copy Generator</h3>
+              <p class="product-description">25+ proven email templates. Just fill in the blanks and send emails that convert.</p>
+              <div class="product-footer">
+                <span class="product-price">$3</span>
+                <a href="https://buy.stripe.com/eVqbJ2bUh4UfeEB8yL4wM04" class="btn-product" target="_blank">Download</a>
+              </div>
+            </div>
           </div>
-          <div class="faq-answer">
-            <p>
-              We stand behind our products with confidence. Each digital product
-              is carefully crafted based on proven strategies. If you have any
-              concerns, our support team is here to help you get the most value
-              from your purchase.
-            </p>
-          </div>
-        </div>
 
+          <div class="product-card">
+            <img
+              src="assets/products/50 ChatGPT Prompt Thumb.jpg"
+              alt="50 ChatGPT Prompts"
+              class="product-image"
+            />
+            <div class="product-content">
+              <h3 class="product-title">50 ChatGPT Prompts</h3>
+              <p class="product-description">50 copy-paste prompts that save 20+ hours weekly. Covers content, marketing, and business tasks.</p>
+              <div class="product-footer">
+                <span class="product-price">$3</span>
+                <a href="https://buy.stripe.com/6oU6oI0bzfyTdAxdT54wM0a" class="btn-product" target="_blank">Download</a>
+              </div>
+            </div>
+          </div>
 
-        <div class="faq-item">
-          <div class="faq-question">
-            <h3>How quickly will I receive my download?</h3>
-            <span class="faq-toggle">+</span>
+          <div class="product-card">
+            <img
+              src="assets/products/30 Day Content Calendar Thumb.jpg"
+              alt="30 Day Content Calendar"
+              class="product-image"
+            />
+            <div class="product-content">
+              <h3 class="product-title">30-Day Content Calendar</h3>
+              <p class="product-description">Plan and post engaging AI content every day with pre-written prompts and templates.</p>
+              <div class="product-footer">
+                <span class="product-price">$3</span>
+                <a href="https://buy.stripe.com/7sY7sMcYl2M71RPbKX4wM0c" class="btn-product" target="_blank">Download</a>
+              </div>
+            </div>
           </div>
-          <div class="faq-answer">
-            <p>
-              Instantly! After purchase, you'll immediately receive download
-              links via email. No waiting, no delays.
-            </p>
-          </div>
-        </div>
 
-        <div class="faq-item">
-          <div class="faq-question">
-            <h3>Are there any recurring fees or subscriptions?</h3>
-            <span class="faq-toggle">+</span>
+          <div class="product-card">
+            <img
+              src="assets/products/AI Fiverr Thumb.jpg"
+              alt="AI Fiverr Gig Builder"
+              class="product-image"
+            />
+            <div class="product-content">
+              <h3 class="product-title">AI Fiverr Gig Builder</h3>
+              <p class="product-description">Launch profitable AI-powered Fiverr gigs with templates, pricing strategies, and delivery systems.</p>
+              <div class="product-footer">
+                <span class="product-price">$3</span>
+                <a href="https://buy.stripe.com/cNi9AU5vTdqL2VTbKX4wM06" class="btn-product" target="_blank">Download</a>
+              </div>
+            </div>
           </div>
-          <div class="faq-answer">
-            <p>
-              Never! All our products are one-time purchases. No hidden fees, no
-              monthly charges, no subscription traps. Pay once, own forever.
-            </p>
+
+          <div class="product-card">
+            <img
+              src="assets/products/AI Side Revenue Tracker Thumb.png"
+              alt="AI Side Revenue Tracker"
+              class="product-image"
+            />
+            <div class="product-content">
+              <h3 class="product-title">AI Revenue Tracker</h3>
+              <p class="product-description">Track income, expenses, and profits across multiple AI side hustles in one organized system.</p>
+              <div class="product-footer">
+                <span class="product-price">$3</span>
+                <a href="https://buy.stripe.com/8x25kE2jH4Uf541aGT4wM08" class="btn-product" target="_blank">Download</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img
+              src="assets/products/Faceless YouTube Thumb.jpg"
+              alt="Faceless YouTube Script Generator"
+              class="product-image"
+            />
+            <div class="product-content">
+              <h3 class="product-title">Faceless YouTube Scripts</h3>
+              <p class="product-description">Generate viral YouTube scripts without showing your face. Includes hooks, structures, and CTAs.</p>
+              <div class="product-footer">
+                <span class="product-price">$3</span>
+                <a href="https://buy.stripe.com/6oU14o5vT4Ufaol02f4wM0g" class="btn-product" target="_blank">Download</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img
+              src="assets/products/Faceless TikTok Thumb.jpg"
+              alt="Faceless TikTok Toolkit"
+              class="product-image"
+            />
+            <div class="product-content">
+              <h3 class="product-title">Faceless TikTok Toolkit</h3>
+              <p class="product-description">Create viral TikToks using AI and automation. No filming, no editing skills required.</p>
+              <div class="product-footer">
+                <span class="product-price">$3</span>
+                <a href="https://buy.stripe.com/bJe00k9M986reEBg1d4wM0e" class="btn-product" target="_blank">Download</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img
+              src="assets/products/Faceless AI Business Thumb.jpg"
+              alt="Faceless AI Business Starter"
+              class="product-image"
+            />
+            <div class="product-content">
+              <h3 class="product-title">Faceless AI Business Starter</h3>
+              <p class="product-description">Build an automated AI brand with no face required. Complete framework and tools included.</p>
+              <div class="product-footer">
+                <span class="product-price">$3</span>
+                <a href="https://buy.stripe.com/4gM4gA7E10DZ54116j4wM0i" class="btn-product" target="_blank">Download</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img
+              src="assets/products/AI Office Thumb.png"
+              alt="AI Office PowerPack"
+              class="product-image"
+            />
+            <div class="product-content">
+              <h3 class="product-title">AI Office PowerPack</h3>
+              <p class="product-description">500+ AI prompts for Word, Excel, PowerPoint & Outlook. Automate your entire workflow.</p>
+              <div class="product-footer">
+                <span class="product-price">$3</span>
+                <a href="https://buy.stripe.com/dRm9AUe2p86rdAx8yL4wM00" class="btn-product" target="_blank">Download</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="founder">
-      <div class="category-title">Meet Your AI Guide</div>
-      <div
-        style="
-          max-width: 900px;
-          margin: 0 auto;
-          text-align: center;
-          padding: 0 20px;
-        "
-      >
-        <div
-          style="
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            padding: 40px;
-            margin-bottom: 40px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-          "
-        >
-          <div style="
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-            justify-content: center;
-          ">
-            <div style="
-              width: 120px;
-              height: 120px;
-              border-radius: 50%;
-              background: linear-gradient(45deg, #f8d24e, #ecb42b);
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              font-size: 3em;
-              color: #0e2d36;
-              font-weight: bold;
-              flex-shrink: 0;
-            ">
-              🚀
+    <section class="section" id="faq" style="background: #f9fafb;">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Common Questions</h2>
+        </div>
+        
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>What format do the tools come in?</span>
+              <span class="faq-toggle">+</span>
             </div>
-            <div style="text-align: left; flex: 1; min-width: 300px;">
-              <h3 style="
-                color: #0e2d36;
-                font-size: 1.8em;
-                margin-bottom: 10px;
-                font-family: 'Orbitron', sans-serif;
-              ">
-                Meet Your AI Guide
-              </h3>
-              <p style="
-                color: #f8d24e;
-                font-size: 1.1em;
-                margin: 0;
-                font-weight: bold;
-              ">
-                I built ClickMint to make AI income tools simple, fast, and accessible for anyone.
+            <div class="faq-answer">
+              <p>
+                All products are delivered as PDF files and Notion templates. You can use them immediately after download—no special software required.
               </p>
             </div>
           </div>
 
-          <div style="color: #0e2d36; font-size: 1.15em; line-height: 1.7; margin-bottom: 20px; text-align: left; max-width:700px; margin-left:auto; margin-right:auto;">
-            <ul style="color: #0e2d36; margin: 0; padding-left: 20px; line-height: 1.8;">
-              <li style="margin-bottom:10px;"><strong>Works for any age</strong> — no tech background needed</li>
-              <li style="margin-bottom:10px;"><strong>No confusing setups</strong> — just plug-and-play tools</li>
-              <li style="margin-bottom:10px;"><strong>Create income streams</strong> that work while you sleep</li>
-              <li style="margin-bottom:10px;"><strong>Stay ahead of the AI curve</strong> — don’t get left behind</li>
-            </ul>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>How quickly will I receive my download?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Instantly. After purchase, you'll receive download links via email within seconds. No waiting.
+              </p>
+            </div>
           </div>
 
-          <p style="color: #555; font-size: 1.1em; line-height: 1.7; margin-bottom: 25px;">
-            ClickMint is about practical tools that deliver real results — without fluff, jargon, or overwhelm.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="about">
-      <div class="category-title">About ClickMint</div>
-      <div
-        style="
-          max-width: 800px;
-          margin: 0 auto;
-          text-align: center;
-          padding: 0 20px;
-        "
-      >
-        <div
-          style="
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            padding: 40px;
-            margin-bottom: 40px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-          "
-        >
-          <h3
-            style="
-              color: #0e2d36;
-              font-size: 2em;
-              margin-bottom: 20px;
-              font-family: &quot;Orbitron&quot;, sans-serif;
-            "
-          >
-            Our Mission
-          </h3>
-          <p
-            style="
-              color: #0e2d36;
-              font-size: 1.2em;
-              line-height: 1.6;
-              margin-bottom: 20px;
-            "
-          >
-            <strong
-              >At ClickMint, we make AI tools simple, affordable, and practical — no subscriptions, no upsells, just real value. Our goal: empower creators and entrepreneurs to turn AI into income.</strong
-            >
-          </p>
-          <p
-            style="
-              color: #555;
-              font-size: 1.1em;
-              line-height: 1.7;
-              margin-bottom: 20px;
-            "
-          >
-            At ClickMint, we believe that artificial intelligence isn't just a
-            tool—it's the great equalizer. Whether you're a health hacker
-            optimizing your wellness journey, a conscious creator building
-            authentic content, or an AI entrepreneur launching your next venture, we
-            provide the practical tools and proven strategies to turn your
-            vision into reality.
-          </p>
-          <p
-            style="
-              color: #555;
-              font-size: 1.1em;
-              line-height: 1.7;
-              margin-bottom: 20px;
-            "
-          >
-            <strong>We're different.</strong> In a market saturated with flashy
-            advertisements, overpriced courses, and subscription traps that
-            drain your wallet monthly, ClickMint offers something refreshingly
-            honest:
-            <strong
-              >one-time purchases, often free resources, and genuine
-              value.</strong
-            >
-            No recurring fees, no upsells, no endless course modules that
-            promise everything and deliver little.
-          </p>
-          <p
-            style="
-              color: #555;
-              font-size: 1.1em;
-              line-height: 1.7;
-              margin-bottom: 25px;
-            "
-          >
-            Our curated collection of digital products—from ChatGPT prompts to
-            complete business frameworks—eliminates the guesswork and
-            accelerates your path to success. We continuously add new tools and
-            resources, but always with the same promise: practical, affordable
-            solutions that work. We're not just selling tools—we're building a
-            community of forward-thinking entrepreneurs who leverage AI to
-            create meaningful impact and sustainable income.
-          </p>
-          <div
-            style="
-              border-left: 4px solid #f8d24e;
-              padding-left: 20px;
-              margin: 30px 0;
-              text-align: left;
-            "
-          >
-            <p
-              style="
-                color: #0e2d36;
-                font-style: italic;
-                font-size: 1.1em;
-                margin: 0;
-              "
-            >
-              "Success in the AI era belongs to those who act decisively with
-              the right tools. ClickMint provides both."
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="social-proof" id="testimonials">
-      <div style="
-        max-width: 800px;
-        margin: 0 auto;
-        text-align: center;
-        padding: 0 20px;
-      ">
-        <div style="
-          background: rgba(255, 255, 255, 0.95);
-          border-radius: 15px;
-          padding: 40px;
-          margin-bottom: 40px;
-          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-        ">
-          <h2 style="
-            color: #0e2d36;
-            font-size: 2.2em;
-            margin-bottom: 20px;
-            font-family: 'Orbitron', sans-serif;
-          ">Our Promise to You</h2>
-
-          <p style="
-            color: #555;
-            font-size: 1.2em;
-            line-height: 1.7;
-            margin-bottom: 30px;
-          ">
-            We're building ClickMint with one principle: <strong>authentic value over hype.</strong>
-            No inflated numbers, no fake testimonials—just practical AI tools that work.
-          </p>
-
-          <div class="trust-badges" style="
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 30px;
-            flex-wrap: wrap;
-          ">
-            <div style="
-              background: rgba(248, 210, 78, 0.1);
-              border: 2px solid #f8d24e;
-              padding: 15px 25px;
-              border-radius: 25px;
-              font-size: 1em;
-              color: #0e2d36;
-              font-weight: bold;
-            ">✓ Instant Download</div>
-            <div style="
-              background: rgba(248, 210, 78, 0.1);
-              border: 2px solid #f8d24e;
-              padding: 15px 25px;
-              border-radius: 25px;
-              font-size: 1em;
-              color: #0e2d36;
-              font-weight: bold;
-            ">✓ Lifetime Updates</div>
-            <div style="
-              background: rgba(248, 210, 78, 0.1);
-              border: 2px solid #f8d24e;
-              padding: 15px 25px;
-              border-radius: 25px;
-              font-size: 1em;
-              color: #0e2d36;
-              font-weight: bold;
-            ">✓ Email Support</div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Are there any recurring fees?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                No. All products are one-time purchases. Pay once, own forever. No subscriptions or hidden costs.
+              </p>
+            </div>
           </div>
 
-          <div style="
-            border-left: 4px solid #f8d24e;
-            padding-left: 20px;
-            margin: 30px 0;
-            text-align: left;
-            background: rgba(248, 210, 78, 0.05);
-            padding: 20px;
-            border-radius: 8px;
-          ">
-            <p style="
-              color: #0e2d36;
-              font-style: italic;
-              font-size: 1.1em;
-              margin: 0;
-              font-weight: 500;
-            ">
-              "We're just getting started, but we're committed to building something real.
-              Try our tools, and if they don't deliver value, we'll refund you—no questions asked."
-            </p>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Do you offer refunds?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Yes. If you're not satisfied with your purchase, contact us at support@clickmintai.com within 30 days for a full refund.
+              </p>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <section class="newsletter-section">
-      <div class="newsletter-container">
-        <h2>🚀 Join 5,000+ AI Entrepreneurs</h2>
-        <p>
-          Get exclusive AI tools, free resources, and insider tips delivered
-          weekly. No spam, unsubscribe anytime.
-        </p>
-        <form class="newsletter-form" action="#" method="post">
-          <input type="email" placeholder="Enter your email address" required />
-          <button type="submit" class="newsletter-btn">Get Free Updates</button>
-        </form>
-        <div class="newsletter-benefits">
-          <div class="benefit">✨ Weekly AI tool roundups</div>
-          <div class="benefit">🎁 Exclusive free downloads</div>
-          <div class="benefit">💡 Early access to new products</div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Can I use these tools for commercial purposes?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Absolutely. Use these tools to create content, build products, and run your business. Commercial use is fully permitted.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <footer>
-      <div class="footer-content">
-        <div class="footer-section">
-          <h4>Contact & Support</h4>
-          <p>📧 support@clickmintai.com</p>
-          <p>💬 Response time: 24 hours</p>
-          <p>🚀 Lifetime updates included</p>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>ClickMint</h4>
+            <p>Practical AI tools for digital entrepreneurs. No fluff, just results.</p>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Products</h4>
+            <a href="#all-access">All-Access Pass</a>
+            <a href="#bundles">Bundles</a>
+            <a href="#products">Individual Tools</a>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Support</h4>
+            <p>📧 support@clickmintai.com</p>
+            <p>💬 Response time: 24 hours</p>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Links</h4>
+            <a href="https://clickmintai.gumroad.com" target="_blank">Gumroad Store</a>
+            <a href="mailto:support@clickmintai.com">Contact Us</a>
+          </div>
         </div>
-        <div class="footer-section">
-          <h4>Quick Links</h4>
-          <a href="#products">Products</a>
-          <a href="#bundles">Bundles</a>
-          <a href="#about">About</a>
+        
+        <div class="footer-bottom">
+          &copy; 2025 ClickMint. All rights reserved.
         </div>
-        <div class="footer-section">
-          <h4>Follow Us</h4>
-          <a href="https://clickmintai.gumroad.com" target="_blank"
-            >🛒 Gumroad Store</a
-          >
-          <a href="mailto:support@clickmintai.com">📧 Email Us</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        &copy; 2025 ClickMint. All rights reserved. | Made with 💛 for AI
-        entrepreneurs
       </div>
     </footer>
 
     <script>
-      // FAQ Toggle functionality
+      // FAQ Toggle
       document.querySelectorAll(".faq-question").forEach((question) => {
         question.addEventListener("click", () => {
           const faqItem = question.parentElement;
-          faqItem.classList.toggle("active");
+          const wasActive = faqItem.classList.contains("active");
+          
+          document.querySelectorAll(".faq-item").forEach((item) => {
+            item.classList.remove("active");
+          });
+          
+          if (!wasActive) {
+            faqItem.classList.add("active");
+          }
         });
       });
 
-      // Conversion Tracking Events
+      // Conversion Tracking
       function trackConversion(eventName, value = 0, productName = "") {
         if (typeof gtag !== "undefined") {
           gtag("event", eventName, {
@@ -1366,17 +1034,13 @@
             currency: "USD",
           });
 
-          // Existing conversions
-          if (eventName === "free_download") {
-            gtag("event", "conversion", { send_to: "AW-17260187801" });
-          } else if (eventName === "product_click") {
+          if (eventName === "product_click") {
             gtag("event", "conversion", {
               send_to: "AW-17260187801",
               value: value,
               currency: "USD",
             });
           } else if (eventName === "landing_view") {
-            // New Landing Page View conversion
             gtag('event', 'conversion', { send_to: 'AW-17260187801/JyRGCJTq0ZUbEJmhpqZA' });
           }
         }
@@ -1391,143 +1055,23 @@
         }
       }
 
-      // Fire landing page view conversion on initial page load
-      try {
-        // Only fire once
-        if (!window.__landing_view_fired) {
-          window.__landing_view_fired = true;
-          trackConversion('landing_view', 0, 'Landing Page');
-        }
-      } catch (e) {
-        /* no-op */
+      // Fire landing page view
+      if (!window.__landing_view_fired) {
+        window.__landing_view_fired = true;
+        trackConversion('landing_view', 0, 'Landing Page');
       }
 
-      // Track free download
-      const freeDownloadBtn = document.querySelector("a[download]");
-      if (freeDownloadBtn) {
-        freeDownloadBtn.addEventListener("click", function () {
-          trackConversion("free_download", 0, "10 AI Businesses Free");
-        });
-      }
-
-      // Track product clicks (potential purchases)
-      document.querySelectorAll(".btn:not(.free)").forEach((button) => {
+      // Track product clicks
+      document.querySelectorAll(".btn-product, .btn-primary").forEach((button) => {
         button.addEventListener("click", function () {
-          const card = this.closest(".card");
-          const productName = card.querySelector("h3").textContent;
-          const priceElement = card.querySelector(".price");
-          const price = priceElement
-            ? parseFloat(priceElement.textContent.replace("$", ""))
-            : 6;
+          const card = this.closest(".product-card, .bundle-card, .bundle-highlight");
+          const productName = card.querySelector("h3, h2")?.textContent || "Product";
+          const priceText = card.querySelector(".product-price, .price, .bundle-price")?.textContent || "$3";
+          const price = parseFloat(priceText.replace("$", ""));
 
           trackConversion("product_click", price, productName);
         });
       });
-
-      // Track newsletter signup
-      const newsletterForm = document.querySelector(".newsletter-form");
-      if (newsletterForm) {
-        newsletterForm.addEventListener("submit", function (e) {
-          trackConversion("newsletter_signup", 0, "Email Newsletter");
-        });
-      }
-
-      // Dynamic Download Counter
-      function updateDownloadCounter() {
-        const counter = document.getElementById("download-counter");
-        if (!counter) return;
-        const baseNumber = 2847;
-        const deploymentDate = new Date("2025-01-08");
-        const currentDate = new Date();
-        const daysDiff = Math.floor((currentDate - deploymentDate) / (1000 * 60 * 60 * 24));
-        const randomSeed = Math.floor(currentDate.getTime() / (1000 * 60 * 60 * 24));
-        const totalAdditional = 3 + (randomSeed % 6);
-        const newCount = baseNumber + totalAdditional;
-        counter.textContent = newCount.toLocaleString();
-      }
-      updateDownloadCounter();
-      setInterval(updateDownloadCounter, 3600000);
-
-      // Ad-focused landing page logic
-      function getParam(name) {
-        const params = new URLSearchParams(window.location.search);
-        return params.get(name);
-      }
-
-      (function applyAdMode() {
-        const ad = getParam("ad");
-        if (!ad || !(ad === "1" || ad.toLowerCase() === "true")) return;
-
-        // Hide distractions
-        const selectors = ["nav", "footer", ".language-switcher", ".newsletter-section"];
-        selectors.forEach((sel) => {
-          const el = document.querySelector(sel);
-          if (el) el.classList.add("ad-mode-hidden");
-        });
-
-        // Disable internal anchors
-        document.querySelectorAll('a[href^="#"]').forEach((a) => {
-          a.addEventListener("click", (e) => e.preventDefault());
-          a.removeAttribute("href");
-        });
-
-        // Insert quick trust bar under header
-        const headerEl = document.querySelector("header");
-        if (headerEl && !document.querySelector(".ad-trust-bar")) {
-          const trustBar = document.createElement("div");
-          trustBar.className = "ad-trust-bar";
-          trustBar.innerHTML =
-            '<div class="ad-trust-text">Loved by 5,000+ AI Entrepreneurs! ✓ Instant Download ✓ Lifetime Updates ✓ Email Support</div>';
-          headerEl.parentNode.insertBefore(trustBar, headerEl.nextSibling);
-        }
-
-        // Message match by product slug
-        const productSlug = getParam("product");
-        if (productSlug) {
-          const normalized = productSlug.replace(/-/g, " ").toLowerCase();
-          const cards = Array.from(document.querySelectorAll(".grid .card"));
-          let matched = null;
-          cards.forEach((card) => {
-            const title = (card.querySelector("h3")?.textContent || "").toLowerCase();
-            if (title.includes(normalized) || normalized.includes(title)) matched = card;
-          });
-
-          if (matched) {
-            const titleText = matched.querySelector("h3")?.textContent || "";
-            const desc = matched.querySelector(".card-content p")?.textContent || "";
-            const h1 = document.querySelector(".header-title h1");
-            const tagline = document.querySelector(".header-title .tagline");
-            if (h1 && titleText) h1.textContent = titleText;
-            if (tagline && desc) tagline.textContent = desc;
-
-            // Show only the matched product
-            cards.forEach((card) => {
-              if (card !== matched) card.classList.add("ad-mode-hidden");
-              else card.classList.add("ad-highlight");
-            });
-          }
-        }
-      })();
-    </script>
-    <script>
-      (function applySaleBadges(){
-        const sections = ['#products','#productos'];
-        sections.forEach(function(sel){
-          const section = document.querySelector(sel);
-          if(!section) return;
-          section.querySelectorAll('.card').forEach(function(card){
-            const pop = card.querySelector('.product-badge.popular');
-            if(pop) pop.remove();
-            // don't overwrite ultimate badge
-            if(!card.querySelector('.product-badge.on-sale') && !card.querySelector('.product-badge.ultimate-badge')){
-              const badge = document.createElement('div');
-              badge.className = 'product-badge on-sale';
-              badge.textContent = 'ON SALE';
-              card.insertBefore(badge, card.firstChild);
-            }
-          });
-        });
-      })();
     </script>
   </body>
 </html>
