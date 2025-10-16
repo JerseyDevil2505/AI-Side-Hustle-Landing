@@ -190,46 +190,6 @@
         color: white;
       }
       
-      /* Value Props */
-      .value-props {
-        background: #f9fafb;
-        padding: 64px 24px;
-        border-bottom: 1px solid #e5e7eb;
-      }
-      
-      .value-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 32px;
-        max-width: 1000px;
-        margin: 0 auto;
-      }
-      
-      .value-item {
-        text-align: center;
-        padding: 32px 24px;
-        background: white;
-        border-radius: 12px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-      }
-      
-      .value-icon {
-        font-size: 3em;
-        margin-bottom: 16px;
-      }
-      
-      .value-title {
-        font-size: 1.3em;
-        font-weight: 600;
-        margin-bottom: 8px;
-        color: #1a1a1a;
-      }
-      
-      .value-text {
-        color: #6b7280;
-        font-size: 1em;
-      }
-      
       /* Section */
       .section {
         padding: 80px 24px;
@@ -254,84 +214,29 @@
         margin: 0 auto;
       }
       
-      /* Bundle Highlight */
-      .bundle-highlight {
+      /* Complete Collection Highlight */
+      .collection-highlight {
         background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
-        border-radius: 16px;
-        padding: 48px;
+        border-radius: 12px;
+        padding: 32px;
         color: white;
         text-align: center;
-        max-width: 800px;
-        margin: 0 auto 80px;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        max-width: 700px;
+        margin: 0 auto;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
       }
-      
-      .bundle-badge {
-        display: inline-block;
-        background: #10b981;
-        color: white;
-        padding: 8px 20px;
-        border-radius: 24px;
-        font-size: 0.9em;
-        font-weight: 600;
-        margin-bottom: 24px;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-      }
-      
-      .bundle-highlight h2 {
-        font-size: 2.5em;
-        margin-bottom: 16px;
-        font-weight: 700;
-      }
-      
-      .bundle-price {
-        font-size: 4em;
-        font-weight: 700;
-        margin: 24px 0;
-        color: #10b981;
-      }
-      
-      .bundle-description {
-        font-size: 1.2em;
-        margin-bottom: 32px;
-        opacity: 0.95;
-        line-height: 1.7;
-      }
-      
-      .bundle-includes {
-        text-align: left;
-        max-width: 500px;
-        margin: 32px auto;
-        background: rgba(255, 255, 255, 0.1);
-        padding: 24px;
-        border-radius: 12px;
-      }
-      
-      .bundle-includes h4 {
-        font-size: 1.1em;
+
+      .collection-highlight h2 {
+        font-size: 1.8em;
         margin-bottom: 16px;
         font-weight: 600;
       }
-      
-      .bundle-includes ul {
-        list-style: none;
-      }
-      
-      .bundle-includes li {
-        padding: 8px 0;
-        padding-left: 28px;
-        position: relative;
+
+      .collection-description {
         font-size: 1em;
-      }
-      
-      .bundle-includes li:before {
-        content: "✓";
-        position: absolute;
-        left: 0;
-        color: #10b981;
-        font-weight: bold;
-        font-size: 1.2em;
+        margin-bottom: 24px;
+        opacity: 0.95;
+        line-height: 1.6;
       }
       
       .btn-primary {
@@ -356,7 +261,7 @@
       /* Product Grid */
       .product-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
         gap: 32px;
         margin-bottom: 64px;
       }
@@ -372,26 +277,39 @@
       }
       
       .product-card:hover {
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+        transform: translateY(-6px);
+        border-color: #10b981;
+      }
+      
+      .product-image-wrapper {
+        position: relative;
+        width: 100%;
+        height: 240px;
+        overflow: hidden;
+        background: linear-gradient(135deg, #f9fafb 0%, #e5e7eb 100%);
       }
       
       .product-image {
         width: 100%;
-        height: 220px;
+        height: 100%;
         object-fit: cover;
-        background: #f9fafb;
+        transition: transform 0.3s ease;
+      }
+      
+      .product-card:hover .product-image {
+        transform: scale(1.05);
       }
       
       .product-content {
-        padding: 24px;
+        padding: 28px;
         flex: 1;
         display: flex;
         flex-direction: column;
       }
       
       .product-title {
-        font-size: 1.3em;
+        font-size: 1.4em;
         font-weight: 600;
         margin-bottom: 12px;
         color: #1a1a1a;
@@ -400,72 +318,125 @@
       .product-description {
         color: #6b7280;
         margin-bottom: 20px;
-        flex: 1;
         font-size: 0.95em;
+        line-height: 1.6;
+      }
+
+      .product-preview {
+        background: linear-gradient(135deg, #f9fafb 0%, #e5e7eb 100%);
+        border-left: 3px solid #10b981;
+        padding: 16px;
+        border-radius: 8px;
+        margin-bottom: 24px;
+      }
+
+      .product-preview h4 {
+        font-size: 0.85em;
+        font-weight: 600;
+        color: #374151;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .product-preview ul {
+        list-style: none;
+        margin: 0;
+      }
+
+      .product-preview li {
+        padding: 4px 0;
+        padding-left: 20px;
+        position: relative;
+        font-size: 0.85em;
+        color: #6b7280;
+      }
+
+      .product-preview li:before {
+        content: "▸";
+        position: absolute;
+        left: 0;
+        color: #10b981;
+        font-weight: bold;
+      }
+
+      .product-features {
+        list-style: none;
+        margin-bottom: 24px;
+        padding: 16px;
+        background: #f9fafb;
+        border-radius: 8px;
       }
       
-      .product-footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: auto;
+      .product-features li {
+        padding: 6px 0;
+        padding-left: 24px;
+        position: relative;
+        font-size: 0.9em;
+        color: #4b5563;
       }
       
-      .product-price {
-        font-size: 2em;
-        font-weight: 700;
-        color: #1a1a1a;
+      .product-features li:before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: #10b981;
+        font-weight: bold;
       }
       
       .btn-product {
         background: #2c5364;
         color: white;
-        padding: 12px 24px;
-        border-radius: 6px;
+        padding: 14px 28px;
+        border-radius: 8px;
         text-decoration: none;
         font-weight: 600;
         transition: all 0.3s ease;
-        font-size: 0.95em;
+        font-size: 1em;
+        text-align: center;
+        display: block;
       }
       
       .btn-product:hover {
         background: #203a43;
-        transform: translateY(-1px);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(44, 83, 100, 0.3);
       }
       
-      /* Bundle Card */
-      .bundle-card {
+      /* Collection Card */
+      .collection-card {
         background: white;
-        border: 2px solid #e5e7eb;
-        border-radius: 12px;
-        padding: 32px;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        padding: 24px;
         text-align: center;
         transition: all 0.3s ease;
       }
-      
-      .bundle-card:hover {
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+      .collection-card:hover {
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
         border-color: #10b981;
       }
-      
-      .bundle-card h3 {
-        font-size: 1.5em;
+
+      .collection-card h3 {
+        font-size: 1.3em;
         font-weight: 600;
         margin-bottom: 12px;
         color: #1a1a1a;
       }
-      
-      .bundle-card .price {
-        font-size: 3em;
-        font-weight: 700;
-        color: #1a1a1a;
-        margin: 16px 0;
+
+      .collection-card p {
+        color: #6b7280;
+        margin-bottom: 20px;
+        font-size: 0.95em;
+        line-height: 1.5;
       }
       
-      .bundle-card p {
-        color: #6b7280;
-        margin-bottom: 24px;
-        font-size: 1em;
+      .bundle-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 32px;
+        margin-bottom: 64px;
       }
       
       /* FAQ */
@@ -580,19 +551,19 @@
           font-size: 2em;
         }
         
-        .bundle-highlight {
+        .collection-highlight {
           padding: 32px 24px;
         }
         
-        .bundle-highlight h2 {
+        .collection-highlight h2 {
           font-size: 2em;
         }
         
-        .bundle-price {
-          font-size: 3em;
+        .product-grid {
+          grid-template-columns: 1fr;
         }
         
-        .product-grid {
+        .bundle-grid {
           grid-template-columns: 1fr;
         }
       }
@@ -637,266 +608,275 @@
       
       <img src="assets/logo.png" alt="ClickMint Logo" class="logo" />
       
-      <h1 class="hero-title">Ready-to-Use AI Tools<br>Built for Results</h1>
+      <h1 class="hero-title">Professional AI Tools<br>Ready to Use</h1>
       
       <p class="hero-subtitle">
-        Download proven templates and prompts that help you create content, launch products, and automate your business.
+        Proven templates and prompts that help you create content, launch products, and automate your business.
       </p>
       
-      <a href="#all-access" class="hero-cta">Get All 10 Tools for $30</a>
+      <a href="#products" class="hero-cta">Explore Our Tools</a>
     </header>
 
-    <section class="value-props">
-      <div class="container">
-        <div class="value-grid">
-          <div class="value-item">
-            <div class="value-icon">⚡</div>
-            <h3 class="value-title">Instant Download</h3>
-            <p class="value-text">Get immediate access. Start using your tools within minutes.</p>
-          </div>
-          <div class="value-item">
-            <div class="value-icon">📋</div>
-            <h3 class="value-title">Copy-Paste Ready</h3>
-            <p class="value-text">No setup required. Just copy, paste, and customize for your needs.</p>
-          </div>
-          <div class="value-item">
-            <div class="value-icon">💰</div>
-            <h3 class="value-title">One-Time Payment</h3>
-            <p class="value-text">Pay once, own forever. No subscriptions or hidden fees.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="all-access">
-      <div class="container">
-        <div class="bundle-highlight">
-          <div class="bundle-badge">Best Value</div>
-          <h2>All-Access Pass</h2>
-          <div class="bundle-price">$30</div>
-          <p class="bundle-description">
-            Get all 10 premium AI tools instantly. Everything you need to create content, launch products, and grow your business with AI.
-          </p>
-          
-          <div class="bundle-includes">
-            <h4>What's Included:</h4>
-            <ul>
-              <li>All 10 Premium Tools (Worth $30 individually)</li>
-              <li>500+ ChatGPT Prompts</li>
-              <li>Product Launch Templates</li>
-              <li>Email Copy Generator</li>
-              <li>Faceless Content Tools</li>
-              <li>Revenue Tracking System</li>
-              <li>Lifetime Updates</li>
-            </ul>
-          </div>
-          
-          <a href="https://buy.stripe.com/6oUeVe0bzaezcwt16j4wM0q" class="btn-primary" target="_blank">Get Complete Access Now</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="bundles" style="background: #f9fafb;">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Starter Bundles</h2>
-          <p class="section-subtitle">
-            Not ready for everything? Start with a focused bundle.
-          </p>
-        </div>
-        
-        <div class="product-grid">
-          <div class="bundle-card">
-            <h3>AI Business Starter Vault</h3>
-            <div class="price">$6</div>
-            <p>Essential tools to kickstart your AI business journey.</p>
-            <a href="https://buy.stripe.com/dRmfZie2p1I37c93er4wM0m" class="btn-product" target="_blank">Get This Bundle</a>
-          </div>
-          
-          <div class="bundle-card">
-            <h3>AI Freelancer Bundle</h3>
-            <div class="price">$6</div>
-            <p>Complete toolkit for AI freelancers and service providers.</p>
-            <a href="https://buy.stripe.com/14AaEY1fDgCX3ZX8yL4wM0k" class="btn-product" target="_blank">Get This Bundle</a>
-          </div>
-          
-          <div class="bundle-card">
-            <h3>Faceless Creator Kit</h3>
-            <div class="price">$6</div>
-            <p>Everything you need for faceless video and content creation.</p>
-            <a href="https://buy.stripe.com/9B65kE5vT4Uf7c9eX94wM0o" class="btn-product" target="_blank">Get This Bundle</a>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <section class="section" id="products">
       <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Individual Tools</h2>
-          <p class="section-subtitle">
-            Pick exactly what you need. Each tool is $3.
-          </p>
-        </div>
-        
         <div class="product-grid">
           <div class="product-card">
-            <img
-              src="assets/products/AI Digital Product Thumb.jpg"
-              alt="AI Digital Product Generator"
-              class="product-image"
-            />
+            <div class="product-image-wrapper">
+              <img
+                src="assets/products/AI Digital Product Thumb.jpg"
+                alt="AI Digital Product Generator"
+                class="product-image"
+              />
+            </div>
             <div class="product-content">
               <h3 class="product-title">AI Digital Product Generator</h3>
-              <p class="product-description">Copy-paste templates to launch digital products in 24 hours. Includes 20+ ready-to-use frameworks.</p>
-              <div class="product-footer">
-                <span class="product-price">$3</span>
-                <a href="https://buy.stripe.com/bJefZif6t3Qb9kh5mz4wM01" class="btn-product" target="_blank">Download</a>
+              <p class="product-description">Launch profitable digital products in 24 hours with AI-powered templates.</p>
+
+              <div class="product-preview">
+                <h4>What's Included:</h4>
+                <ul>
+                  <li>8 complete modules (47 pages)</li>
+                  <li>15+ AI prompt templates for product ideation</li>
+                  <li>eBook, course & template pack creators</li>
+                  <li>Pricing calculator & profit projection tools</li>
+                </ul>
               </div>
+
+              <a href="https://buy.stripe.com/bJefZif6t3Qb9kh5mz4wM01" class="btn-product" target="_blank">Unlock Now</a>
             </div>
           </div>
 
           <div class="product-card">
-            <img
-              src="assets/products/AI Email Generator Thumb.jpg"
-              alt="AI Email Generator"
-              class="product-image"
-            />
+            <div class="product-image-wrapper">
+              <img
+                src="assets/products/AI Email Generator Thumb.jpg"
+                alt="AI Email Generator"
+                class="product-image"
+              />
+            </div>
             <div class="product-content">
               <h3 class="product-title">AI Email Copy Generator</h3>
-              <p class="product-description">25+ proven email templates. Just fill in the blanks and send emails that convert.</p>
-              <div class="product-footer">
-                <span class="product-price">$3</span>
-                <a href="https://buy.stripe.com/eVqbJ2bUh4UfeEB8yL4wM04" class="btn-product" target="_blank">Download</a>
+              <p class="product-description">Write high-converting emails in minutes with 25+ fill-in-the-blank templates.</p>
+
+              <div class="product-preview">
+                <h4>Frameworks Included:</h4>
+                <ul>
+                  <li>AIDA: Attention, Interest, Desire, Action</li>
+                  <li>PAS: Problem, Agitation, Solution</li>
+                  <li>Before/After/Bridge</li>
+                  <li>5-email automated sales sequences</li>
+                </ul>
               </div>
+
+              <a href="https://buy.stripe.com/eVqbJ2bUh4UfeEB8yL4wM04" class="btn-product" target="_blank">Unlock Now</a>
             </div>
           </div>
 
           <div class="product-card">
-            <img
-              src="assets/products/50 ChatGPT Prompt Thumb.jpg"
-              alt="50 ChatGPT Prompts"
-              class="product-image"
-            />
+            <div class="product-image-wrapper">
+              <img
+                src="assets/products/50 ChatGPT Prompt Thumb.jpg"
+                alt="50 ChatGPT Prompts"
+                class="product-image"
+              />
+            </div>
             <div class="product-content">
-              <h3 class="product-title">50 ChatGPT Prompts</h3>
-              <p class="product-description">50 copy-paste prompts that save 20+ hours weekly. Covers content, marketing, and business tasks.</p>
-              <div class="product-footer">
-                <span class="product-price">$3</span>
-                <a href="https://buy.stripe.com/6oU6oI0bzfyTdAxdT54wM0a" class="btn-product" target="_blank">Download</a>
+              <h3 class="product-title">50 ChatGPT Prompts for Side Hustlers</h3>
+              <p class="product-description">50 battle-tested prompts to save 20+ hours weekly on business & content.</p>
+
+              <div class="product-preview">
+                <h4>Sample Prompts:</h4>
+                <ul>
+                  <li>"Analyze [industry] and identify 5 underserved customer segments..."</li>
+                  <li>"Write a sales page for [product] that addresses objections..."</li>
+                  <li>"Generate a TikTok caption for [topic] with engaging hook..."</li>
+                </ul>
               </div>
+
+              <a href="https://buy.stripe.com/6oU6oI0bzfyTdAxdT54wM0a" class="btn-product" target="_blank">Unlock Now</a>
             </div>
           </div>
 
           <div class="product-card">
-            <img
-              src="assets/products/30 Day Content Calendar Thumb.jpg"
-              alt="30 Day Content Calendar"
-              class="product-image"
-            />
+            <div class="product-image-wrapper">
+              <img
+                src="assets/products/30 Day Content Calendar Thumb.jpg"
+                alt="30 Day Content Calendar"
+                class="product-image"
+              />
+            </div>
             <div class="product-content">
-              <h3 class="product-title">30-Day Content Calendar</h3>
-              <p class="product-description">Plan and post engaging AI content every day with pre-written prompts and templates.</p>
-              <div class="product-footer">
-                <span class="product-price">$3</span>
-                <a href="https://buy.stripe.com/7sY7sMcYl2M71RPbKX4wM0c" class="btn-product" target="_blank">Download</a>
+              <h3 class="product-title">30-Day AI Content Calendar</h3>
+              <p class="product-description">Plan and post engaging AI content every day effortlessly.</p>
+
+              <div class="product-preview">
+                <h4>What's Inside:</h4>
+                <ul>
+                  <li>30 days of content ideas mapped out</li>
+                  <li>Platform-specific strategies (IG, TikTok, LinkedIn)</li>
+                  <li>Weekly themes + daily post templates</li>
+                </ul>
               </div>
+
+              <a href="https://buy.stripe.com/7sY7sMcYl2M71RPbKX4wM0c" class="btn-product" target="_blank">Unlock Now</a>
             </div>
           </div>
 
           <div class="product-card">
-            <img
-              src="assets/products/AI Fiverr Thumb.jpg"
-              alt="AI Fiverr Gig Builder"
-              class="product-image"
-            />
+            <div class="product-image-wrapper">
+              <img
+                src="assets/products/AI Fiverr Thumb.jpg"
+                alt="AI Fiverr Gig Builder"
+                class="product-image"
+              />
+            </div>
             <div class="product-content">
               <h3 class="product-title">AI Fiverr Gig Builder</h3>
-              <p class="product-description">Launch profitable AI-powered Fiverr gigs with templates, pricing strategies, and delivery systems.</p>
-              <div class="product-footer">
-                <span class="product-price">$3</span>
-                <a href="https://buy.stripe.com/cNi9AU5vTdqL2VTbKX4wM06" class="btn-product" target="_blank">Download</a>
+              <p class="product-description">Launch profitable Fiverr gigs that convert with AI-optimized templates.</p>
+
+              <div class="product-preview">
+                <h4>What You Get:</h4>
+                <ul>
+                  <li>SEO-optimized gig titles & descriptions</li>
+                  <li>Pricing strategy framework</li>
+                  <li>FAQ templates that convert</li>
+                  <li>Upsell & package structures</li>
+                </ul>
               </div>
+
+              <a href="https://buy.stripe.com/cNi9AU5vTdqL2VTbKX4wM06" class="btn-product" target="_blank">Unlock Now</a>
             </div>
           </div>
 
           <div class="product-card">
-            <img
-              src="assets/products/AI Side Revenue Tracker Thumb.png"
-              alt="AI Side Revenue Tracker"
-              class="product-image"
-            />
+            <div class="product-image-wrapper">
+              <img
+                src="assets/products/AI Side Revenue Tracker Thumb.png"
+                alt="AI Side Revenue Tracker"
+                class="product-image"
+              />
+            </div>
             <div class="product-content">
-              <h3 class="product-title">AI Revenue Tracker</h3>
-              <p class="product-description">Track income, expenses, and profits across multiple AI side hustles in one organized system.</p>
-              <div class="product-footer">
-                <span class="product-price">$3</span>
-                <a href="https://buy.stripe.com/8x25kE2jH4Uf541aGT4wM08" class="btn-product" target="_blank">Download</a>
+              <h3 class="product-title">AI Side Hustle Revenue Tracker</h3>
+              <p class="product-description">Track and scale multiple income streams with professional analytics.</p>
+
+              <div class="product-preview">
+                <h4>Notion Dashboard Features:</h4>
+                <ul>
+                  <li>MRR, one-time sales & passive income tracking</li>
+                  <li>Weekly goals vs actual performance</li>
+                  <li>Monthly growth % calculator</li>
+                  <li>Visual charts & progress bars</li>
+                </ul>
               </div>
+
+              <a href="https://buy.stripe.com/8x25kE2jH4Uf541aGT4wM08" class="btn-product" target="_blank">Unlock Now</a>
             </div>
           </div>
 
           <div class="product-card">
-            <img
-              src="assets/products/Faceless YouTube Thumb.jpg"
-              alt="Faceless YouTube Script Generator"
-              class="product-image"
-            />
+            <div class="product-image-wrapper">
+              <img
+                src="assets/products/Faceless YouTube Thumb.jpg"
+                alt="Faceless YouTube Script Generator"
+                class="product-image"
+              />
+            </div>
             <div class="product-content">
               <h3 class="product-title">Faceless YouTube Scripts</h3>
-              <p class="product-description">Generate viral YouTube scripts without showing your face. Includes hooks, structures, and CTAs.</p>
-              <div class="product-footer">
-                <span class="product-price">$3</span>
-                <a href="https://buy.stripe.com/6oU14o5vT4Ufaol02f4wM0g" class="btn-product" target="_blank">Download</a>
+              <p class="product-description">Create engaging YouTube scripts that get views - no camera required.</p>
+
+              <div class="product-preview">
+                <h4>Video Templates:</h4>
+                <ul>
+                  <li>Top 10 Lists & Rankings</li>
+                  <li>Tutorial & How-To Guides</li>
+                  <li>Story-Based Case Studies</li>
+                  <li>AIDA Framework & Story Arc structures</li>
+                </ul>
               </div>
+
+              <a href="https://buy.stripe.com/6oU14o5vT4Ufaol02f4wM0g" class="btn-product" target="_blank">Unlock Now</a>
             </div>
           </div>
 
           <div class="product-card">
-            <img
-              src="assets/products/Faceless TikTok Thumb.jpg"
-              alt="Faceless TikTok Toolkit"
-              class="product-image"
-            />
+            <div class="product-image-wrapper">
+              <img
+                src="assets/products/Faceless TikTok Thumb.jpg"
+                alt="Faceless TikTok Toolkit"
+                class="product-image"
+              />
+            </div>
             <div class="product-content">
               <h3 class="product-title">Faceless TikTok Toolkit</h3>
-              <p class="product-description">Create viral TikToks using AI and automation. No filming, no editing skills required.</p>
-              <div class="product-footer">
-                <span class="product-price">$3</span>
-                <a href="https://buy.stripe.com/bJe00k9M986reEBg1d4wM0e" class="btn-product" target="_blank">Download</a>
+              <p class="product-description">Create viral TikToks without showing your face - automation included.</p>
+
+              <div class="product-preview">
+                <h4>What's Included:</h4>
+                <ul>
+                  <li>Viral hook templates & caption generators</li>
+                  <li>Hashtag strategies (trending + niche mix)</li>
+                  <li>CTA bank & comment reply generators</li>
+                  <li>Algorithm optimization tactics</li>
+                </ul>
               </div>
+
+              <a href="https://buy.stripe.com/bJe00k9M986reEBg1d4wM0e" class="btn-product" target="_blank">Unlock Now</a>
             </div>
           </div>
 
           <div class="product-card">
-            <img
-              src="assets/products/Faceless AI Business Thumb.jpg"
-              alt="Faceless AI Business Starter"
-              class="product-image"
-            />
+            <div class="product-image-wrapper">
+              <img
+                src="assets/products/Faceless AI Business Thumb.jpg"
+                alt="Faceless AI Business Starter"
+                class="product-image"
+              />
+            </div>
             <div class="product-content">
               <h3 class="product-title">Faceless AI Business Starter</h3>
-              <p class="product-description">Build an automated AI brand with no face required. Complete framework and tools included.</p>
-              <div class="product-footer">
-                <span class="product-price">$3</span>
-                <a href="https://buy.stripe.com/4gM4gA7E10DZ54116j4wM0i" class="btn-product" target="_blank">Download</a>
+              <p class="product-description">Build an automated AI brand without showing your face - ever.</p>
+
+              <div class="product-preview">
+                <h4>7 Proven Business Models:</h4>
+                <ul>
+                  <li>AI Content Agency</li>
+                  <li>Automation Services</li>
+                  <li>Digital Product Empire</li>
+                  <li>AI Consulting (no video)</li>
+                  <li>The SCALE Framework included</li>
+                </ul>
               </div>
+
+              <a href="https://buy.stripe.com/4gM4gA7E10DZ54116j4wM0i" class="btn-product" target="_blank">Unlock Now</a>
             </div>
           </div>
 
           <div class="product-card">
-            <img
-              src="assets/products/AI Office Thumb.png"
-              alt="AI Office PowerPack"
-              class="product-image"
-            />
+            <div class="product-image-wrapper">
+              <img
+                src="assets/products/AI Office Thumb.png"
+                alt="AI Office PowerPack"
+                class="product-image"
+              />
+            </div>
             <div class="product-content">
               <h3 class="product-title">AI Office PowerPack</h3>
-              <p class="product-description">500+ AI prompts for Word, Excel, PowerPoint & Outlook. Automate your entire workflow.</p>
-              <div class="product-footer">
-                <span class="product-price">$3</span>
-                <a href="https://buy.stripe.com/dRm9AUe2p86rdAx8yL4wM00" class="btn-product" target="_blank">Download</a>
+              <p class="product-description">500+ AI prompts to automate Word, Excel, PowerPoint & Outlook.</p>
+
+              <div class="product-preview">
+                <h4>Office Automation:</h4>
+                <ul>
+                  <li>Excel: Data analysis, dashboards, financial modeling</li>
+                  <li>Word: Document formatting, contracts, proposals</li>
+                  <li>PowerPoint: Presentation builders, pitch decks</li>
+                  <li>Outlook: Email templates, calendar automation</li>
+                </ul>
               </div>
+
+              <a href="https://buy.stripe.com/dRm9AUe2p86rdAx8yL4wM00" class="btn-product" target="_blank">Unlock Now</a>
             </div>
           </div>
         </div>
@@ -908,7 +888,7 @@
         <div class="section-header">
           <h2 class="section-title">Common Questions</h2>
         </div>
-        
+
         <div class="faq-container">
           <div class="faq-item">
             <div class="faq-question">
@@ -936,24 +916,12 @@
 
           <div class="faq-item">
             <div class="faq-question">
-              <span>Are there any recurring fees?</span>
+              <span>What is your refund policy?</span>
               <span class="faq-toggle">+</span>
             </div>
             <div class="faq-answer">
               <p>
-                No. All products are one-time purchases. Pay once, own forever. No subscriptions or hidden costs.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question">
-              <span>Do you offer refunds?</span>
-              <span class="faq-toggle">+</span>
-            </div>
-            <div class="faq-answer">
-              <p>
-                Yes. If you're not satisfied with your purchase, contact us at support@clickmintai.com within 30 days for a full refund.
+                Due to the instant digital nature of our products, all sales are final. Once you download the files, we cannot offer refunds. Please review the product details carefully before purchasing.
               </p>
             </div>
           </div>
@@ -969,6 +937,61 @@
               </p>
             </div>
           </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Do I need any special software or subscriptions?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                No. All tools are provided as PDFs and Notion templates that work with free accounts. There are no additional software requirements or ongoing subscriptions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="bundles">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" style="font-size: 2em;">Curated Bundles</h2>
+          <p class="section-subtitle" style="font-size: 1em;">
+            Focused collections for specific use cases.
+          </p>
+        </div>
+
+        <div class="bundle-grid">
+          <div class="collection-card" style="padding: 24px;">
+            <h3 style="font-size: 1.3em;">AI Business Starter Vault</h3>
+            <p style="font-size: 0.95em;">Essential tools to kickstart your AI business journey.</p>
+            <a href="https://buy.stripe.com/dRmfZie2p1I37c93er4wM0m" class="btn-product" target="_blank" style="padding: 10px 20px; font-size: 0.9em;">View Bundle</a>
+          </div>
+
+          <div class="collection-card" style="padding: 24px;">
+            <h3 style="font-size: 1.3em;">AI Freelancer Bundle</h3>
+            <p style="font-size: 0.95em;">Complete toolkit for AI freelancers and service providers.</p>
+            <a href="https://buy.stripe.com/14AaEY1fDgCX3ZX8yL4wM0k" class="btn-product" target="_blank" style="padding: 10px 20px; font-size: 0.9em;">View Bundle</a>
+          </div>
+
+          <div class="collection-card" style="padding: 24px;">
+            <h3 style="font-size: 1.3em;">Faceless Creator Kit</h3>
+            <p style="font-size: 0.95em;">Everything for faceless video and content creation.</p>
+            <a href="https://buy.stripe.com/9B65kE5vT4Uf7c9eX94wM0o" class="btn-product" target="_blank" style="padding: 10px 20px; font-size: 0.9em;">View Bundle</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="collection" style="background: #f9fafb; padding: 48px 24px;">
+      <div class="container">
+        <div class="collection-highlight" style="padding: 32px; max-width: 700px;">
+          <h2 style="font-size: 1.8em;">The Vault: All-Access</h2>
+          <p class="collection-description" style="font-size: 1em; margin-bottom: 24px;">
+            Get instant access to all 10 premium AI tools in one package.
+          </p>
+          <a href="https://buy.stripe.com/6oUeVe0bzaezcwt16j4wM0q" class="btn-primary" target="_blank" style="padding: 12px 32px; font-size: 1em;">View Complete Collection</a>
         </div>
       </div>
     </section>
@@ -983,9 +1006,9 @@
           
           <div class="footer-section">
             <h4>Products</h4>
-            <a href="#all-access">All-Access Pass</a>
-            <a href="#bundles">Bundles</a>
             <a href="#products">Individual Tools</a>
+            <a href="#bundles">Curated Bundles</a>
+            <a href="#collection">Complete Collection</a>
           </div>
           
           <div class="footer-section">
@@ -1002,7 +1025,7 @@
         </div>
         
         <div class="footer-bottom">
-          &copy; 2025 ClickMint. All rights reserved.
+          &copy; 2025 ClickMint. All rights reserved. All sales final - no refunds on digital downloads.
         </div>
       </div>
     </footer>
@@ -1064,12 +1087,10 @@
       // Track product clicks
       document.querySelectorAll(".btn-product, .btn-primary").forEach((button) => {
         button.addEventListener("click", function () {
-          const card = this.closest(".product-card, .bundle-card, .bundle-highlight");
+          const card = this.closest(".product-card, .collection-card, .collection-highlight");
           const productName = card.querySelector("h3, h2")?.textContent || "Product";
-          const priceText = card.querySelector(".product-price, .price, .bundle-price")?.textContent || "$3";
-          const price = parseFloat(priceText.replace("$", ""));
 
-          trackConversion("product_click", price, productName);
+          trackConversion("product_click", 0, productName);
         });
       });
     </script>
